@@ -36,7 +36,6 @@ public class Task implements Serializable {
     @XmlElementWrapper(name="roles")
     @XmlElement(name="role")
     public List<String> roles;
-    
 }
 
 

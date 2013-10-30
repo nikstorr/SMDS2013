@@ -10,7 +10,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "taskmanager")
 public class TaskCollection implements Serializable {
     
-    @XmlElementWrapper(name = "tasks")    
+	private static final long serialVersionUID = 1L;
+	@XmlElementWrapper(name = "tasks")    
     @XmlElement(name = "task")
     public List<Task> tasks;
     

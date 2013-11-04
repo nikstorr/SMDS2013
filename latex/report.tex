@@ -1,23 +1,85 @@
 \documentclass[]{report}
 
+\usepackage{comment}
+
+\usepackage{color}
+\usepackage{xcolor}
+
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+
+
+% code formatting
+\usepackage{listings}
+\lstset{
+language=java,
+basicstyle=\scriptsize\sffamily,
+frame=single,
+columns=fullflexible,
+showstringspaces=true,
+breaklines=true,
+keywordstyle=\color{blue},
+numbers=left,
+stringstyle=\color{red},
+commentstyle=\color{gray},
+rulecolor=\color{black}
+}
+
+
+% lose 'chapter' word in chapter
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{}{-100pt}{\Huge}
+\titlespacing*{\chapter}
+  {0pt}{0pt}{40pt}
+
+% link toc to chapters
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+% minitoc
+\usepackage{minitoc}
+\setcounter{minitocdepth}{2}
+\setcounter{tocdepth}{1}
+
+
+%space betyween rows in tabular
+\renewcommand{\arraystretch}{2.0}
+
+
+% change spacing in enumerate
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=-1mm}
+
+
 
 % Title Page
-\title{Report SMDS-2013}
-\author{Mikkel Bybjerg Christophersen, Jonas Bredvig Bendix Nielsen, Nikolai Storr-Hansen}
+%\title{Report SMDS-2013}
+%\author{Mikkel Bybjerg Christophersen, Jonas Bredvig Bendix Nielsen, Nikolai Storr-Hansen}
 
 
 \begin{document}
-\maketitle
-
-\begin{abstract}
-\end{abstract}
+\input{titlepage}
+\dominitoc
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\tableofcontents
 
 \include{introduction}
 \include{servlet}
 \include{serialization}
 \include{REST Task Manager}
 \include{Secure Task Manager}
-\include{Collaborative Task Manager with jGroups}
+\include{groupcommunication}
+
 \include{Concurrency Control}
 \include{Mobile client}
 \include{Conclusion}

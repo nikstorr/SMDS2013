@@ -1,14 +1,10 @@
 \chapter{Group Communication}
 \minitoc
 
-A) the lab description of the respective topic (to make the report selfcontained)\\
-B) 1-2 pages pointing out how much they solved and which issues they encountered\\
-C) A “print” of an example run\\
-D) 1-2 pages where they relate what they did to the relevant theory in the curriculum\\
-E) max 1 page conclusion, concluding what was solved well (perhaps even makes you proud :-)- and what could be done differently/better and why\\
 
+This chapter is about group communication. In distributed systems there's often a need for multicasting messages. It is much more efficient to sent a single message to a group of processes instead of sending that message to the group as a series of one-to-one messages. IP multicast is an example of a simple group communication protocol that does not provide guarantees for atomicity, lossless messaging and ordering of messages. These properties are handled by the JGroups API.  \\
 
-In this chapter we shall describe the result of the JGroup exercise. In section \ref{jgroup_solution} we demonstrate our solution. In section \ref{jgroup_run} we show an example run of the solution. In section \ref{jgroup_motivation} we discuss the underlying theory and relate that to the solution. In section \ref{jgroup_conclusion} we round up the chapter.
+We shall describe the result of the JGroup exercise. In section \ref{jgroup_solution} we demonstrate our solution. In section \ref{jgroup_run} we show an example run of the solution. In section \ref{jgroup_motivation} we discuss the underlying theory and relate that to the solution. In section \ref{jgroup_conclusion} we round up the chapter.
 
 
 \section{lab description}
@@ -42,7 +38,7 @@ In this chapter we shall describe the result of the JGroup exercise. In section 
 The solution consists of two main classes. A sender and a receiver. The sender's task is to take user requests and relay them to the receivers.
 The receiver's task is to... receive the requests. \\ 
 
-The sender instantiates a 'channel' object. This is similar to a socket and this is the main concept in the JGroup API. messages are sent 
+The sender instantiates a 'channel' object. This is similar to a socket and this is one of the main concepts in the JGroup API. messages are sent 
 over the channel to the group or to individual processes.  The Message object itself takes the sender's and receiver's addresses as well as the marshalled message. If the sender and receiver addresses are null the message is multicast to the group members\\
 
 Our sender class first packages a user request in an envelope object (which can hold a request command as well as a Task object) and then serializes the envelope object before multicasting a JGroup Message object containing this serialized envelope to the group i.e., 
@@ -55,9 +51,7 @@ multicast as well as one-to-one communication. By providing the Message object w
 
 \section{Example Run}
 \label{jgroup_run}
-In our taskmanagerapplication we first create and connect to the group 'channel'. 
-Then we fetch the state which in turn invokes the receivers 'setstate' method. 
-This is to ensure a synchronized state across the group.   
+In our taskmanagerapplication we first create and connect to the group 'channel'. Then we fetch the state which in turn invokes the receivers 'setstate' method. This is to ensure a synchronized state across the group. Note the receivers setState method is not implemented as the time of writing!!!   
 
 \begin{lstlisting}[caption=group setup]
 // channelTasks = ChannelHelper.getNewChannel(localIp, addPort);
@@ -79,7 +73,7 @@ eventLoop();
 channel.close();
 \end{lstlisting}
 
-After the initial creation and state transfer steps we enter the eventLoop. Here we receive requests, transform the request 
+After the initial group creation and state transfer steps we enter the eventLoop. Here we receive requests, transform the request 
 into a Message object and send messages to the group. A request is wrapped in an 'Envelope' object together with possibly a Task.
 The WriteToChannel(envelope, channel) method then serializes the envelope and wraps it in a JGroup Message object, which contains 
 sender and receiver addresses, and sends theat message to the group.\\
@@ -110,7 +104,7 @@ switch (command.toLowerCase().trim()) {
 \end{lstlisting}
 
 A receiver can either implement JGroup.receiver or extend receiverAdapter and simply override the 'receive(Message)' method. 
-In our application we do the later. \\
+In our simple application we do the later. \\
 
 After receiving a Message the application deserializes the message into an Envelope object.
 The envelope contains the request and possibly a Task object on which to perform the requested action.
@@ -146,9 +140,11 @@ if(DeserializeEnvelope.command.equals("request")){
 
 
 
-\section{Theoretical Motivation}
+\section{Motivation- and theory}
 \label{jgroup_motivation}
-Remote invocation paradigms (RPC, RMI) imply a coupling between the participants that is often not desirable in distributed systems. The sender need to know the receiver at the time of communication. A common means of decoupling the system is by using a form of indirect communication. Indirect communication is defined as 'entities communicating through an intermediary'. Note there an be potentially many receivers of a single subject/object. \\
+Remote invocation paradigms (RPC, RMI) imply a coupling between the participants that is often not desirable in distributed systems. The sender need to know the receiver. \\
+
+ A common means of decoupling the system is by using a form of indirect communication. Indirect communication is defined as 'entities communicating through an intermediary'. Note there an be potentially many receivers of a single subject/object. One process sends to several subscriber processes\\
 
 Uncoupling the communicating entities reveal two properties: 
 
@@ -192,20 +188,31 @@ But IP multicast offers no guarantees as to reliability i.e., no ordering of mes
 
 JGroups is build as an IP multicast application using a transport protocol ( UDP TCP, or JMS (Java Message Service)) 
 and, crucially,  it delivers reliability and group membership. Among other things this includes:\\
-\begin{enumerate}
-\item lossless transmission of a message to all recipients (with retransmission of missing messages.)
-\item fragmentation of large messages into smaller ones and reassembly at the receiver's side
-\item ordering of messages, e.g. messages m1 and m2 sent by P will be received by all receivers in the same order, and not as m2, m1 (FIFO order)
-\item atomicity: a message will be received by all receivers, or none of them.
-\item Knowledge of who the members of a group are. 
-\item Notification when a new member joins, an existing member leaves, or an existing member has crashed.
-\end{enumerate}
+
+%\begin{minipage}{\textwidth-10pt}
+\captionof{table}{JGroup properties } \label{tab:title}
+\begin{tabular}{L{4.45in} }    % { C{1.25in} C{.85in} *4{C{.75in}}}
+\toprule[1.5pt] % horizontal line
+
+Lossless transmission of a message to all recipients (with retransmission of missing messages.) \\\midrule
+Fragmentation of large messages into smaller ones and reassembly at the receiver's side\\\midrule
+Ordering of messages, e.g. messages m1 and m2 sent by P will be received by all receivers in the same order, and not as m2, m1 (FIFO order)\\\midrule
+Atomicity: a message will be received by all receivers, or none of them.\\\midrule
+Knowledge of who the members of a group are. \\\midrule
+Notification when a new member joins, an existing member leaves, or an existing member has crashed.\\
+
+\bottomrule[1.25pt] % horizontal line
+\end {tabular}\par
+\bigskip
+%\end{minipage}
+
+
 
 JGroups consists of 3 main parts: (1) the Channel used by developers to build reliable group communication applications, (2) the building blocks which are layered on top of the channel and provide a higher abstraction level and (3) the protocol stack, which implements the properties specified for a given channel.\\
 
 JGroups is highly configurable and developers can put together a protocol stack that suits their particular needs ranging from fast but unreliable to slower but reliable protocol stacks. i.e., a system might be composed, depending on the protocol stacks used, in such a way that it offers lossless transmission but not ordering of messages or lossless transmission, atomicity and ordering of messages.\\
 
-In JGroups the ‘channel’ abstraction is the group membership itself. When connecting to a channel a process joins the group. A Message abstraction is the means be which a process sends a message to the group. the message consists of a receiver address, a sender address and a message. 
+In JGroups the ‘channel’ abstraction is the group membership itself. When connecting to a channel a process joins the group. A Message abstraction is the means be which a process sends a message to the group. the message consists of a receiver address (a group), a sender address and a message. 
 
 
 \section{Conclusion}

@@ -1,4 +1,6 @@
 \chapter{Introduction}
+\minitoc
+
 \section{Project Presentation}
 
 This report is an examination of some of the principles seen in the application of distributed systems. The report's modus operandi is to test the underlying theory on small independant applications. Projects in the report are based on a ‘taskmanager’ application. The basic concept provides a means of creating, editing, deleting and persisting tasks. \\
@@ -33,8 +35,10 @@ The taskmanager application is founded on an xml document containing ‘tasks’
 \subsection{Task}
 The taskmanager application holds a list of Task objects. A task has the following properties:\\
 
+\begin{comment}
 ID (a unique identifier), name (the name of the task), date (the date of creation), status (status of the task. E.g executed or non-executed.),
 required (E.g. ‘true’ or ‘false’.’), role (role, is an access control technique in where the role of a task signifies the access rights level of that task. ), Attendants (a list of attendants for the task)\\
+\end{comment}
 
 
 \begin{lstlisting}[caption=Task]
@@ -75,8 +79,7 @@ In chapter 5 we discuss security in distributed systems. We implement a simple r
 -
 \section{Baseline model}
 
-Before we continue, a summary of the challenges in distributed systems is outlined:
-
+Before we continue, a summary of some of the challenges in distributed systems is outlined:
 
 \subsection{Heterogeneity}
 Each node in a distributed system may have been developed in different languages on different OS’.   
@@ -113,37 +116,48 @@ How to solve concurrent requests?
 
 How to make the system seem one though it is in fact comprised of several subsystems perhaps located on different continents.
 
-\begin{enumerate}
-\item Access transparency: access to local and remote resources must go through the same  interfaces.
-\item Location transparency: The node accessing a resource should not need to know it’s location.
-\item Concurrency transparency: Multiple nodes can access the resource simultaneously. 
-\item Replication transparency: multiple instances of a resources can be utilized without the nodes noticing.
-\item Failure transparency:In case of failure in the resource (hardware or software) the node should be able to complete its task.
-\item Mobility transparency: the resource can be moved without the node noticing
-\item 
-\item 
-\end{enumerate}
+%\begin{minipage}{\textwidth-10pt}
+\captionof{table}{transparency } \label{tab:title}
+\begin{tabular}{L{1.0in} L{3.45in} }    % { C{1.25in} C{.85in} *4{C{.75in}}}
+\toprule[1.5pt] % horizontal line
+\textbf{Access-\newline transparency} & access to local and remote resources must go through the same  interfaces. \\\midrule
+\textbf{Location- \newline transparency} & The node accessing a resource should not need to know it’s location. \\\midrule
+\textbf{Concurrency-\newline transparency} & Multiple nodes can access the resource simultaneously. \\\midrule
+\textbf{Replication-\newline transparency} & multiple instances of a resources can be utilized without the nodes noticing.\\\midrule
+\textbf{Failure-\newline transparency} & In case of failure in the resource (hardware or software) the node should be able to complete its task.\\\midrule
+\textbf{Mobility-\newline transparency} & the resource can be moved without the node noticing\\
+\bottomrule[1.25pt] % horizontal line
+\end {tabular}\par
+\bigskip
+%\end{minipage}
 
 
 \section{Failure model}
 
-The above challenges are a t the root of a basic failure model for distributed systems. \\
+The above challenges are at the root of a basic failure model for distributed systems. \\
 
 There are three places of potential failure: the sender, the channel and the receiver. 
 The basic failure model in distributed system distinguish between failure in the channel and failure in the processes.
 
-\begin{enumerate}
-\item Omission: Channel failure. An outgoing message never arrives at the destination
- 
-\item Send-Omission: Process failure. The message never leaves the process.
- 
-\item Receive Omission: Process Failure. The message arrives but theprocess can't find it.
- 
-\item Crash: Process failure. A process halts. Others might not recognize this
- 
-\item Fail-stop: Process failure. A process halts. Others see this.
- 
-\item Arbitrary: Process or channel failure. All or any of the above.
+%\pagebreak
+%\begin{minipage}{\textwidth-10pt}
+\captionof{table}{transparency } \label{tab:title}
+\begin{tabular}{L{1.0in} L{3.45in} }    % { C{1.25in} C{.85in} *4{C{.75in}}}
+\toprule[1.5pt] % horizontal line
 
-\end{enumerate}
+\textbf{Omission} & Channel failure. An outgoing message never arrives at the destination \\\midrule
+ 
+\textbf{Send-Omission} & Process failure. The message never leaves the process.\\\midrule
+ 
+\textbf{Receive Omission} & Process Failure. The message arrives but the process can't find it.\\\midrule
+ 
+\textbf{Crash} & Process failure. A process halts. Others might not recognize this.\\\midrule
+ 
+\textbf{Fail-stop} & Process failure. A process halts. Others see this.\\\midrule
+ 
+\textbf{Arbitrary} &  Process or channel failure. All or any of the above.\\
 
+\bottomrule[1.25pt] % horizontal line
+\end {tabular}\par
+\bigskip
+%\end{minipage}

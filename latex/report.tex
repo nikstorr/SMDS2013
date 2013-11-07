@@ -10,6 +10,12 @@
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
+% more fun with tabulars
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\newcolumntype{L}[1]{>{}m{#1}}
+\renewcommand\tabularxcolumn[1]{L{#1}}
+% make table captions float left
+\usepackage{floatrow}
 
 
 % code formatting
@@ -77,7 +83,7 @@ rulecolor=\color{black}
 \include{servlet}
 \include{serialization}
 \include{REST Task Manager}
-\include{Secure Task Manager}
+\include{security}
 \include{groupcommunication}
 
 \include{Concurrency Control}

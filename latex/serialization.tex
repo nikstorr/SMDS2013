@@ -2,7 +2,7 @@
 \minitoc
 
 
-In this chapter we describe the result of the TCP lab exercise. in section \ref{tcp_lab} we describe the assignment. In section \ref{tcp_solution} we describe our solution. in section \ref{tcp_example} we provide an example run of the solution. In section \ref{tcp_reflection} we reflect on the theory behind the assignment. In section \ref{tcp_conclusion} we sum up what we learned and round up the chapter.
+In this chapter we describe the result of the TCP lab exercise. in section \ref{tcp_lab} we describe the assignment. In section \ref{tcp_solution} we describe our solution. in section \ref{tcp_example} we provide an example run of the solution. In section \ref{tcp_reflection} we reflect on the theory behind the assignment. In section \ref{tcp_conclusion} we sum up what we've learned and round up the chapter.
 
 \section{lab description}
 \label{tcp_lab}
@@ -26,15 +26,15 @@ In this chapter we describe the result of the TCP lab exercise. in section \ref{
 \section{Solution}
 \label{tcp_solution}
 
-In our solution we first deserialize the xml document into a 'taskmanager' object and ‘Task’ objects. Then we create appropriate input- and output streams for communicating with client. \\
+In our solution we first deserialize the xml document into a 'taskmanager' object and ‘Task’ objects. Then we create appropriate input- and output streams for communicating with clients. \\
 
 Serialization and deserialization to and from xml is done with the JAXB API. To quote Oracle; \textit{JAXB provides methods for unmarshalling (reading) XML instance documents into Java content trees, and then marshalling (writing) Java content trees back into XML instance documents.} \\
 
-JAXB uses annotations to achieve this. We annotate the Task and Taskmanager  Java objects and JAXB then knows how to convert the objects into an xml tree-structure and back into an object graph.\\
+JAXB uses annotations to achieve this. We annotate the Task and Taskmanager  Java objects and JAXB then knows how to convert these annotated objects into an xml tree-structure and back into an object graph.\\
 
 The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call. The Client creates a socket on the same port but this time with the servers InetAddress as a second argument. \\
 
-The server and client communicates by passing messages in and out of the matching inputstreams and outputstreams. Command messages are passed via the writeUTF and received by the readUTF methods (as strings?). The Task and taskmanager objects are sent via writeObject and received by readObject methods (as byte-streams ?). \\
+The server and client communicates by passing messages in and out of the matching inputstreams and outputstreams. Command messages are passed via the writeUTF and received by the readUTF methods (as bytes). The Task and taskmanager objects are then sent via writeObject and received by readObject methods (objects must Serializable in order to be sent with writeObject). \\
 
 \subsection{http protocol}
 
@@ -43,7 +43,7 @@ The server responds to the client’s request by sending the request back. The c
 \section{example run}
 \label{tcp_example}
 
-In this example run we star out with an xml document containing one Task. Before the example run the xml document looks like this:
+In this example run we start out with an xml document containing one Task. Before the example run the xml document looks like this:
 
 \begin{lstlisting}[caption=xml before run]
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -172,24 +172,26 @@ System.out.println("Client: server response : " + response)
 \section{Reflection}
 \label{tcp_reflection}
 
-In this exercise we worked with protocols at the transport layer level, well, the TCP protocol to be precise. \\
+In this exercise we worked with protocols at the transport layer level, the TCP protocol to be precise. \\
 
-The TCP protocol is part of a protocol suite. A protocol suite is a stack of protocols each responsible for a single task. 
+The TCP protocol is part of a protocol suite. A protocol suite is a stack of protocols each responsible for a single logical task. 
 Each layer communicates with the layer above and below, only. \\
 
-At the bottom of the TCP/IP suite are the physical layer(s), and on top of those the network layer provides an interface to the transport layer, application services (and protocols) are built on top of the transport layer, based on TCP e.g. HTTP, SMTP, POP, FTP etc. 
+At the bottom of the TCP/IP suite are the physical layer (hardware). On top of the physical layer the network layer provides an interface to the transport layer, application services (and their protocols) are built on top of the transport layer, based on TCP e.g. HTTP, SMTP, POP, FTP etc. 
 More layers can be added to provide additional functionality e.g. security etc.\\
 
-The benefit in using protocols is network independance i.e., many different application types and languages can use the same network to communicate as long as they use they implement the same protocol(s). \\
+Using protocols gives us network independance i.e., different application types and languages can use the same network to communicate 
+as long as they comply to the same protocol(s). \\
 
-In our application the transmission Control Protocol (or TCP protocol) communicated with the network layer through a ‘socket’ connection. Our client existed in the application/presentation layers utilizing the TCP transport protocol which communicated with the network layer. \\
+In our example application the transmission Control Protocol (or TCP protocol) communicated with the network layer through a ‘socket’ connection. Our client existed in the application/presentation layer utilizing the TCP transport protocol to communicate through the network layer with another node.  \\
 
-In our application messages were addressed to a communication port. The transport address (the IP number) was in this case composed of the computers  ‘localhost’ address and the port number. \\
+Nodes communicated through a port. Both client and server addressed messages to the same port. The transport address (the IP number) was in this case composed of the computers  ‘localhost’ address and the port number. \\
 
 There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages (IP packets) and TCP transfers byte streams (as IP packets). Furthermore, TCP is reliable and ordered i.e., TCP provides guarantees as to the ordering of its messages and it provides guarantees as to the delivery of the messages. \\
 
-In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there’s no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. This seem logical as the network layer (IP protocol) can not control the other end of the connection . 
+In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there’s no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. This seem logical as the network layer (IP protocol) can not control the other end of the connection. 
 
+\pagebreak
 \subsection{Good and bad}
 \label{tcp_conclusion}
 

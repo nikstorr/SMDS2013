@@ -1,5 +1,3 @@
-\documentclass{report}
-\begin{document}
 	\chapter{Servlet}
 	
 	\section{Lab description}
@@ -20,7 +18,7 @@
 	
 	\section{Solution}
 	\label{servlet_solution}
-	Our solution is implemented using Jsp-documents. Jsp is a construct similar to Php: code sections written in a scripting language is embedded in a mark-up language or standing alone, and gets called whenever the resource is requested in order to dynamically construct a web response. In our documents, Java programming statements are embedded in an Html-page. The statements uses the XmlOutputter class to have the Jsp-tag in which it is embedded evaluate to an Xml-construct.\\
+	Our solution is implemented using Jsp-documents. Jsp is a construct similar to Php: code sections written in a scripting language is embedded in a mark-up language, and gets called whenever the resource is requested in order to dynamically construct a web response. In our documents, Java programming statements are embedded in an Html-page. The statements uses the XmlOutputter class to have the Jsp-tag in which it is embedded evaluate to an Xml-construct.\\
 	The class JDOMParser provided with the assignment, is used to read from the task-manager-xml.xml document, and execute XPath queries on its contents.\\
 	We have implemented three Jsp-documents, offering the functionality described in the assignment:
 	\begin{itemize}
@@ -41,7 +39,7 @@
 		request:\\
 		http://localhost:8080/BMDS-TaskManager-01/GetAllTasks.jsp\\\\
 		
-		response:\\
+		\begin{lstlisting}[caption=response:]
 		<?xml version="1.0" encoding="UTF-8"?>
 		<tasks><task id="handin-01" name="Submit assignment-01" date="16-12-2013" status="not-executed" required="false">
 					<description>
@@ -75,6 +73,7 @@
 					</description>
 					<attendants>Thomas</attendants>
 				</task></tasks>
+		\end{lstlisting}
 				\\\\
 		
 		\item
@@ -82,7 +81,7 @@
 		request:\\	
 		http://localhost:8080/BMDS-TaskManager-01/GetTaskById.jsp?id="handin-01"\\\\
 		
-		reponse:\\
+		\begin{lstlisting}[caption=response:]
 		<?xml version="1.0" encoding="UTF-8"?>
 		<tasks><task id="handin-01" name="Submit assignment-01" date="16-12-2013" status="not-executed" required="false">
 					<description>
@@ -90,6 +89,7 @@
 					</description>
 					<attendants>student-01, student-02</attendants>
 				</task></tasks>
+		\end{lstlisting}
 		\\\\
 		
 		\item
@@ -97,7 +97,7 @@
 		request:\\
 		http://localhost:8080/BMDS-TaskManager-01/GetTaskByDate.jsp?date="17-12-2013"\\\\
 		
-		response:\\
+		\begin{lstlisting}[caption=response:]
 		<?xml version="1.0" encoding="UTF-8"?>
 		<tasks><task id="review-01" name="Review and check assignment" date="17-12-2013" status="not-executed" required="false">
 					<description>
@@ -121,11 +121,15 @@
 					<attendants>TA-01, Rao</attendants>
 		
 				</task></tasks>
+		\end{lstlisting}
 		\end{itemize}
 	\section{Reflection}
 	\label{servlet_reflection}
-		
+		The exercise demonstrates a simple example of a client-server distribution architecture, the use of Http to request specific resources, and mechanisms of dynamically generated web pages.\\
+		A client-server architecture is characterized by a fundamental difference between every two parties communicating; the client initiates the transaction, makes requests, remembers session state and previous responses, and have access to all servers on the network. Servers respond to requests, can receive requests from all clients using the network, does often not store session state (see section XXXXXXX), and can act as clients themselves, forwarding the requests to other servers.\\
+		This architecture has the benefits of centralizing services to single server entrypoints, and decoupling the abstract service being provided from the machine executing the processing needed to provide the service. This allows for very agile and scalable systems, as the client only needs to know about the URI defining the position of the service, while the execution can be forwarded and distributed among as many servers as is needed. A service is only characterized by its URI, and not by its physical position, allowing for physical machines to be exchanged and removed while the service stays the same. \\
+		The solution implemented responds to requests with dynamic web pages. Our solution could be extended to exemplify this scalable architecture, by having each of the three pages be stored on an individual machine, and have the entrypoint forward requests to these machines for execution, based on the format of the URI. In a larger system, one could take advantage of the inherently hierarchical structure of URIs by having all requests with URIs starting with a given prefix be forwarded to a corresponding server.
 	\section{Conclusion}
 	\label{servlet_conclusion}
-	
-\end{document}
+		In this exercise we have managed to implement a Http-service that exposes Task entities from the provided document "task-manager-xml.xml". The solution uses .jsp documents to execute user queries and generate dynamic responses, and uses xpath statements to address the contents of the xml document. \\
+		We have not implemented the functionality described in the assignment as identifying tasks by "owner", as this information did not exist in the xml schema.

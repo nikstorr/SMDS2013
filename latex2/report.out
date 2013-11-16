@@ -1,0 +1,30 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Project Presentation}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{report structure}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Baseline model}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Failure model}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{TCP server and Serialization}{}% 6
+\BOOKMARK [1][-]{section.2.1}{lab description}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Solution}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{example run}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Reflection}{chapter.2}% 10
+\BOOKMARK [0][-]{chapter.3}{REST Service}{}% 11
+\BOOKMARK [1][-]{section.3.1}{Lab description}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.2}{Solution}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.3}{Test run}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.4}{Reflection}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.5}{Conclusion}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{Security}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Lab Description}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Solution}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Example run}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Theory}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Indirect Communication}{}% 23
+\BOOKMARK [1][-]{section.5.1}{lab description}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Solution}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.3}{Example Run}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.4}{Motivation- and theory}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Concurrency Control}{}% 29
+\BOOKMARK [1][-]{section.6.1}{Example run}{chapter.6}% 30

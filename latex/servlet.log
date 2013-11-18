@@ -1,0 +1,226 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.5)  13 NOV 2013 12:58
+entering extended mode
+**servlet.tex
+(C:\Users\Mikkel\workspace\SMDS2013\latex\servlet.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MikTex\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MikTex\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\Mikkel\workspace\SMDS2013\latex\servlet.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+
+Chapter 1.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+[1
+
+
+{C:/Users/Mikkel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
+
+("C:\Program Files (x86)\MikTex\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--43
+
+ []
+
+
+Overfull \hbox (4.11186pt too wide) in paragraph at lines 44--58
+\OT1/cmr/m/n/10 name="Submit assignment-01" date="16-12-2013" status="not-execu
+ted"
+ []
+
+
+Overfull \hbox (43.16743pt too wide) in paragraph at lines 44--58
+\OT1/cmr/m/n/10 scrip-tion> <attendants>student-01, student-02</attendants> </t
+ask><task id="review-
+ []
+
+
+Overfull \hbox (8.9729pt too wide) in paragraph at lines 44--58
+\OT1/cmr/m/n/10 01" name="Review and check as-sign-ment" date="17-12-2013" stat
+us="not-
+ []
+
+[2]
+Overfull \hbox (20.38962pt too wide) in paragraph at lines 59--65
+[]\OT1/cmr/m/n/10 </task><task id="reject-01" name="ask to re-sub-mit the as-si
+gn-ment" date="17-
+ []
+
+
+Overfull \hbox (2.80634pt too wide) in paragraph at lines 66--71
+[]\OT1/cmr/m/n/10 </task><task id="approve-01" name="mandatory as-sign-ment 01 
+ap-proved"
+ []
+
+
+Overfull \hbox (2.80624pt too wide) in paragraph at lines 66--71
+\OT1/cmr/m/n/10 date="17-12-2013" status="not-executed" re-quired="false"> <de-
+scrip-tion>
+ []
+
+
+Overfull \hbox (24.91753pt too wide) in paragraph at lines 72--79
+[]\OT1/cmr/m/n/10 </task><task id="qualify-for-exam" name="qualify for writ-ten
+ exam" date="21-
+ []
+
+
+Overfull \hbox (38.07481pt too wide) in paragraph at lines 72--79
+\OT1/cmr/m/n/10 stu-dents to take up writ-ten exam. </de-scrip-tion> <at-ten-da
+nts>Thomas</attendants>
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--79
+
+ []
+
+
+Overfull \hbox (20.45918pt too wide) in paragraph at lines 81--84
+\OT1/cmr/m/n/10 http://localhost:8080/BMDS-TaskManager-01/GetTaskById.jsp?id="h
+andin-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
+
+ []
+
+
+Overfull \hbox (4.11186pt too wide) in paragraph at lines 85--94
+\OT1/cmr/m/n/10 name="Submit assignment-01" date="16-12-2013" status="not-execu
+ted"
+ []
+
+
+Overfull \hbox (2.08403pt too wide) in paragraph at lines 85--94
+\OT1/cmr/m/n/10 scrip-tion> <attendants>student-01, student-02</attendants> </t
+ask></tasks> 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Overfull \hbox (22.82027pt too wide) in paragraph at lines 96--99
+\OT1/cmr/m/n/10 http://localhost:8080/BMDS-TaskManager-01/GetTaskByDate.jsp?dat
+e="17-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+
+ []
+
+[3]
+Overfull \hbox (20.38962pt too wide) in paragraph at lines 110--116
+[]\OT1/cmr/m/n/10 </task><task id="reject-01" name="ask to re-sub-mit the as-si
+gn-ment" date="17-
+ []
+
+
+Overfull \hbox (2.80634pt too wide) in paragraph at lines 117--122
+[]\OT1/cmr/m/n/10 </task><task id="approve-01" name="mandatory as-sign-ment 01 
+ap-proved"
+ []
+
+
+Overfull \hbox (2.80624pt too wide) in paragraph at lines 117--122
+\OT1/cmr/m/n/10 date="17-12-2013" status="not-executed" re-quired="false"> <de-
+scrip-tion>
+ []
+
+[4] [5] (C:\Users\Mikkel\workspace\SMDS2013\latex\servlet.aux) ) 
+Here is how much of TeX's memory you used:
+ 254 strings out of 493921
+ 3085 string characters out of 3146478
+ 54031 words of memory out of 3000000
+ 3627 multiletter control sequences out of 15000+200000
+ 5158 words of font info for 19 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 23i,4n,19p,663b,173s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Fil
+es (x86)/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x8
+6)/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MikT
+ex/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on servlet.pdf (5 pages, 54004 bytes).
+PDF statistics:
+ 30 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

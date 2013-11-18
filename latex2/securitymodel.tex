@@ -1,0 +1,41 @@
+\section{Basic Security Model}
+A goal of security in distributed systems is to restrict access to information and resources to just those with authorization. Another is non-repudiation, securing that a process (or user) cannot deny participating in an activity. \\
+
+This can be achieved by securing the processes and the channels used to interact and by protecting the objects they use against unauthorized access.\\
+
+A basic model for the analysis of security risks include: \\
+
+The enemey: we postulate an enemy who can send messages and receive messages 
+to and from any two processes. \\
+
+Threats include threats to processes and to communication channels: \\
+
+\begin{itemize}
+\item[\textbf{Processes}] Even if protocols include an address in the messags sent there's no guarantee the sender is who he claims to be. A server cannot be sure the sender is authorized to access a certain resource if it cannot deermine the source of the message. Likewise, a client cannot be sure the result of a invokation is actually comming form the server and not a man-in-the-middle.  
+\item[\textbf{Channels}] The conceptual enemy can copy, alter or inject messages as they travel the network.
+\end{itemize}
+
+Security falls into 3 broad classes - Leakage: acquisition of info by unauthorized recipients, Tampering: Altering of info, Vandalism: interference without gain to the perpetrator.\\
+
+Attacks can be classified into the way a channel is misused -
+\begin{itemize}
+\item Eavesdropping: Copying a message. 
+\item Masquerading: portraying to be someone else
+\item Message tampering: Altering the contents of messages
+\item Replaying: re-sending a message
+\item Denial of service: Flooding the channel with messages denying access to a resource
+\end{itemize}
+
+\subsubsection{Worst-Case Assumptions }
+Designing a secure system is a matter of constructing a list of threats and then designing the system against it. Note \textit{the size and characteristics of such a list is weighed against time and quality requirements (read cost).}\\
+
+to create the list we have a set of worst-case assumptions and guidelines:
+
+\begin{itemize}
+\item interfaces are exposed: 
+\item networks are insecure
+\item limit the lifetime and scope of secrets: (the longer the lifetime the grater the risk of compromization)
+\item code and algorithms are available to the enemy. (better expose the algorithm hoping to discover holes in it and then creating better ones. )
+\item attackers have acces to large resources. (computing power is cheap. Assume strong enemies.)
+\item Minimize trust base: the portionof a system responsible for security should be kept small. 
+\end{itemize}

@@ -1,0 +1,27 @@
+\chapter{Group Communication}
+\minitoc
+
+This chapter is about concurrency control...  \\
+
+We shall describe the result of the mutual exclusion exercise. In section \ref{MutualExclusion_solution} we demonstrate our solution. In section \ref{MutualExclusion_run} we show an example run of the solution. In section \ref{MutualExclusion_motivation} we discuss the underlying theory and relate that to the solution. In section \ref{MutualExclusion_conclusion} we round up the chapter.
+
+\section{lab description}
+\textit{The main objective of this week’s assignment is to understand some of the primary challenges of concurrency control. In order to understand those challenges, we will use Task Manager group communication, bulding on the last week’s lab exercise using JGroups.}\\
+
+\textit{The sample code is provided in order to help you to understand how a task can results into different states if it is executed concurrently at different task manager servers. This week’s sample code is more or less similar to the last week’s sample code and uses JGroups for group communication among the Task manager servers. Even though each task manger uses a individual task manager Xml file, the tasks in the xml files are the same. It offers two simple operations on the tasks as described below.}\\
+
+
+
+\textit{The basic idea is to initiate to ‘execute’ and ‘request’ operations on a task with same Id from two different instances of task manager concurrently. If these operations are carried out concurrently at different task manager servers, then the task would results in different states based on the sequence of two operations carried out at the respective task manger servers.  For example, at one task manager, if ‘execute’ is followed by ‘request’, then the final state of task will set the attribute required=’true’, on the other hand at an another task manger server, if the ‘request’ followed by ‘execute’ then the task will have the attribute required=’false’.}\\
+
+\section{Solution}
+\label{MutualExclusion_solution}
+
+\section{Example Run}
+\label{MutualExclusion_run}
+
+\section{Motivation- and theory}
+\label{MutualExclusion_motivation}
+
+\section{Conclusion}
+\label{MutualExclusion_conclusion}

@@ -23,7 +23,7 @@
 \contentsline {subsection}{\numberline {3.4.1}Good and bad}{13}{subsection.3.4.1}
 \contentsline {chapter}{\numberline {4}Security}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Lab Exersize}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Solution}{16}{section.4.2}
+\contentsline {section}{\numberline {4.2}Solution}{15}{section.4.2}
 \contentsline {section}{\numberline {4.3}Example Run}{16}{section.4.3}
 \contentsline {section}{\numberline {4.4}Theory}{16}{section.4.4}
 \contentsline {section}{\numberline {4.5}Conclusion}{16}{section.4.5}

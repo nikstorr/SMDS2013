@@ -41,7 +41,7 @@
 \contentsline {section}{\numberline {7.1}Lab Description}{34}{section.7.1}
 \contentsline {section}{\numberline {7.2}Solution}{34}{section.7.2}
 \contentsline {section}{\numberline {7.3}Example Run}{34}{section.7.3}
-\contentsline {section}{\numberline {7.4}Theory}{35}{section.7.4}
+\contentsline {section}{\numberline {7.4}Theory}{34}{section.7.4}
 \contentsline {subsubsection}{Volatility}{35}{subsubsection*.5}
 \contentsline {subsubsection}{Smart Spaces}{35}{subsubsection*.6}
 \contentsline {subsection}{\numberline {7.4.1}Device Model}{35}{subsection.7.4.1}
@@ -49,6 +49,6 @@
 \contentsline {subsubsection}{Serverless Discovery}{37}{subsubsection*.7}
 \contentsline {subsubsection}{Real World Example:}{38}{subsubsection*.8}
 \contentsline {subsection}{\numberline {7.4.3}Interoperation}{38}{subsection.7.4.3}
-\contentsline {subsubsection}{Interoperations Models}{39}{subsubsection*.9}
+\contentsline {subsubsection}{Interoperations Models}{38}{subsubsection*.9}
 \contentsline {subsubsection}{Sensing And Context-wareness}{39}{subsubsection*.10}
 \contentsline {section}{\numberline {7.5}Conclusion}{39}{section.7.5}

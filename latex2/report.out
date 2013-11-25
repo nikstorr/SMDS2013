@@ -27,8 +27,18 @@
 \BOOKMARK [1][-]{section.5.4}{Motivation- and theory}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 28
 \BOOKMARK [0][-]{chapter.6}{Concurrency Control}{}% 29
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.6.1}{lab description}{chapter.6}% 30
 \BOOKMARK [1][-]{section.6.2}{Solution}{chapter.6}% 31
 \BOOKMARK [1][-]{section.6.3}{Example Run}{chapter.6}% 32
 \BOOKMARK [1][-]{section.6.4}{Motivation- and theory}{chapter.6}% 33
 \BOOKMARK [1][-]{section.6.5}{Conclusion}{chapter.6}% 34
+=======
+\BOOKMARK [1][-]{section.6.1}{Example run}{chapter.6}% 30
+\BOOKMARK [0][-]{chapter.7}{Mobile}{}% 31
+\BOOKMARK [1][-]{section.7.1}{Lab Description}{chapter.7}% 32
+\BOOKMARK [1][-]{section.7.2}{Solution}{chapter.7}% 33
+\BOOKMARK [1][-]{section.7.3}{Example Run}{chapter.7}% 34
+\BOOKMARK [1][-]{section.7.4}{Theory}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.5}{Conclusion}{chapter.7}% 36
+>>>>>>> 9d392c95571a19c66fe500c32118440596bed85c

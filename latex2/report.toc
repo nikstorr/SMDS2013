@@ -36,9 +36,28 @@
 \contentsline {subsection}{\numberline {5.4.1}Group Communication Programing Model}{30}{subsection.5.4.1}
 \contentsline {section}{\numberline {5.5}Conclusion}{31}{section.5.5}
 \contentsline {chapter}{\numberline {6}Concurrency Control}{33}{chapter.6}
+<<<<<<< HEAD
 \contentsline {section}{\numberline {6.1}lab description}{33}{section.6.1}
 \contentsline {section}{\numberline {6.2}Solution}{34}{section.6.2}
 \contentsline {section}{\numberline {6.3}Example Run}{35}{section.6.3}
 \contentsline {section}{\numberline {6.4}Motivation- and theory}{38}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Coordination: Mututal Exclusion}{38}{subsection.6.4.1}
 \contentsline {section}{\numberline {6.5}Conclusion}{40}{section.6.5}
+=======
+\contentsline {section}{\numberline {6.1}Example run}{33}{section.6.1}
+\contentsline {chapter}{\numberline {7}Mobile}{34}{chapter.7}
+\contentsline {section}{\numberline {7.1}Lab Description}{34}{section.7.1}
+\contentsline {section}{\numberline {7.2}Solution}{34}{section.7.2}
+\contentsline {section}{\numberline {7.3}Example Run}{34}{section.7.3}
+\contentsline {section}{\numberline {7.4}Theory}{34}{section.7.4}
+\contentsline {subsubsection}{Volatility}{35}{subsubsection*.5}
+\contentsline {subsubsection}{Smart Spaces}{35}{subsubsection*.6}
+\contentsline {subsection}{\numberline {7.4.1}Device Model}{35}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Discovery Services}{37}{subsection.7.4.2}
+\contentsline {subsubsection}{Serverless Discovery}{37}{subsubsection*.7}
+\contentsline {subsubsection}{Real World Example:}{38}{subsubsection*.8}
+\contentsline {subsection}{\numberline {7.4.3}Interoperation}{38}{subsection.7.4.3}
+\contentsline {subsubsection}{Interoperations Models}{38}{subsubsection*.9}
+\contentsline {subsubsection}{Sensing And Context-wareness}{39}{subsubsection*.10}
+\contentsline {section}{\numberline {7.5}Conclusion}{39}{section.7.5}
+>>>>>>> 9d392c95571a19c66fe500c32118440596bed85c

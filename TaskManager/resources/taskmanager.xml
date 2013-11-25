@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taskmanager>
+	<tasks>
+		<task id="45" name="feed the dog" date="today" status="not done"
+			required="false">
+			<description>you need to feed the dog</description>
+			<attendants>
+				<attendant>jim</attendant>
+				<attendant>jon</attendant>
+				<attendant>joe</attendant>
+			</attendants>
+			<roles>
+				<role>manager</role>
+				<role>moderator</role>
+				<role>user</role>
+			</roles>
+		</task>
+		<task id="12" name="jump into the air" date="tomorrow" status="not done"
+			required="true">
+			<description>dont come down again. stay up there.</description>
+			<attendants>
+				<attendant>ben</attendant>
+				<attendant>bill</attendant>
+			</attendants>
+			<roles>
+				<role>jumper</role>
+			</roles>
+		</task>
+	</tasks>
+</taskmanager>

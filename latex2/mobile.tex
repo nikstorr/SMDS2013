@@ -9,10 +9,14 @@ In this chapter we talk about mobile computing.
 
 \section{Solution}
 
-The android system is event based (intents). A service is a background activity with no user interface. An activity is a single user iterface (can be started by other activities). An intent broadcasts to receivers (services and activities). Content providers are containers that let applications share data amongst them (table based storage mechanisms e.g. sqllite, Web services. etc). A client process then requests that data through a content resolver. 
+The android system is event based (intents). A service is a background activity with no user interface. An activity is a single user interface (can be started by other activities). An intent broadcasts to receivers (services and activities). Content providers are containers that let applications share data amongst them (table based storage mechanisms e.g. sqllite, Web services. etc). A client process then requests that data through a content resolver. 
 
 
 \section{Example Run}
+The example consists of a client and an app-engine backend deployed to google cloud. The app-engine exposes our takmanager service at a google endpoint. Clients registers with the endpoint and receives messages (tasks) from the endpoint. 
+
+Registering with the google endpoint involves  
+
 
 
 \section{Theory}

@@ -1,22 +1,20 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.12)  25 NOV 2013 04:04
-=======
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.4.4)  24 NOV 2013 15:52
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.4.4)  25 NOV 2013 15:54
 entering extended mode
 **report.tex
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.tex
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
@@ -98,18 +96,16 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen105
 \captionmargin@=\dimen106
 \captionwidth=\dimen107
-\caption@tempdima=\dimen108
-\caption@indent=\dimen109
-\caption@parindent=\dimen110
-\caption@hangindent=\dimen111
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
 )
 \c@ContinuedFloat=\count89
 )
@@ -118,17 +114,17 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen112
-\extrarowheight=\dimen113
+\col@sep=\dimen111
+\extrarowheight=\dimen112
 \NC@list=\toks15
 \extratabsurround=\skip43
 \backup@length=\skip44
 )
-\TX@col@width=\dimen114
-\TX@old@table=\dimen115
-\TX@old@col=\dimen116
-\TX@target=\dimen117
-\TX@delta=\dimen118
+\TX@col@width=\dimen113
+\TX@old@table=\dimen114
+\TX@old@col=\dimen115
+\TX@target=\dimen116
+\TX@delta=\dimen117
 \TX@cols=\count90
 \TX@ftn=\toks16
 )
@@ -155,23 +151,23 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen119
-\lightrulewidth=\dimen120
-\cmidrulewidth=\dimen121
-\belowrulesep=\dimen122
-\belowbottomsep=\dimen123
-\aboverulesep=\dimen124
-\abovetopsep=\dimen125
-\cmidrulesep=\dimen126
-\cmidrulekern=\dimen127
-\defaultaddspace=\dimen128
+\heavyrulewidth=\dimen118
+\lightrulewidth=\dimen119
+\cmidrulewidth=\dimen120
+\belowrulesep=\dimen121
+\belowbottomsep=\dimen122
+\aboverulesep=\dimen123
+\abovetopsep=\dimen124
+\cmidrulesep=\dimen125
+\cmidrulekern=\dimen126
+\defaultaddspace=\dimen127
 \@cmidla=\count91
 \@cmidlb=\count92
-\@aboverulesep=\dimen129
-\@belowrulesep=\dimen130
+\@aboverulesep=\dimen128
+\@belowrulesep=\dimen129
 \@thisruleclass=\count93
 \@lastruleclass=\count94
-\@thisrulewidth=\dimen131
+\@thisrulewidth=\dimen130
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\floatrow\floatrow.sty"
 Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
@@ -184,9 +180,9 @@ Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 
 \FR@everyfloat=\toks18
 \flrow@foot=\insert233
-\FB@wd=\dimen132
-\FBo@wd=\dimen133
-\FBc@wd=\dimen134
+\FB@wd=\dimen131
+\FBo@wd=\dimen132
+\FBc@wd=\dimen133
 \FBo@ht=\skip59
 \FBc@ht=\skip60
 \FBf@ht=\skip61
@@ -202,7 +198,7 @@ Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 \Zhsize=\skip67
 \sZhsize=\skip68
 \flrow@rowbox=\box28
-\FR@Zunitlength=\dimen135
+\FR@Zunitlength=\dimen134
 \c@FBcnt=\count100
 \FPOScnt=\count101
 \LTleft=\skip69
@@ -216,14 +212,14 @@ Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 \lst@gtempboxa=\box29
 \lst@token=\toks20
 \lst@length=\count103
-\lst@currlwidth=\dimen136
+\lst@currlwidth=\dimen135
 \lst@column=\count104
 \lst@pos=\count105
-\lst@lostspace=\dimen137
-\lst@width=\dimen138
+\lst@lostspace=\dimen136
+\lst@width=\dimen137
 \lst@newlines=\count106
 \lst@lineno=\count107
-\lst@maxwidth=\dimen139
+\lst@maxwidth=\dimen138
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
@@ -244,15 +240,15 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box31
 \beforetitleunit=\skip73
 \aftertitleunit=\skip74
-\ttl@plus=\dimen140
-\ttl@minus=\dimen141
+\ttl@plus=\dimen139
+\ttl@minus=\dimen140
 \ttl@toksa=\toks21
-\titlewidth=\dimen142
-\titlewidthlast=\dimen143
-\titlewidthfirst=\dimen144
+\titlewidth=\dimen141
+\titlewidthlast=\dimen142
+\titlewidthfirst=\dimen143
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
@@ -302,51 +298,47 @@ Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen145
+\@linkdim=\dimen144
 \Hy@linkcounter=\count110
 \Hy@pagecounter=\count111
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count112
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
+Package hyperref Info: Bookmarks ON on input line 4300.
 \c@Hy@tempcnt=\count113
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen146
+LaTeX Info: Redefining \url on input line 4653.
 \Fld@menulength=\count114
-\Field@Width=\dimen147
-\Fld@charsize=\dimen148
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
+\Field@Width=\dimen145
+\Fld@charsize=\dimen146
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
 \Hy@abspage=\count115
 \c@Item=\count116
 \c@Hfootnote=\count117
@@ -355,7 +347,7 @@ LaTeX Info: Redefining \pageref on input line 6369.
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
 \Fld@listcount=\count118
 \c@bookmark@seq@number=\count119
 
@@ -391,7 +383,8 @@ Package minitoc Info: I0003
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc0)
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+mtc0")
 Package minitoc Info: I0012
 (minitoc)             Long extensions (Unix-like) will be used.
 Package minitoc Info: I0031
@@ -405,8 +398,7 @@ Package minitoc Info: I0031
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\english.mld"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\english.mld"
 File: english.mld 2006/01/13
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\english.mld"
@@ -415,27 +407,39 @@ File: english.mld 2006/01/13
 ("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip79
-\enit@outerparindent=\dimen149
+\enit@outerparindent=\dimen147
 \enit@toks=\toks23
 \enit@inbox=\box34
 \enitdp@description=\count124
 )
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.aux
-(C:\Users\Bendix\Documents\SMDS2013\latex2\introduction.aux
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+aux"
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\introdu
+ction.aux"
 
 LaTeX Warning: Label `tab:title' multiply defined.
 
-) (C:\Users\Bendix\Documents\SMDS2013\latex2\servlet.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\tcp.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\rest.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\security.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\groupcommunication.aux
+)
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\servlet
+.aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\tcp.aux
+")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\rest.au
+x")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\securit
+y.aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\groupco
+mmunication.aux"
 
 LaTeX Warning: Label `tab:title' multiply defined.
 
-) (C:\Users\Bendix\Documents\SMDS2013\latex2\concurrency.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\mobile.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\Conclusion.aux))
+)
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\concurr
+ency.aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\mobile.
+aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\Conclus
+ion.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
@@ -450,23 +454,21 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count125
-\scratchdimen=\dimen150
+\scratchdimen=\dimen148
 \scratchbox=\box35
 \nofMPsegments=\count126
 \nofMParguments=\count127
 \everyMPshowfont=\toks24
 \MPscratchCnt=\count128
-\MPscratchDim=\dimen151
+\MPscratchDim=\dimen149
 \MPnumerator=\count129
 \makeMPintoPDFobject=\count130
 \everyMPtoPDFconversion=\toks25
 )
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: floatrow package is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: floatrow package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -479,7 +481,7 @@ LaTeX Info: Redefining \selectfont on input line 78.
 Package hyperref Info: Link coloring ON on input line 78.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
@@ -490,8 +492,10 @@ LaTeX Info: Redefining \ref on input line 78.
 LaTeX Info: Redefining \pageref on input line 78.
 LaTeX Info: Redefining \nameref on input line 78.
 
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.out)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.out)
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+out")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+out")
 \@outlinefile=\write5
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
@@ -523,7 +527,9 @@ Package minitoc(hints) Warning: W0023
 (minitoc(hints))                --- It may be the consequence 
 (minitoc(hints))                of loading the ``hyperref'' package.
 
-(C:\Users\Bendix\Documents\SMDS2013\latex2\titlepage.tex
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\titlepa
+ge.tex"
 Overfull \hbox (85.0pt too wide) in paragraph at lines 3--4
  [] 
  []
@@ -593,7 +599,8 @@ Package minitoc Info: I0033
 Package minitoc Info: I0033
 (minitoc)             Writing report.mtc7.
 
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.toc
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -602,28 +609,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-<<<<<<< HEAD
-l.44 ...mberline {6.5}Conclusion}{39}{section.6.5}
-=======
-l.42 ...numberline {7.2}Solution}{34}{section.7.2}
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+l.43 ...mberline {6.5}Conclusion}{42}{section.6.5}
                                                    [1
 
 ])
 \tf@toc=\write6
  [2]
-<<<<<<< HEAD
-(C:\Users\Bendix\Documents\SMDS2013\latex2\introduction.tex
-=======
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\introdu
 ction.tex"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc1)
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+mtc1")
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
@@ -835,22 +836,268 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
-<<<<<<< HEAD
-) [8] (C:\Users\Bendix\Documents\SMDS2013\latex2\servlet.tex)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\tcp.tex
-=======
 ) [8]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\servlet
 .tex")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\tcp.tex
 "
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 2.
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc2)
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+mtc2")
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
 
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+[9
+
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 27--28
+[]\OT1/cmr/m/it/10 Develop java se-ri-al-iza-tion classes for task-manager-xml 
+us-ing Java
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 29--30
+[]\OT1/cmr/m/it/10 Develop TaskMan-agerTCPServer and TaskMan-agerTCP-Client cla
+sses
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 83--83
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 93--93
+[][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+[12]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 118--118
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 129--129
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 148--148
+[][][][][][][] 
+ []
+
+[13]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 169--169
+[][][][][][][] 
+ []
+
+[14]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+) [16]
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\rest.te
+x"
+Chapter 3.
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+mtc3")
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+
+ []
+
+[17
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+[18] [19]) [20]
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\securit
+y.tex"
+Chapter 4.
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+mtc4")
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
@@ -870,218 +1117,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-[9
-
-
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-[10]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 69--69
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 88--88
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 109--109
-[][][][][][][] 
- []
-
-[11] [12]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 126--126
-[][][][][][][] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 137--137
-[][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--204
-
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
-
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-
- []
-
-<<<<<<< HEAD
-) [15] (C:\Users\Bendix\Documents\SMDS2013\latex2\rest.tex
-=======
-) [15]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\rest.te
-x"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
-Chapter 3.
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc3)
-Underfull \hbox (badness 10000) in paragraph at lines 8--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--24
-
- []
-
-[16
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-<<<<<<< HEAD
-[17] [18]) [19] (C:\Users\Bendix\Documents\SMDS2013\latex2\security.tex
-=======
-[17] [18]) [19]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\securit
-y.tex"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
-Chapter 4.
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc4)
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
-[20
+[21
 
 
 
@@ -1091,72 +1127,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 69.
+(caption)                particular \caption on input line 74.
 See the caption package documentation for explanation.
 
-<<<<<<< HEAD
-<images/security_run.png, id=459, 919.93687pt x 451.6875pt>
-=======
-<images/security_run.png, id=469, 919.93687pt x 451.6875pt>
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+<images/security_run.png, id=471, 919.93687pt x 451.6875pt>
 File: images/security_run.png Graphic file (type png)
 
 <use images/security_run.png>
-Package pdftex.def Info: images/security_run.png used on input line 70.
+Package pdftex.def Info: images/security_run.png used on input line 75.
 (pdftex.def)             Requested size: 459.96732pt x 225.84319pt.
 
-Overfull \hbox (114.96732pt too wide) in paragraph at lines 70--71
+Overfull \hbox (114.96732pt too wide) in paragraph at lines 75--76
  [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-
- []
-
-<<<<<<< HEAD
-[22 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/security_run.png>]
-=======
-[22 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
-es/security_run.png>]
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
@@ -1165,7 +1192,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-
+[24 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/security_run.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
@@ -1175,25 +1203,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-<<<<<<< HEAD
-) [24] (C:\Users\Bendix\Documents\SMDS2013\latex2\groupcommunication.tex
-=======
-) [24]
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+) [26]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\groupco
 mmunication.tex"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 5.
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc5)
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+mtc5")
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
@@ -1213,7 +1269,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[25
+[27
 
 
 
@@ -1272,7 +1328,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-[26]
+[28]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 53--53
 [][][][][][][] 
  []
@@ -1282,7 +1338,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--76
 
  []
 
-[27]
+[29]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 80--80
 [][][][][][][] 
  []
@@ -1302,7 +1358,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-[28]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
@@ -1348,7 +1404,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-[29]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
@@ -1368,7 +1424,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--185
 
  []
 
-[30]
+[32]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 189.
@@ -1389,25 +1445,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
-[31]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
-<<<<<<< HEAD
-) [32] (C:\Users\Bendix\Documents\SMDS2013\latex2\concurrency.tex
-=======
-) [32]
+) [34]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\concurr
 ency.tex"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 6.
-(C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc6)
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+mtc6")
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-<<<<<<< HEAD
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
@@ -1514,7 +1567,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-[33
+[35
 
 
 
@@ -1540,20 +1593,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 36--37
-=======
-pdfTeX warning: pdflatex.exe (file C:/Users/nikolai/Documents/skole/ITU5/Distri
-buted Systems/GIT2/latex2/images/concurrencyrun.pdf): PDF inclusion: found PDF 
-version <1.7>, but at most version <1.5> allowed
-<images/concurrencyrun.pdf, id=602, 725.74335pt x 456.44226pt>
-File: images/concurrencyrun.pdf Graphic file (type pdf)
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
-<<<<<<< HEAD
-=======
-[33
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
@@ -1566,7 +1608,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-[34]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
@@ -1579,70 +1621,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--49
-=======
- <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/images/
-concurrencyrun.pdf>]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\mobile.
-tex"
-Chapter 7.
-
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
-mtc7")
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-[34
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 62.
 See the caption package documentation for explanation.
 
-<images/CCServer1.png, id=613, 576.65437pt x 405.76593pt>
+<images/CCServer1.png, id=630, 576.65437pt x 405.76593pt>
 File: images/CCServer1.png Graphic file (type png)
 
 <use images/CCServer1.png>
@@ -1653,31 +1661,17 @@ Overfull \hbox (0.99529pt too wide) in paragraph at lines 63--66
 [][] 
  []
 
-[35]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
-
- []
-
-
-<<<<<<< HEAD
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 71.
 See the caption package documentation for explanation.
 
-<images/CCServer2.png, id=619, 625.58719pt x 432.86719pt>
+<images/CCServer2.png, id=636, 625.58719pt x 432.86719pt>
 File: images/CCServer2.png Graphic file (type png)
 
 <use images/CCServer2.png>
@@ -1688,36 +1682,18 @@ Overfull \hbox (30.35521pt too wide) in paragraph at lines 72--75
 [][] 
  []
 
-[36 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/CCServer1.png>]
+[38 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/CCServer1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 76--77
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
-
- []
-
-
-<<<<<<< HEAD
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 80.
 See the caption package documentation for explanation.
 
-<images/CCServer3.png, id=626, 649.67719pt x 328.97906pt>
+<images/CCServer3.png, id=642, 649.67719pt x 328.97906pt>
 File: images/CCServer3.png Graphic file (type png)
 
 <use images/CCServer3.png>
@@ -1728,74 +1704,138 @@ Overfull \hbox (44.80931pt too wide) in paragraph at lines 81--84
 [][] 
  []
 
-[37 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/CCServer2.png>]
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-
- []
-
-
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+[39 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/CCServer2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-<<<<<<< HEAD
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 91--92
-\OT1/cmr/m/n/10 Android's 'dis-cov-eryLis-tener' (a call-back han-dler for reg-
-is-ter-ing ser-vices)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-[37]
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-<<<<<<< HEAD
-[38 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/CCServer3.png>]
+[40 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/CCServer3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 123--124
-=======
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ´ in font cmr10!
-[39]) [40] (C:\Users\Bendix\Documents\SMDS2013\latex2\mobile.tex)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\Conclusion.tex)
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+[41]) [42]
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\mobile.
+tex"
+Chapter 7.
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+mtc7")
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+[43
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 95--96
+\OT1/cmr/m/n/10 Android's 'dis-cov-eryLis-tener' (a call-back han-dler for reg-
+is-ter-ing ser-vices)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
@@ -1805,24 +1845,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
-[38]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
-) [39]
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+) [48]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\Conclus
 ion.tex")
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the report.maf file.
@@ -1848,36 +1897,37 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                in the report.log file.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-<<<<<<< HEAD
-[41
-
-
-=======
-[40
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+[49
 
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
- (C:\Users\Bendix\Documents\SMDS2013\latex2\report.aux
-(C:\Users\Bendix\Documents\SMDS2013\latex2\introduction.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\servlet.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\tcp.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\rest.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\security.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\groupcommunication.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\concurrency.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\mobile.aux)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\Conclusion.aux))
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
+aux"
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\introdu
+ction.aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\servlet
+.aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\tcp.aux
+")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\rest.au
+x")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\securit
+y.aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\groupco
+mmunication.aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\concurr
+ency.aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\mobile.
+aux")
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\Conclus
+ion.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `report.out' has not changed.
-<<<<<<< HEAD
-(rerunfilecheck)             Checksum: 06D3829EF434834B048B9CA83091A1C7;1998.
-=======
-(rerunfilecheck)             Checksum: 044A5E66B0BE98AD5B8063CD96C70D7D;2084.
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+(rerunfilecheck)             Checksum: F4FE9C98D7AFAE6B5F8574C272D2AEE5;2347.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1888,23 +1938,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 11186 strings out of 493921
- 167667 string characters out of 3147279
- 473989 words of memory out of 3000000
- 13776 multiletter control sequences out of 15000+200000
+ 11042 strings out of 494045
+ 167449 string characters out of 3148382
+ 589586 words of memory out of 3000000
+ 13627 multiletter control sequences out of 15000+200000
  9728 words of font info for 34 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 36i,9n,42p,876b,1687s stack positions out of 5000i,500n,10000p,200000b,50000s
-=======
- 11030 strings out of 494045
- 167151 string characters out of 3148382
- 670417 words of memory out of 3000000
- 13616 multiletter control sequences out of 15000+200000
- 9560 words of font info for 33 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 36i,9n,41p,1068b,1683s stack positions out of 5000i,500n,10000p,200000b,50000s
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+ 36i,9n,41p,1068b,1208s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -1915,20 +1955,11 @@ e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Fi
-<<<<<<< HEAD
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (42 pages, 540224 bytes).
+Output written on report.pdf (50 pages, 564743 bytes).
 PDF statistics:
- 757 PDF objects out of 1000 (max. 8388607)
- 310 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (41 pages, 625629 bytes).
-PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 316 named destinations out of 1000 (max. 500000)
- 299 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+ 816 PDF objects out of 1000 (max. 8388607)
+ 312 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

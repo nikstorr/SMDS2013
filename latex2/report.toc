@@ -8,56 +8,51 @@
 \contentsline {section}{\numberline {1.4}Failure model}{7}{section.1.4}
 \contentsline {chapter}{\numberline {2}TCP server and Serialization}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}lab description}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Solution}{9}{section.2.2}
-\contentsline {subsubsection}{Serialization}{10}{subsubsection*.2}
-\contentsline {subsubsection}{TCP}{10}{subsubsection*.3}
-\contentsline {subsubsection}{Byte Stream}{10}{subsubsection*.4}
-\contentsline {subsection}{\numberline {2.2.1}http protocol}{11}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}example run}{11}{section.2.3}
-\contentsline {section}{\numberline {2.4}Reflection}{14}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Good and bad}{15}{subsection.2.4.1}
-\contentsline {chapter}{\numberline {3}REST Service}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Lab description}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Solution}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Test run}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reflection}{18}{section.3.4}
-\contentsline {section}{\numberline {3.5}Conclusion}{19}{section.3.5}
-\contentsline {chapter}{\numberline {4}Security}{20}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lab Description}{20}{section.4.1}
-\contentsline {section}{\numberline {4.2}Solution}{20}{section.4.2}
-\contentsline {section}{\numberline {4.3}Example run}{22}{section.4.3}
-\contentsline {section}{\numberline {4.4}Theory}{22}{section.4.4}
-\contentsline {section}{\numberline {4.5}Conclusion}{24}{section.4.5}
-\contentsline {chapter}{\numberline {5}Indirect Communication}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}lab description}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2}Solution}{26}{section.5.2}
-\contentsline {section}{\numberline {5.3}Example Run}{27}{section.5.3}
-\contentsline {section}{\numberline {5.4}Motivation- and theory}{29}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Group Communication Programing Model}{30}{subsection.5.4.1}
-\contentsline {section}{\numberline {5.5}Conclusion}{31}{section.5.5}
-\contentsline {chapter}{\numberline {6}Concurrency Control}{33}{chapter.6}
-<<<<<<< HEAD
-\contentsline {section}{\numberline {6.1}lab description}{33}{section.6.1}
-\contentsline {section}{\numberline {6.2}Solution}{34}{section.6.2}
-\contentsline {section}{\numberline {6.3}Example Run}{35}{section.6.3}
-\contentsline {section}{\numberline {6.4}Motivation- and theory}{38}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Coordination: Mututal Exclusion}{38}{subsection.6.4.1}
-\contentsline {section}{\numberline {6.5}Conclusion}{40}{section.6.5}
-=======
-\contentsline {section}{\numberline {6.1}Example run}{33}{section.6.1}
-\contentsline {chapter}{\numberline {7}Mobile}{34}{chapter.7}
-\contentsline {section}{\numberline {7.1}Lab Description}{34}{section.7.1}
-\contentsline {section}{\numberline {7.2}Solution}{34}{section.7.2}
-\contentsline {section}{\numberline {7.3}Example Run}{34}{section.7.3}
-\contentsline {section}{\numberline {7.4}Theory}{34}{section.7.4}
-\contentsline {subsubsection}{Volatility}{35}{subsubsection*.5}
-\contentsline {subsubsection}{Smart Spaces}{35}{subsubsection*.6}
-\contentsline {subsection}{\numberline {7.4.1}Device Model}{35}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Discovery Services}{37}{subsection.7.4.2}
-\contentsline {subsubsection}{Serverless Discovery}{37}{subsubsection*.7}
-\contentsline {subsubsection}{Real World Example:}{38}{subsubsection*.8}
-\contentsline {subsection}{\numberline {7.4.3}Interoperation}{38}{subsection.7.4.3}
-\contentsline {subsubsection}{Interoperations Models}{38}{subsubsection*.9}
-\contentsline {subsubsection}{Sensing And Context-wareness}{39}{subsubsection*.10}
-\contentsline {section}{\numberline {7.5}Conclusion}{39}{section.7.5}
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+\contentsline {section}{\numberline {2.2}Solution}{10}{section.2.2}
+\contentsline {subsubsection}{Serialization}{11}{subsubsection*.2}
+\contentsline {subsubsection}{TCP}{11}{subsubsection*.3}
+\contentsline {subsubsection}{Byte Stream}{11}{subsubsection*.4}
+\contentsline {section}{\numberline {2.3}example run}{12}{section.2.3}
+\contentsline {section}{\numberline {2.4}Reflection}{15}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Good and bad}{16}{subsection.2.4.1}
+\contentsline {chapter}{\numberline {3}REST Service}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Lab description}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Solution}{17}{section.3.2}
+\contentsline {section}{\numberline {3.3}Test run}{19}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reflection}{19}{section.3.4}
+\contentsline {section}{\numberline {3.5}Conclusion}{20}{section.3.5}
+\contentsline {chapter}{\numberline {4}Security}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lab Description}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Solution}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Example run}{23}{section.4.3}
+\contentsline {section}{\numberline {4.4}Relating To The Theory}{24}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion}{26}{section.4.5}
+\contentsline {chapter}{\numberline {5}Indirect Communication}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}lab description}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}Solution}{28}{section.5.2}
+\contentsline {section}{\numberline {5.3}Example Run}{29}{section.5.3}
+\contentsline {section}{\numberline {5.4}Motivation- and theory}{31}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Group Communication Programing Model}{32}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}Conclusion}{33}{section.5.5}
+\contentsline {chapter}{\numberline {6}Concurrency Control}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}lab description}{35}{section.6.1}
+\contentsline {section}{\numberline {6.2}Solution}{36}{section.6.2}
+\contentsline {section}{\numberline {6.3}Example Run}{37}{section.6.3}
+\contentsline {section}{\numberline {6.4}Motivation- and theory}{40}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Coordination: Mututal Exclusion}{40}{subsection.6.4.1}
+\contentsline {section}{\numberline {6.5}Conclusion}{42}{section.6.5}
+\contentsline {chapter}{\numberline {7}Mobile}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1}Lab Description}{43}{section.7.1}
+\contentsline {section}{\numberline {7.2}Solution}{43}{section.7.2}
+\contentsline {section}{\numberline {7.3}Example Run}{43}{section.7.3}
+\contentsline {section}{\numberline {7.4}Theory}{44}{section.7.4}
+\contentsline {subsubsection}{Volatility}{44}{subsubsection*.5}
+\contentsline {subsubsection}{Smart Spaces}{44}{subsubsection*.6}
+\contentsline {subsection}{\numberline {7.4.1}Device Model}{44}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Discovery Services}{46}{subsection.7.4.2}
+\contentsline {subsubsection}{Serverless Discovery}{46}{subsubsection*.7}
+\contentsline {subsubsection}{Real World Example:}{47}{subsubsection*.8}
+\contentsline {subsection}{\numberline {7.4.3}Interoperation}{47}{subsection.7.4.3}
+\contentsline {subsubsection}{Interoperations Models}{48}{subsubsection*.9}
+\contentsline {subsubsection}{Sensing And Context-wareness}{48}{subsubsection*.10}
+\contentsline {section}{\numberline {7.5}Conclusion}{48}{section.7.5}

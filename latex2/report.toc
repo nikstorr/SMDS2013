@@ -10,11 +10,11 @@
 \contentsline {section}{\numberline {2.1}lab description}{9}{section.2.1}
 \contentsline {section}{\numberline {2.2}Solution}{10}{section.2.2}
 \contentsline {subsubsection}{Serialization}{11}{subsubsection*.2}
-\contentsline {subsubsection}{TCP}{11}{subsubsection*.3}
-\contentsline {subsubsection}{Byte Stream}{11}{subsubsection*.4}
+\contentsline {subsubsection}{Byte Stream}{11}{subsubsection*.3}
+\contentsline {subsubsection}{JAXB}{11}{subsubsection*.4}
+\contentsline {subsubsection}{TCP}{12}{subsubsection*.5}
 \contentsline {section}{\numberline {2.3}example run}{12}{section.2.3}
 \contentsline {section}{\numberline {2.4}Reflection}{15}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Good and bad}{16}{subsection.2.4.1}
 \contentsline {chapter}{\numberline {3}REST Service}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Lab description}{17}{section.3.1}
 \contentsline {section}{\numberline {3.2}Solution}{17}{section.3.2}
@@ -41,18 +41,19 @@
 \contentsline {section}{\numberline {6.4}Motivation- and theory}{40}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Coordination: Mututal Exclusion}{40}{subsection.6.4.1}
 \contentsline {section}{\numberline {6.5}Conclusion}{42}{section.6.5}
-\contentsline {chapter}{\numberline {7}Mobile}{43}{chapter.7}
+\contentsline {chapter}{\numberline {7}Mobile client}{43}{chapter.7}
 \contentsline {section}{\numberline {7.1}Lab Description}{43}{section.7.1}
 \contentsline {section}{\numberline {7.2}Solution}{43}{section.7.2}
-\contentsline {section}{\numberline {7.3}Example Run}{43}{section.7.3}
-\contentsline {section}{\numberline {7.4}Theory}{44}{section.7.4}
-\contentsline {subsubsection}{Volatility}{44}{subsubsection*.5}
-\contentsline {subsubsection}{Smart Spaces}{44}{subsubsection*.6}
-\contentsline {subsection}{\numberline {7.4.1}Device Model}{44}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Discovery Services}{46}{subsection.7.4.2}
-\contentsline {subsubsection}{Serverless Discovery}{46}{subsubsection*.7}
-\contentsline {subsubsection}{Real World Example:}{47}{subsubsection*.8}
-\contentsline {subsection}{\numberline {7.4.3}Interoperation}{47}{subsection.7.4.3}
-\contentsline {subsubsection}{Interoperations Models}{48}{subsubsection*.9}
-\contentsline {subsubsection}{Sensing And Context-wareness}{48}{subsubsection*.10}
-\contentsline {section}{\numberline {7.5}Conclusion}{48}{section.7.5}
+\contentsline {section}{\numberline {7.3}Example Run}{44}{section.7.3}
+\contentsline {section}{\numberline {7.4}Theory}{45}{section.7.4}
+\contentsline {subsubsection}{Volatility}{45}{subsubsection*.12}
+\contentsline {subsubsection}{Smart Spaces}{45}{subsubsection*.13}
+\contentsline {subsection}{\numberline {7.4.1}Device Model}{45}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Discovery Services}{47}{subsection.7.4.2}
+\contentsline {subsubsection}{Serverless Discovery}{47}{subsubsection*.14}
+\contentsline {subsubsection}{Real World Example:}{48}{subsubsection*.15}
+\contentsline {subsection}{\numberline {7.4.3}Interoperation}{48}{subsection.7.4.3}
+\contentsline {subsubsection}{Interoperations Models}{49}{subsubsection*.16}
+\contentsline {subsubsection}{Sensing And Context-wareness}{49}{subsubsection*.17}
+\contentsline {section}{\numberline {7.5}Conclusion}{49}{section.7.5}
+\contentsline {chapter}{\numberline {A}Who-did-what}{56}{appendix.A}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.4.4)  25 NOV 2013 15:54
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.4.4)  2 DEC 2013 09:11
 entering extended mode
 **report.tex
 
@@ -439,7 +439,11 @@ ency.aux")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\mobile.
 aux")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\Conclus
-ion.aux"))
+ion.aux")
+
+LaTeX Warning: Label `tab:title' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
@@ -554,32 +558,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-[1
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+ [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
 Package minitoc Info: I0024
@@ -598,6 +583,8 @@ Package minitoc Info: I0033
 (minitoc)             Writing report.mtc6.
 Package minitoc Info: I0033
 (minitoc)             Writing report.mtc7.
+Package minitoc Info: I0033
+(minitoc)             Writing report.mtc8.
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 toc"
@@ -738,13 +725,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 110.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
 
 Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
@@ -845,6 +825,9 @@ Chapter 2.
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 mtc2")
+
+LaTeX Warning: Reference `tcp_conclusion' on page 9 undefined on input line 4.
+
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
@@ -874,6 +857,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
 [9
 
 
@@ -881,11 +869,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
-
- []
-
-
 Underfull \hbox (badness 1867) in paragraph at lines 27--28
 []\OT1/cmr/m/it/10 Develop java se-ri-al-iza-tion classes for task-manager-xml 
 us-ing Java
@@ -939,12 +922,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
@@ -974,46 +952,94 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 99--99
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 93--93
+Overfull \hbox (6.0pt too wide) in paragraph at lines 109--109
 [][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
-
  []
 
 [12]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 118--118
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 134--134
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 129--129
+Overfull \hbox (6.0pt too wide) in paragraph at lines 145--145
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 148--148
+Overfull \hbox (6.0pt too wide) in paragraph at lines 164--164
 [][][][][][][] 
  []
 
 [13]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 169--169
+Overfull \hbox (6.0pt too wide) in paragraph at lines 185--185
 [][][][][][][] 
  []
 
-[14]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 202.
+See the caption package documentation for explanation.
+
+<images/TCP_run_client.png, id=397, 556.32843pt x 360.59718pt>
+File: images/TCP_run_client.png Graphic file (type png)
+
+<use images/TCP_run_client.png>
+Package pdftex.def Info: images/TCP_run_client.png used on input line 203.
+(pdftex.def)             Requested size: 389.42725pt x 252.4163pt.
+
+Overfull \hbox (44.42725pt too wide) in paragraph at lines 203--204
+ [] 
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 210.
+See the caption package documentation for explanation.
+
+[14 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/TCP_run_client.png>]
+<images/TCP_run_server.png, id=420, 556.32843pt x 360.59718pt>
+File: images/TCP_run_server.png Graphic file (type png)
+
+<use images/TCP_run_server.png>
+Package pdftex.def Info: images/TCP_run_server.png used on input line 211.
+(pdftex.def)             Requested size: 389.42725pt x 252.4163pt.
+
+Overfull \hbox (44.42725pt too wide) in paragraph at lines 211--212
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ˜ in font cmr10!
@@ -1021,43 +1047,18 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+ []
+
+[15 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/TCP_run_server.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--203
-
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ˜ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
@@ -1161,7 +1162,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 74.
 See the caption package documentation for explanation.
 
-<images/security_run.png, id=471, 919.93687pt x 451.6875pt>
+<images/security_run.png, id=486, 919.93687pt x 451.6875pt>
 File: images/security_run.png Graphic file (type png)
 
 <use images/security_run.png>
@@ -1334,42 +1335,47 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 53--53
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--76
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
 [29]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 80--80
+Overfull \hbox (6.0pt too wide) in paragraph at lines 79--79
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 107--107
+Overfull \hbox (6.0pt too wide) in paragraph at lines 105--105
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
@@ -1384,51 +1390,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--159
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-
- []
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 162--163
+Underfull \hbox (badness 1052) in paragraph at lines 160--161
 []\OT1/cmr/bx/n/10 Shared mem-ory sys-tems: \OT1/cmr/m/n/10 Pro-cesses ac-cess 
 DSM by reads and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 [31]
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 181--183
 
  []
 
 [32]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 189.
+(caption)                particular \caption on input line 187.
 See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
+
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 207--208
@@ -1436,17 +1442,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--208
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
@@ -1608,11 +1609,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-[36]
+
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
+[36]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ´ in font cmr10!
 
@@ -1650,7 +1652,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 62.
 See the caption package documentation for explanation.
 
-<images/CCServer1.png, id=630, 576.65437pt x 405.76593pt>
+<images/CCServer1.png, id=642, 576.65437pt x 405.76593pt>
 File: images/CCServer1.png Graphic file (type png)
 
 <use images/CCServer1.png>
@@ -1671,7 +1673,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 71.
 See the caption package documentation for explanation.
 
-<images/CCServer2.png, id=636, 625.58719pt x 432.86719pt>
+<images/CCServer2.png, id=648, 625.58719pt x 432.86719pt>
 File: images/CCServer2.png Graphic file (type png)
 
 <use images/CCServer2.png>
@@ -1693,7 +1695,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 80.
 See the caption package documentation for explanation.
 
-<images/CCServer3.png, id=642, 649.67719pt x 328.97906pt>
+<images/CCServer3.png, id=654, 649.67719pt x 328.97906pt>
 File: images/CCServer3.png Graphic file (type png)
 
 <use images/CCServer3.png>
@@ -1735,143 +1737,242 @@ Chapter 7.
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 mtc7")
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
-
- []
-
-[43
+Missing character: There is no â in font cmti10!
+Missing character: There is no € in font cmti10!
+Missing character: There is no ™ in font cmti10!
+Missing character: There is no Â in font cmr10!
+Missing character: There is no ´ in font cmr10!
+ [43
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+<images/googlecloud__createtask.png, id=686, 657.2053pt x 545.78906pt>
+File: images/googlecloud__createtask.png Graphic file (type png)
 
+<use images/googlecloud__createtask.png>
+Package pdftex.def Info: images/googlecloud__createtask.png used on input line 
+23.
+(pdftex.def)             Requested size: 460.04057pt x 382.04973pt.
+
+Overfull \hbox (115.04057pt too wide) in paragraph at lines 23--24
+ [][] 
+ []
+
+<images/googlecloud__taskexist.png, id=687, 1192.455pt x 492.33937pt>
+File: images/googlecloud__taskexist.png Graphic file (type png)
+
+<use images/googlecloud__taskexist.png>
+Package pdftex.def Info: images/googlecloud__taskexist.png used on input line 2
+9.
+(pdftex.def)             Requested size: 834.71283pt x 344.6352pt.
+
+Overfull \hbox (489.71283pt too wide) in paragraph at lines 29--30
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+<images/googlemessagin_isonline_cloudmessaging.png, id=689, 542.025pt x 625.587
+19pt>
+File: images/googlemessagin_isonline_cloudmessaging.png Graphic file (type png)
 
+ <use images/googlemessagin_isonline_cloudmessaging.png>
+Package pdftex.def Info: images/googlemessagin_isonline_cloudmessaging.png used
+ on input line 37.
+(pdftex.def)             Requested size: 379.4149pt x 437.90805pt.
+
+Overfull \hbox (34.4149pt too wide) in paragraph at lines 37--38
+ [][] 
+ []
+
+<images/googlemessagin_sendmessage.png, id=692, 718.93594pt x 454.69875pt>
+File: images/googlemessagin_sendmessage.png Graphic file (type png)
+
+<use images/googlemessagin_sendmessage.png>
+Package pdftex.def Info: images/googlemessagin_sendmessage.png used on input li
+ne 45.
+(pdftex.def)             Requested size: 503.25172pt x 318.28694pt.
+
+Overfull \hbox (158.25172pt too wide) in paragraph at lines 45--46
+ [][] 
+ []
+
+<images/googlecloudmessaging.png, id=693, 545.78906pt x 628.59843pt>
+File: images/googlecloudmessaging.png Graphic file (type png)
+
+<use images/googlecloudmessaging.png>
+Package pdftex.def Info: images/googlecloudmessaging.png used on input line 51.
+
+(pdftex.def)             Requested size: 382.04973pt x 440.0159pt.
+
+Overfull \hbox (37.04973pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
+
+<images/googlecloud__tasksindevice.png, id=695, 545.78906pt x 625.58719pt>
+File: images/googlecloud__tasksindevice.png Graphic file (type png)
+
+<use images/googlecloud__tasksindevice.png>
+Package pdftex.def Info: images/googlecloud__tasksindevice.png used on input li
+ne 59.
+(pdftex.def)             Requested size: 382.04973pt x 437.90805pt.
+
+Overfull \hbox (37.04973pt too wide) in paragraph at lines 59--60
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
-
- []
-
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 95--96
-\OT1/cmr/m/n/10 Android's 'dis-cov-eryLis-tener' (a call-back han-dler for reg-
-is-ter-ing ser-vices)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 [47]
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 1210) in paragraph at lines 138--139
+\OT1/cmr/m/n/10 Android's 'dis-cov-eryLis-tener' (a call-back han-dler for reg-
+is-ter-ing ser-vices)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-) [48]
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
+) [49] [50 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/late
+x2/images/googlecloud__createtask.png>] [51 <C:/Users/nikolai/Documents/skole/I
+TU5/Distributed Systems/GIT2/latex2/images/googlecloud__taskexist.png>]
+[52 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/googlemessagin_isonline_cloudmessaging.png>] [53 <C:/Users/nikolai/Documents
+/skole/ITU5/Distributed Systems/GIT2/latex2/images/googlemessagin_sendmessage.p
+ng>] [54 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2
+/images/googlecloudmessaging.png>] [55 <C:/Users/nikolai/Documents/skole/ITU5/D
+istributed Systems/GIT2/latex2/images/googlecloud__tasksindevice.png>]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\Conclus
 ion.tex")
+Appendix A.
+
+("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\whodidw
+hat.tex"
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2.
+See the caption package documentation for explanation.
+
+)
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the report.maf file.
@@ -1896,13 +1997,14 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the report.log file.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-[49
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+[56
+
 
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 aux"
@@ -1924,27 +2026,30 @@ ency.aux")
 aux")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\Conclus
 ion.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: F4FE9C98D7AFAE6B5F8574C272D2AEE5;2347.
+(rerunfilecheck)             Checksum: 830028FE5FAB793882A7854B261515C6;2404.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 11042 strings out of 494045
- 167449 string characters out of 3148382
- 589586 words of memory out of 3000000
- 13627 multiletter control sequences out of 15000+200000
+ 11125 strings out of 494045
+ 169639 string characters out of 3148382
+ 589868 words of memory out of 3000000
+ 13671 multiletter control sequences out of 15000+200000
  9728 words of font info for 34 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 36i,9n,41p,1068b,1208s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,9n,41p,1068b,1683s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -1952,14 +2057,13 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (50 pages, 564743 bytes).
+cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (57 pages, 960313 bytes).
 PDF statistics:
- 816 PDF objects out of 1000 (max. 8388607)
- 312 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 884 PDF objects out of 1000 (max. 8388607)
+ 337 named destinations out of 1000 (max. 500000)
+ 389 words of extra memory for PDF output out of 10000 (max. 10000000)
 

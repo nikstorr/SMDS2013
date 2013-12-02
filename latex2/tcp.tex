@@ -53,24 +53,40 @@ We use JAXB API to provide persistence for the taskmanager objects. JAXB is java
 Our TCP server first opens a serversocket on a specified port and continues to listens for clients . A client instantiates a socket specifying the serversocket's address and port number. The client and server then communicates by passing byte streams through the agreed upon port. The transmission of bytes is done with ObjectInputStream and ObjectOutputStream methods.  \\
 
 \subsubsection{Serialization}
-Serialization and deserialization to and from xml is done with the JAXB API. Quoting Oracle; \textit{JAXB provides methods for unmarshalling (reading) XML instance documents into Java content trees, and then marshalling (writing) Java content trees back into XML instance documents.} \\
+Information in OO programs are typically stored as data structures whereas data in the messages used to communicate in distributed systems are binary. So, no matter the communication protocols used the data structures need to be flattened before transmitting and then reassembled at the other end.
 
-JAXB uses annotations to achieve this. We annotate the Task and Taskmanager Java objects and JAXB then knows how to convert these annotated objects into an xml tree-structure and back into an object graph.\\
-
-\subsubsection{TCP}
-
-TCP is one of the main protocols of the transport layer of the TCP/IP model. It receives and send data to the lower IP layer. \\
-
-The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call and the server won't perform any other tasks before a client connects. The Client creates a socket on the same port which takes the servers InetAddress and the port it is listening on as arguments. TCP is an end-to-end service then. It directly connects two nodes.\\
-
-Information in OO programs are typically stored as data structures whereas data in the messages used to communicate in distributed systems are binary. So, no matter the communication protocols used the data structures need to be flattened before transmitting and then reassembled at the other end. ObjectInputStream/ObjectOutputStream transforms java objects to and from bytestreams. Provided they implement serializable.\\ 
 
 \subsubsection{Byte Stream}
+ObjectInputStream/ObjectOutputStream are java methods for transforming serializable java objects to and from bytestreams. \\ 
+
 In Java,  serializable objects can be sent through a connection by  ObjectInputStream and ObjectOutputStream classes which transforms an object or a graph of objects into an array of bytes (for storage or transmission), and back into objects again. \\
 
 Our server and client communicates by passing bytes in and out of matching inputstreams and outputstreams. Command messages (requests) are passed via the writeUTF and received by the readUTF methods as DataStreams. The Task and taskmanager objects, implementing serializable, are sent via ObjectOutputStream and received by ObjectInputStream. \\
 
-The server responds to requests by sending the request back. The client waits for this confirmation before proceeding. 
+The server responds to requests by sending the request back. The client waits for this confirmation before proceeding. \\
+
+\subsubsection{JAXB}
+Serialization and deserialization to and from xml is done with the JAXB API. Quoting Oracle; \textit{JAXB provides methods for unmarshalling (reading) XML instance documents into Java content trees, and then marshalling (writing) Java content trees back into XML instance documents.} \\
+
+JAXB uses annotations to achieve this. We annotate the Task and Taskmanager Java objects and JAXB then knows how to convert these annotated objects into an xml tree-structure and back into an object graph.\\
+
+\begin{lstlisting}
+@XmlRootElement(name = "taskmanager") // JAXB annotation
+public class TaskManager implements Serializable{
+
+	@XmlElementWrapper(name = "tasks") // 
+    @XmlElement(name = "task")
+    public List<Task> tasks;
+}
+\end{lstlisting}
+
+\subsubsection{TCP}
+
+TCP is one of the main protocols of the transport layer of the TCP/IP model. It receives and sends data to the lower IP layer. \\
+
+The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call and the server won't perform any other tasks before a client connects. The Client creates a socket on the same port which takes the servers InetAddress and the port it is listening on as arguments. \\
+
+
 
 \section{example run}
 \label{tcp_example}
@@ -164,7 +180,7 @@ After the run, in which the client requested the server's POST method with a new
 </taskmanager>
 \end{lstlisting}
 
-Not included in this summary, but in the full example the client also requests the GET method and the PUT method wanting to change the new 'one more cup of coffe' Task description from 'recondre' to 'recondre les roix'. Finally, the client requests the DELETE method with the taskid 'handin'01' parameter. After the run the xml document now looks like this:
+Not included in this summary, but in the complete example the client also requests the GET method and the PUT method wanting to change the new 'one more cup of coffe' Task description from 'sense of direction' to 'no sense of direction'. Finally, the client requests the DELETE method with the taskid 'handin'01' parameter. After the run the xml document now looks like this:
 
 \begin{lstlisting}[caption=xml after PUT]
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -178,7 +194,24 @@ Not included in this summary, but in the full example the client also requests t
 </taskmanager>
 \end{lstlisting}
 
-\pagebreak
+%\pagebreak
+
+
+\begin{center}
+\centering
+\caption{console output tcp client}
+\includegraphics[scale=0.7]{images/TCP_run_client.png}
+\end{center}
+\vspace{10pt}
+
+
+\begin{center}
+\centering
+\caption{console output server}
+\includegraphics[scale=0.7]{images/TCP_run_server.png}
+\end{center}
+\vspace{10pt}
+
 
 \section{Reflection}
 \label{tcp_reflection}
@@ -193,30 +226,20 @@ At the bottom of the TCP/IP suite are the physical layer (hardware). On top of t
 Using protocols gives us network independance i.e., different application types and languages can use the same network to communicate 
 as long as they comply to the same protocol(s). Note \textit{even so, the heterogeneity of distributed systems makes it difficult to provide guarantees.}\\
 \end{comment}
+We have used this example to demonstrate and experiement with the TCP/IP suite. There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages and TCP transfers byte streams. Unlike UDP, TCP is reliable and ordered. TCP can provide guarantees as to the ordering of its messages i.e., messages arrive in the order they were sent. It does so by giving every packet a number and then ordering the packets on arrival. TCP provides guarantees as to the delivery of the messages i.e, the message eventually arrive. It does so by using acknowledgements and retries (resend messages).   \\
 
-In our example application we use the Transmission Control Protocol (or TCP protocol) to communicate with the network layer through a ‘socket’ connection. Our client is at the application/presentation layer utilizing the TCP transport protocol to communicate with other nodes through the network layer.\\
+In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there is no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. IP relegates the task of providing a reliable service to other layers, namely the TCP layer atop it. This nicely demonstrates the end-to-end principle. Application specific functionality should reside at the end hosts.
 
-Both client and server addressed messages to the same port. Nodes establish a connection through a socket using an address (the IP number), and a port number. Subsequent communication is routed through the port. \\
+The code in our solution is very much a 'proof-of-concept'. The code style could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the theory.  \\
 
-The TCP protocol is end-to-end i.e., the nodes are directly connected ( Blocking calls ).  
-There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages (IP packets) and TCP transfers byte streams (as IP packets). Unlike UDP, TCP is reliable and ordered. TCP can provide guarantees as to the ordering of its messages i.e., messages arrive in the order they were sent and TCP provides guarantees as to the delivery of the messages be using acknowledgements and retries.   \\
+As with many other examples, we did not have time to implement the optional parts of the assignment. This is regretable and would have been desirable and a valuable addition to the outcome of the course. But time is simply in short supply at this study.\\
 
-In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there is no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. Note \textit{This seem logical as the network layer (IP protocol) can not control the other end of the connection in a way the TCP protocol does by connecting directly to a port}. 
-
-
-
-\pagebreak
-\subsection{Good and bad}
-\label{tcp_conclusion}
-
-A source of concern is the structure of our code. This could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the theory.  \\
-
+\begin{comment}
 The main lesson learned is about protocols and layers, each layer providing a specialized task enforced by the protocol (provided we use the protocols as intented). Each layer communicates with the layers below. \\
+\end{comment}
 
 Network layers send IP packets to (IP)addresses accross the network. The transport layer's UDP and TCP protocols sends IP packets to processes instead of addresses. TCP provides guarantees about reliability, ordering etc which UDP does not and this makes TCP well suited for server-client architectures in distributed systems. \\
 
-A small practical thing to notice is that the order and type of method calls between the server and client can be confusing. It is vital that a writeUTF is picked up by a similar readUTF at the other side i.e, you can not readObject from a writeUTF method ;-) \\ 
-
-
+Our simple example resembled the way the TCP protocol achieves reliability. By sending acknowledgements our client-server is, in principle, capable of achieving reliability. It could be made to resend a packet in case of no response from the other end. Off course things like latenzy, troughput or duplicate packages come into play. But the principle stands.     
 
 

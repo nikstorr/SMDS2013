@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.12)  25 NOV 2013 04:04
-=======
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.4.4)  24 NOV 2013 15:52
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.12)  25 NOV 2013 04:55
 entering extended mode
 **report.tex
 (C:\Users\Bendix\Documents\SMDS2013\latex2\report.tex
@@ -602,22 +598,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-<<<<<<< HEAD
-l.44 ...mberline {6.5}Conclusion}{39}{section.6.5}
-=======
-l.42 ...numberline {7.2}Solution}{34}{section.7.2}
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+l.44 ...mberline {6.5}Conclusion}{40}{section.6.5}
                                                    [1
 
 ])
 \tf@toc=\write6
  [2]
-<<<<<<< HEAD
 (C:\Users\Bendix\Documents\SMDS2013\latex2\introduction.tex
-=======
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\introdu
-ction.tex"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 3.
@@ -835,16 +822,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
-<<<<<<< HEAD
 ) [8] (C:\Users\Bendix\Documents\SMDS2013\latex2\servlet.tex)
 (C:\Users\Bendix\Documents\SMDS2013\latex2\tcp.tex
-=======
-) [8]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\servlet
-.tex")
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\tcp.tex
-"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 2.
 (C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc2)
 Missing character: There is no â in font cmti10!
@@ -1021,13 +1000,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
-<<<<<<< HEAD
 ) [15] (C:\Users\Bendix\Documents\SMDS2013\latex2\rest.tex
-=======
-) [15]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\rest.te
-x"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 3.
 (C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc3)
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
@@ -1053,13 +1026,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-<<<<<<< HEAD
 [17] [18]) [19] (C:\Users\Bendix\Documents\SMDS2013\latex2\security.tex
-=======
-[17] [18]) [19]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\securit
-y.tex"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 4.
 (C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc4)
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -1115,11 +1082,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 69.
 See the caption package documentation for explanation.
 
-<<<<<<< HEAD
-<images/security_run.png, id=459, 919.93687pt x 451.6875pt>
-=======
-<images/security_run.png, id=469, 919.93687pt x 451.6875pt>
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+<images/security_run.png, id=489, 919.93687pt x 451.6875pt>
 File: images/security_run.png Graphic file (type png)
 
 <use images/security_run.png>
@@ -1135,12 +1098,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-<<<<<<< HEAD
 [22 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/security_run.png>]
-=======
-[22 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
-es/security_run.png>]
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
@@ -1185,13 +1143,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-<<<<<<< HEAD
 ) [24] (C:\Users\Bendix\Documents\SMDS2013\latex2\groupcommunication.tex
-=======
-) [24]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\groupco
-mmunication.tex"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 5.
 (C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc5)
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
@@ -1394,20 +1346,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
-<<<<<<< HEAD
 ) [32] (C:\Users\Bendix\Documents\SMDS2013\latex2\concurrency.tex
-=======
-) [32]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\concurr
-ency.tex"
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Chapter 6.
 (C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc6)
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-<<<<<<< HEAD
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
@@ -1540,20 +1485,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 36--37
-=======
-pdfTeX warning: pdflatex.exe (file C:/Users/nikolai/Documents/skole/ITU5/Distri
-buted Systems/GIT2/latex2/images/concurrencyrun.pdf): PDF inclusion: found PDF 
-version <1.7>, but at most version <1.5> allowed
-<images/concurrencyrun.pdf, id=602, 725.74335pt x 456.44226pt>
-File: images/concurrencyrun.pdf Graphic file (type pdf)
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
-<<<<<<< HEAD
-=======
-[33
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
@@ -1579,70 +1513,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--49
-=======
- <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/images/
-concurrencyrun.pdf>]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\mobile.
-tex"
-Chapter 7.
-
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
-mtc7")
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-[34
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 62.
 See the caption package documentation for explanation.
 
-<images/CCServer1.png, id=613, 576.65437pt x 405.76593pt>
+<images/CCServer1.png, id=643, 576.65437pt x 405.76593pt>
 File: images/CCServer1.png Graphic file (type png)
 
 <use images/CCServer1.png>
@@ -1655,29 +1555,15 @@ Overfull \hbox (0.99529pt too wide) in paragraph at lines 63--66
 
 [35]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
-
- []
-
-
-<<<<<<< HEAD
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 71.
 See the caption package documentation for explanation.
 
-<images/CCServer2.png, id=619, 625.58719pt x 432.86719pt>
+<images/CCServer2.png, id=649, 625.58719pt x 432.86719pt>
 File: images/CCServer2.png Graphic file (type png)
 
 <use images/CCServer2.png>
@@ -1690,7 +1576,94 @@ Overfull \hbox (30.35521pt too wide) in paragraph at lines 72--75
 
 [36 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/CCServer1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 76--77
-=======
+
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 80.
+See the caption package documentation for explanation.
+
+<images/CCServer3.png, id=656, 649.67719pt x 328.97906pt>
+File: images/CCServer3.png Graphic file (type png)
+
+<use images/CCServer3.png>
+Package pdftex.def Info: images/CCServer3.png used on input line 81.
+(pdftex.def)             Requested size: 389.80931pt x 197.38895pt.
+
+Overfull \hbox (44.80931pt too wide) in paragraph at lines 81--84
+[][] 
+ []
+
+[37 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/CCServer2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+[38 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/CCServer3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+Missing character: There is no Â in font cmr10!
+Missing character: There is no ´ in font cmr10!
+[39]) [40] (C:\Users\Bendix\Documents\SMDS2013\latex2\mobile.tex
+Chapter 7.
+(C:\Users\Bendix\Documents\SMDS2013\latex2\report.mtc7)
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+[41
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
@@ -1705,31 +1678,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
-[36]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 78--79
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 80.
-See the caption package documentation for explanation.
-
-<images/CCServer3.png, id=626, 649.67719pt x 328.97906pt>
-File: images/CCServer3.png Graphic file (type png)
-
-<use images/CCServer3.png>
-Package pdftex.def Info: images/CCServer3.png used on input line 81.
-(pdftex.def)             Requested size: 389.80931pt x 197.38895pt.
-
-Overfull \hbox (44.80931pt too wide) in paragraph at lines 81--84
-[][] 
- []
-
-[37 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/CCServer2.png>]
-=======
 Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
@@ -1740,14 +1694,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
  []
 
 
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-<<<<<<< HEAD
-=======
 Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
@@ -1763,33 +1714,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-[37]
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-<<<<<<< HEAD
-[38 <C:/Users/Bendix/Documents/SMDS2013/latex2/images/CCServer3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-=======
 
 Underfull \hbox (badness 10000) in paragraph at lines 95--96
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-
- []
-
-Missing character: There is no Â in font cmr10!
-Missing character: There is no ´ in font cmr10!
-[39]) [40] (C:\Users\Bendix\Documents\SMDS2013\latex2\mobile.tex)
-(C:\Users\Bendix\Documents\SMDS2013\latex2\Conclusion.tex)
-=======
 Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
@@ -1814,15 +1749,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-[38]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
-) [39]
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\Conclus
-ion.tex")
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+) [46] (C:\Users\Bendix\Documents\SMDS2013\latex2\Conclusion.tex)
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the report.maf file.
@@ -1848,13 +1780,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                in the report.log file.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-<<<<<<< HEAD
-[41
-
-
-=======
-[40
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+[47
 
 
 
@@ -1873,11 +1799,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `report.out' has not changed.
-<<<<<<< HEAD
-(rerunfilecheck)             Checksum: 06D3829EF434834B048B9CA83091A1C7;1998.
-=======
-(rerunfilecheck)             Checksum: 044A5E66B0BE98AD5B8063CD96C70D7D;2084.
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+(rerunfilecheck)             Checksum: 669C3E76194F02ED1F657E3C2F5EBF16;2331.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1888,23 +1810,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 11186 strings out of 493921
- 167667 string characters out of 3147279
- 473989 words of memory out of 3000000
- 13776 multiletter control sequences out of 15000+200000
+ 11219 strings out of 493921
+ 168127 string characters out of 3147279
+ 474032 words of memory out of 3000000
+ 13783 multiletter control sequences out of 15000+200000
  9728 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,9n,42p,876b,1687s stack positions out of 5000i,500n,10000p,200000b,50000s
-=======
- 11030 strings out of 494045
- 167151 string characters out of 3148382
- 670417 words of memory out of 3000000
- 13616 multiletter control sequences out of 15000+200000
- 9560 words of font info for 33 fonts, out of 3000000 for 9000
- 715 hyphenation exceptions out of 8191
- 36i,9n,41p,1068b,1683s stack positions out of 5000i,500n,10000p,200000b,50000s
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+ 36i,9n,42p,1068b,1687s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -1915,20 +1827,11 @@ e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Fi
-<<<<<<< HEAD
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (42 pages, 540224 bytes).
+Output written on report.pdf (48 pages, 562503 bytes).
 PDF statistics:
- 757 PDF objects out of 1000 (max. 8388607)
- 310 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (41 pages, 625629 bytes).
-PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 316 named destinations out of 1000 (max. 500000)
- 299 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 9d392c95571a19c66fe500c32118440596bed85c
+ 834 PDF objects out of 1000 (max. 8388607)
+ 331 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

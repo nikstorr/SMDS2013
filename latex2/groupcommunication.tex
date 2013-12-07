@@ -9,7 +9,7 @@ We shall describe the result of the JGroup exercise. In section \ref{jgroup_solu
 
 \section{lab description}
 
-\textit{The primary focus of this week?s assignment is to understand the basic concepts of group communication.} \\
+\textit{The primary focus of this week's assignment is to understand the basic concepts of group communication.} \\
 
 \textit{Your primary task is to add group communication functionality to task manager application using JGroups toolkit. You can assume a scenario as shown in the following figure, where multiple instances of task manager applications are running and providing functionality for their clients to create, read, update and delete tasks, as described in the previous lab exercises.}\\
 
@@ -38,17 +38,17 @@ We shall describe the result of the JGroup exercise. In section \ref{jgroup_solu
 The solution consists of two main classes. A sender and a receiver. The sender's task is to take user requests and relay them to a group of receivers.
 The receiver's task is to receive the requests and execute them. \\ 
 
-The sender instantiates a 'channel' object. This is similar to a socket and one of the main concepts in the JGroup API. messages are sent over the 'channel' to the group or to individual processes.  A 'Message' object sent over the channel takes the sender's and receiver's addresses as well as a marshalled message. If the sender and receivers' addresses are null the message is multicast to the group members.\\
+The sender instantiates a 'channel' object. This is similar to a socket and one of the main concepts in the JGroup API. messages are sent over the 'channel' to the group or to individual processes.  A 'Message' object sent over the channel takes the sender's and receiver's addresses as well as a message. If the sender and receivers' addresses are null the message is multicast to the group members.\\
 
-Our sender class first packages a user request in an envelope object (which can hold a request command as well as a Task object) and then serializes the envelope object before multicasting a JGroup Message object containing the envelope to the group. i.e., a request for a given operation on a given task is put into an envelope object with the task's ID. The envelope is marshalled and then multicast to the group in a JGroup Message.\\
+Our sender class first packages a user request in an envelope object (which can hold a request command as well as a Task object) and then serializes the envelope object before multicasting a JGroup Message object containing the envelope to the group. i.e., a request for a given operation on a given task is put into an envelope object with the task's ID. The envelope is marshalled and multicast to the group as a JGroup Message.\\
 
 Receivers subscribe to the same JGroup channel as the sender has instantiated. The group receivers will unmarshall a message back into an envelope object giving them access to the original request and the Task object. \\
 
-JGroup delivers multicast as well as one-to-one communication. By providing the Message object with a receiver address that message is sent to that receiver only and not to the group.
+Note \textit{JGroup delivers multicast as well as one-to-one communication. By providing the Message object with an explicit receiver address that message is sent to that receiver only and not to the group.}
 
 \section{Example Run}
 \label{jgroup_run}
-In our taskmanagerapplication we first create and connect to the group 'channel'. Then we fetch the state which in turn invokes the receivers 'setstate' method. This is to ensure a synchronized state across the group. Note the receivers setState method is not implemented as the time of writing!!!   
+In our taskmanagerapplication we first create and connect to the group 'channel'. Then we fetch the state which in turn invokes the receivers 'setstate' method. This is to ensure a synchronized state across the group. Note \textit{the receiver's setState method is not implemented as the time of writing!!!}   
 
 \begin{lstlisting}[caption=group setup]
 // channelTasks = ChannelHelper.getNewChannel(localIp, addPort);
@@ -71,8 +71,7 @@ channel.close();
 \end{lstlisting}
 
 After the initial group creation and state transfer steps we enter the eventLoop. Here we receive requests, transform the request 
-into a Message object and send messages to the group. A request is wrapped in an 'Envelope' object together with possibly a Task.
-The WriteToChannel(envelope, channel) method then serializes the envelope and wraps it in a JGroup Message object and sends that message to the group.\\
+into a Message object and send messages to the group. A request is wrapped in an 'Envelope' object. The WriteToChannel(envelope, channel) method then serializes the envelope and wraps it in a JGroup Message object and sends that message to the group.\\
 
 Note overloads of the channel.send() method exists which, provided an address allows us to send the message to a single address instead of the group.
 
@@ -99,10 +98,9 @@ switch (command.toLowerCase().trim()) {
 
 \end{lstlisting}
 
-A receiver can either implement JGroup.receiver interface or extend receiverAdapter and simply override the 'receive(Message)' method. In our simple application we content our selves to do the later. \\
+A receiver can either implement JGroup.receiver interface or extend receiverAdapter and simply override the 'receive(Message)' method. In our simple application we do the later. \\
 
-After receiving a Message the application deserializes the message back into an Envelope object.
-The envelope contains the request and possibly a Task object on which to perform the requested action.
+After receiving a Message the application deserializes the message back into an Envelope object. The envelope contains the request and possibly a Task object on which to perform the requested action.
 
 \begin{lstlisting}[caption=receiver]
 if(DeserializeEnvelope.command.equals("request")){

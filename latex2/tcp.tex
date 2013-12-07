@@ -1,31 +1,45 @@
 \chapter{TCP server and Serialization}
 \minitoc
 
-
-In this chapter we describe the result of the TCP lab exercise. in section \ref{tcp_lab} we describe the assignment. In section \ref{tcp_solution} we describe our solution. in section \ref{tcp_example} we provide an example run of the solution. In section \ref{tcp_reflection} we reflect on the theory behind the assignment. In section \ref{tcp_conclusion} we sum up what we've learned and round up the chapter.
+In this chapter we talk about the TCP protocol. in section \ref{tcp_lab} we describe the assignment. In section \ref{tcp_solution} we describe our solution. in section \ref{tcp_example} we provide an example run of the solution. In section \ref{tcp_reflection} we try to connect the example to the theory behind. In section \ref{tcp_conclusion} we sum up what we've learned and round up the chapter.
 
 \section{lab description}
 \label{tcp_lab}
 \textit{The purpose of this week’s lab exercise is to develop a simplified version of web server for task manager that runs on TCP protocol.}\\
 
+\textit{The task manager TCP server and its clients follow a strictly predefined structured communication based on the following conversational protocol.}
+
+\begin{itemize}
+\item Initially a client will send a command to the server indicating that it wishes to consume the particular service offered by the server through the mentioned command.\\
+
+\item After receiving a command from the client, the server will respond by sending the same command back to the client indicating it’s readiness to provide the service mentioned in the command.\\
+
+\item Soon after receiving the command from the server, the client will send necessary data to the server to further process the command on the server side. In case of POST and PUT commands, the client will send a Task object, where as in case of GET or DELETE commands, the client will send an attendant’s name or a task id respectively.\\
+
+\item Finally, after processing the command the server will send back the results to the client. In case of GET command, the server will return a list of tasks (List<Task> object) to the client. On the other hand, it will simply return the result of that command (e.g. task deleted). The result could also contain error message if any (e.g. task Id not found in the task list).
+
+
+\end{itemize}
+
 \textit{In this lab exercise, you are required to develop the code for the following functionality.}\\
 
-\textit{Develop java serialization classes for task-manager-xml using Java Architecture for XML Binding (JAXB) APIs (by annotating java classes) to handle deserialization/serialization from/to task-manager-xml in the server.}\\
+\begin{itemize}
+\item \textit{Develop java serialization classes for task-manager-xml using Java Architecture for XML Binding (JAXB) APIs (by annotating java classes) to handle deserialization/serialization from/to task-manager-xml in the server.}\\
 
-\textit{Develop TaskManagerTCPServer and TaskManagerTCPClient classes to implement the above described functionality of server and client that communicate on the TCP protocol.}\\
+\item \textit{Develop TaskManagerTCPServer and TaskManagerTCPClient classes to implement the above described functionality of server and client that communicate on the TCP protocol.}\\
 
+\item \textit{[Optional] The server described above can only handle one single client at a time in each run. In order to make the server more robust and handle multiple clients concurrently, one may follow the approach suggested in the page. 173 of the course textbook [DS], to create a new connection for every client request that will run on a separate thread. Therefore, develop a TaskManagerTCPServer that can handle multiple concurrent clients.}\\
 
-\begin{comment}
-[Optional] The server described above can only handle one single client at a time in each run. In order to make the server more robust and handle multiple clients concurrently, one may follow the approach suggested in the page. 173 of the course textbook [DS], to create a new connection for every client request that will run on a separate thread. Therefore, develop a TaskManagerTCPServer that can handle multiple concurrent clients.\\
+\item \textit{[Optional] The functionality of TaskManagerTCPServer can be extended to offer more commands (e.g. OPTIONS, HEAD) similar to the HTTP protocol. In case of OPTIONS command, one may describe the list of commands offered by the server, where as for HEAD, one may only provide the number of tasks available for a given attendant instead of sending all the available tasks to the client.}\\
 
-[Optional] The functionality of TaskManagerTCPServer can be extended to offer more commands (e.g. OPTIONS, HEAD) similar to the HTTP protocol. In case of OPTIONS command, one may describe the list of commands offered by the server, where as for HEAD, one may only provide the number of tasks available for a given attendant instead of sending all the available tasks to the client.\\
+\end{itemize}
 
-\end{comment}
 
 
 \section{Solution}
 \label{tcp_solution}
 
+Due to the general pressure of the study we did not find the time to elaborate much on this excersize. Hence the optional parts are not implemented.\\
 
 \begin{comment}
 Information in OO programs are typically stored as data structures whereas data in the messages used to communicate in distributed systems are binary. So, no matter the communication protocols used the data structures need to be flattened before transmitting and then reassembled at the other end. This is called marshalling and unmarshalling. The sender and transmitter must agree on the format used in order for the receiver to reassmble the data structures. CORBA, Java Object Serialization and XML are som of the formats used to transmit binary data from one node to another. \\
@@ -34,37 +48,99 @@ This can (as it often is) be done by middleware. In this project we have used JA
 \end{comment}
 
 
-We use the JAXB API to provide persistence. JAXB  unmarshall's the xml document into a 'taskmanager' object with a related collection of ‘Task’ objects and 'marshall's' it back into a xml document. \\ 
+We use JAXB API to provide persistence for the taskmanager objects. JAXB is java middleware capable of marshalling and unmarshalling java objects into xml and back into java objects, in this case a 'taskmanager' object with a related collection of ‘Task’ objects. To send the taskmanager object over TCP/IP, objects are transformed into bytes by ObjectInputStream and ObjectOutputStream (only objects that are serializable may be written as a bytestream).   \\ 
 
-
-Our server opens a serversocket on a specified port and listens for clients. A client instantiates a socket specifying the server's address and port number. The client and server  communicates by passing byte streams through the port. The transmission of data is done with ObjectInputStream and ObjectOutputStream methods. \\
+Our TCP server first opens a serversocket on a specified port and continues to listens for clients . A client instantiates a socket specifying the serversocket's address and port number. The client and server then communicates by passing byte streams through the agreed upon port. The transmission of bytes is done with ObjectInputStream and ObjectOutputStream methods.  \\
 
 \subsubsection{Serialization}
-Serialization and deserialization to and from xml is done with the JAXB API. To quote Oracle; \textit{JAXB provides methods for unmarshalling (reading) XML instance documents into Java content trees, and then marshalling (writing) Java content trees back into XML instance documents.} \\
+Information in OO programs are typically stored as data structures whereas data in the messages used to communicate in distributed systems are binary. So, no matter the communication protocols used the data structures need to be flattened before transmitting and then reassembled at the other end.
 
-JAXB uses annotations to achieve this. We annotate the Task and Taskmanager  Java objects and JAXB then knows how to convert these annotated objects into an xml tree-structure and back into an object graph.\\
-
-\subsubsection{TCP}
-The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call and the server won't perform any other tasks before a client connects. The Client creates a socket on the same port but this time with the servers InetAddress as a second argument. \\
-
-
-Information in OO programs are typically stored as data structures whereas data in the messages used to communicate in distributed systems are binary. So, no matter the communication protocols used the data structures need to be flattened before transmitting and then reassembled at the other end. \\ 
 
 \subsubsection{Byte Stream}
-In Java, annotating data structures with the 'Serialization' keyword allows the ObjectInputStream and ObjectOutputStream classes to transform a graph of objects into an array of bytes for storage or transmission, and back into objects. \\
+ObjectInputStream/ObjectOutputStream are java methods for transforming serializable java objects to and from bytestreams. \\ 
 
-Our server and client communicates by passing messages in and out of the matching inputstreams and outputstreams. Command messages are passed via the writeUTF and received by the readUTF methods as  DataStreams. The Task and taskmanager objects are then sent as ObjectOutputStream and received as ObjectInputStream. \\
+In Java,  serializable objects can be sent through a connection by  ObjectInputStream and ObjectOutputStream classes which transforms an object or a graph of objects into an array of bytes (for storage or transmission), and back into objects again. \\
+
+Our server and client communicates by passing bytes in and out of matching inputstreams and outputstreams. Command messages (requests) are passed via the writeUTF and received by the readUTF methods as DataStreams. The Task and taskmanager objects, implementing serializable, are sent via ObjectOutputStream and received by ObjectInputStream. \\
+
+The server responds to requests by sending the request back. The client waits for this confirmation before proceeding. \\
+
+\subsubsection{JAXB}
+Serialization and deserialization to and from xml is done with the JAXB API. Quoting Oracle; \textit{JAXB provides methods for unmarshalling (reading) XML instance documents into Java content trees, and then marshalling (writing) Java content trees back into XML instance documents.} \\
+
+JAXB uses annotations to achieve this. We annotate the Task and Taskmanager Java objects and JAXB then knows how to convert these annotated objects into an xml tree-structure and back into an object graph.\\
+
+\begin{lstlisting}
+@XmlRootElement(name = "taskmanager") // JAXB annotation
+public class TaskManager implements Serializable{
+
+	@XmlElementWrapper(name = "tasks") // 
+    @XmlElement(name = "task")
+    public List<Task> tasks;
+}
+\end{lstlisting}
+
+\subsubsection{TCP}
+
+TCP is one of the main protocols of the transport layer of the TCP/IP model. It receives and sends data to the lower IP layer. \\
+
+The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call and the server won't perform any other tasks before a client connects. The Client creates a socket on the same port which takes the servers InetAddress and the port it is listening on as arguments. \\
 
 
-
-\subsection{http protocol}
-
-The server responds to the client’s request by sending the request back. The client then proceeds accordingly. This mimics the HTTP protocol request-response pattern in detail?.
 
 \section{example run}
 \label{tcp_example}
 
-In this example run we start out with an xml document containing one Task. Before the example run the xml document looks like this:
+In our example the server sends out confirmation messages to the client for each request received. The client proceeds, only after receiving an acknowledgement of its request. \textit{This mimics the way the TCP protocol uses acknowledgements (acks) to confirm packet reception. Acks are the way the TCP protocol achieves \textit{reliability}. A client will wait for an ack and if none arrives it retransmits the package.}\\   
+
+After establishing a socket connection between client and server the client sends a request to the server. The server responds by sending an ack to the client (in this case the ack is the request itself).
+% \lstinputlisting{TCPserver.java}
+
+\begin{lstlisting}[caption= server sends an ack to a request]
+while(running){
+         // client request
+         String message = dis.readUTF(); // [blocking call]
+         // accept client request by returning the (request) message
+         dos.writeUTF(message);    
+
+\end{lstlisting}
+
+The client continues, only after receiving the ack from the server.
+\begin{lstlisting}[caption=client request and wait for ack]
+String message = "POST";
+dos.writeUTF(message);		// send the request
+response = dis.readUTF();	// wait for ack [Blocking call ]
+
+Task t = new Task();
+t.name = "Tout les circles";
+t.id = "one more cup of coffe";
+t.date = "15-09-2013";	
+t.description = "recondre";
+t.status = "mais jai le plus grande maillot du monde";
+t.attendants = "bjarne, lise, hans, jimmy";
+
+// if server acknowledges
+if(response.equals(message)){
+   	ous.writeObject(t);
+}else{
+   	System.out.println("Client: the server did not acknowledge the request.");
+}
+\end{lstlisting}
+
+The client-server uses readUTF() and writeUTF() to send requests and acks but in order to send an object they use writeObject() and readObject() to transform the object into a byte stream to send over the socket. \textit{Only objects implementing serializable can be transmitted by writeObject().} After receiving the bytestream we cast it back into an object.\\
+
+After executing a POST operation the server then proceeds to persist the taskmanager object by marshalling it with JAXB.
+
+\begin{lstlisting}[caption=server POST]
+// expect an object from the client
+if(message.equals("POST")){   
+	Task t = (Task) ois.readObject(); // 
+	serializer.allTasks.tasks.add(t);
+    serializer.Serialize();	
+}
+\end{lstlisting}
+
+Before the example run the taskmanager xml document looked like this:
 
 \begin{lstlisting}[caption=xml before run]
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -83,7 +159,7 @@ In this example run we start out with an xml document containing one Task. Befor
 
 \end{lstlisting}
 
-During the run the client requests the POST method with new Task. After the run the xml document looks like this:
+After the run, in which the client requested the server's POST method with a new Task, the xml document looks like this:
 
 \begin{lstlisting}[caption=xml after POST]
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -104,7 +180,7 @@ During the run the client requests the POST method with new Task. After the run 
 </taskmanager>
 \end{lstlisting}
 
-The client then requests the PUT method wanting to change the new 'one more cup of coffe' Task description from 'recondre' to 'recondre les roix'. Finally, the client requests the DELETE method with the taskid 'handin'01' parameter. After the run the xml document now looks like this:
+Not included in this summary, but in the complete example the client also requests the GET method and the PUT method wanting to change the new 'one more cup of coffe' Task description from 'sense of direction' to 'no sense of direction'. Finally, the client requests the DELETE method with the taskid 'handin'01' parameter. After the run the xml document now looks like this:
 
 \begin{lstlisting}[caption=xml after PUT]
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -118,82 +194,30 @@ The client then requests the PUT method wanting to change the new 'one more cup 
 </taskmanager>
 \end{lstlisting}
 
-\pagebreak
-
-The TCP server code of interest looks like this.
-% \lstinputlisting{TCPserver.java}
-
-\begin{lstlisting}[caption= servers initial request-response]
-while(running){
-         System.out.println("\nServer: Waiting for client command");
-         // client request
-         String message = dis.readUTF(); // blocking call
-         System.out.println("Server: client command received : " + message);
-         // accept client request by returning the (request) message
-         dos.writeUTF(message);    
-
-\end{lstlisting}
-
-\begin{lstlisting}[caption= server POST method]
-if(message.equals("POST")){
-    // receive Task object from client
-   	Task t = (Task) ois.readObject();
-   	
-   	System.out.println("Server: object received '" + t.name +"', persisting object...");
-   	// Add Task object to takmanager collection
-   	serializer.allTasks.tasks.add(t);
-   	// persist to xml document<
-   	serializer.Serialize();
-   	// acknowledge to client   	
-   	dos.writeUTF("Task with id: '" +t.id + "' saved");
-}
-
-\end{lstlisting}
+%\pagebreak
 
 
-The corresponding TCP client code looks like this.
-%\lstinputlisting{TCPclient.java}
+\begin{center}
+\centering
+\caption{console output tcp client}
+\includegraphics[scale=0.7]{images/TCP_run_client.png}
+\end{center}
+\vspace{10pt}
 
 
-\begin{lstlisting}
-InetAddress serverAddress = InetAddress.getByName("localhost");            
-// Open a socket for communication.
-Socket socket = new Socket(serverAddress, 7896);
-// Request message to server
-String  message = "POST";			
-System.out.println("Client: requesting " + message);
-
-dos.writeUTF(message);		// send the request
-response = dis.readUTF();	// blocking call          
-System.out.println("Client: server response : " + response);         
-
-Task t = new Task();
-t.name = "Tout les circles";
-t.id = "one more cup of coffe";
-t.date = "15-09-2013";	
-t.description = "recondre";
-t.status = "mais jai le plus grande maillot du monde";
-t.attendants = "bjarne, lise, hans, jimmy";
-
-// if server acknowledges
-if(response.equals(message)){
-   	System.out.println("Client: server accepted. Sending object");
-   	// send the Task object
-   	ous.writeObject(t);
-}else{
-   	System.out.println("Client: the server did not acknowledge the object. Aborting.");
-}
-
-response = dis.readUTF();
-System.out.println("Client: server response : " + response)
-\end{lstlisting}
-
+\begin{center}
+\centering
+\caption{console output server}
+\includegraphics[scale=0.7]{images/TCP_run_server.png}
+\end{center}
+\vspace{10pt}
 
 
 \section{Reflection}
 \label{tcp_reflection}
 
-In this exercise we worked with the TCP protocol. TCP is a transport layer level protocol. The TCP protocol provides communication between the application layer and the network layer?\\
+\begin{comment}
+In this exercise we worked with the TCP protocol. TCP is a transport layer level protocol. The TCP protocol provides communication between the application layer and the network layer (IP)\\
 
 The TCP protocol is part of the TCP/IP protocol suite. A protocol suite is a stack of protocols each responsible for a single logical task, e.g. transport, packaging etc. Each layer communicates with the layer directly above and below, only. Messages are passed down the stack at one side and they bubble up through the stack at the other side. \\
 
@@ -201,25 +225,21 @@ At the bottom of the TCP/IP suite are the physical layer (hardware). On top of t
 
 Using protocols gives us network independance i.e., different application types and languages can use the same network to communicate 
 as long as they comply to the same protocol(s). Note \textit{even so, the heterogeneity of distributed systems makes it difficult to provide guarantees.}\\
+\end{comment}
+We have used this example to demonstrate and experiement with the TCP/IP suite. There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages and TCP transfers byte streams. Unlike UDP, TCP is reliable and ordered. TCP can provide guarantees as to the ordering of its messages i.e., messages arrive in the order they were sent. It does so by giving every packet a number and then ordering the packets on arrival. TCP provides guarantees as to the delivery of the messages i.e, the message eventually arrive. It does so by using acknowledgements and retries (resend messages).   \\
 
-In our example application we use the Transmission Control Protocol (or TCP protocol) to communicate with the network layer through a ‘socket’ connection. Our client sits at the application/presentation layer utilizing the TCP transport protocol to communicate with other nodes through the network layer.\\
+In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there is no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. IP relegates the task of providing a reliable service to other layers, namely the TCP layer atop it. This nicely demonstrates the end-to-end principle. Application specific functionality should reside at the end hosts.
 
-Nodes communicate through a port. Both client and server addressed messages to the same port. The transport address (the IP number) was, in this case, composed of the computer's  ‘localhost’ address and a port number. \\
+The code in our solution is very much a 'proof-of-concept'. The code style could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the theory.  \\
 
-There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages (IP packets) and TCP transfers byte streams (as IP packets). Furthermore, TCP is reliable and ordered i.e., TCP provides guarantees as to the ordering of its messages i.e., messages arrive in the order they were sent. And TCP provides guarantees as to the delivery of the messages be using a retry.  \\
+As with many other examples, we did not have time to implement the optional parts of the assignment. This is regretable and would have been desirable and a valuable addition to the outcome of the course. But time is simply in short supply at this study.\\
 
-In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there’s no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. Note \textit{This seem logical as the network layer (IP protocol) can not control the other end of the connection}. 
+\begin{comment}
+The main lesson learned is about protocols and layers, each layer providing a specialized task enforced by the protocol (provided we use the protocols as intented). Each layer communicates with the layers below. \\
+\end{comment}
 
-\pagebreak
-\subsection{Good and bad}
-\label{tcp_conclusion}
+Network layers send IP packets to (IP)addresses accross the network. The transport layer's UDP and TCP protocols sends IP packets to processes instead of addresses. TCP provides guarantees about reliability, ordering etc which UDP does not and this makes TCP well suited for server-client architectures in distributed systems. \\
 
-A source of concern is the structure of our code. This could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the distributed systems.  \\
-
-The main lesson learned is about protocols and layers, each layer providing a specialized task. Each layer communicates with the layers above and below. Network layers send IP packets to (IP)addresses accross the network. The transport layer's UDP and TCP protocols sends IP packets to processes instead of addresses. TCP provides guarantees about reliability, ordering etc which UDP does not and this makes TCP well suited for server-client architectures in distributed systems. \\
-
-A small practical thing to notice is that the order and type of method calls between the server and client can be confusing. It is vital that a writeUTF is picked up by a similar readUTF at the other side i.e, you can not readObject from a writeUTF method ;-) \\ 
-
-
+Our simple example resembled the way the TCP protocol achieves reliability. By sending acknowledgements our client-server is, in principle, capable of achieving reliability. It could be made to resend a packet in case of no response from the other end. Off course things like latenzy, troughput or duplicate packages come into play. But the principle stands.     
 
 

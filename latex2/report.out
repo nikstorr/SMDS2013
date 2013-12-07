@@ -18,7 +18,7 @@
 \BOOKMARK [1][-]{section.4.1}{Lab Description}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.2}{Solution}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.3}{Example run}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.4}{Theory}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{Relating To The Theory}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 22
 \BOOKMARK [0][-]{chapter.5}{Indirect Communication}{}% 23
 \BOOKMARK [1][-]{section.5.1}{lab description}{chapter.5}% 24
@@ -32,9 +32,17 @@
 \BOOKMARK [1][-]{section.6.3}{Example Run}{chapter.6}% 32
 \BOOKMARK [1][-]{section.6.4}{Motivation- and theory}{chapter.6}% 33
 \BOOKMARK [1][-]{section.6.5}{Conclusion}{chapter.6}% 34
+<<<<<<< HEAD
 \BOOKMARK [0][-]{chapter.7}{Mobile}{}% 35
+=======
+\BOOKMARK [0][-]{chapter.7}{Mobile client}{}% 35
+>>>>>>> 13810f4c61c9cc5d1e1b97243b386956f80b3f49
 \BOOKMARK [1][-]{section.7.1}{Lab Description}{chapter.7}% 36
 \BOOKMARK [1][-]{section.7.2}{Solution}{chapter.7}% 37
 \BOOKMARK [1][-]{section.7.3}{Example Run}{chapter.7}% 38
 \BOOKMARK [1][-]{section.7.4}{Theory}{chapter.7}% 39
 \BOOKMARK [1][-]{section.7.5}{Conclusion}{chapter.7}% 40
+<<<<<<< HEAD
+=======
+\BOOKMARK [0][-]{appendix.A}{Who-did-what}{}% 41
+>>>>>>> 13810f4c61c9cc5d1e1b97243b386956f80b3f49

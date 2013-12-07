@@ -1,9 +1,8 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}lab description}{\reset@font\mtcSfont 9}{section.2.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Solution}{\reset@font\mtcSfont 9}{section.2.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Serialization}{\reset@font\mtcSSSfont 10}{subsubsection*.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode TCP}{\reset@font\mtcSSSfont 10}{subsubsection*.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Byte Stream}{\reset@font\mtcSSSfont 10}{subsubsection*.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}http protocol}{\reset@font\mtcSSfont 11}{subsection.2.2.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}example run}{\reset@font\mtcSfont 11}{section.2.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Reflection}{\reset@font\mtcSfont 14}{section.2.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}Good and bad}{\reset@font\mtcSSfont 15}{subsection.2.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Solution}{\reset@font\mtcSfont 10}{section.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Serialization}{\reset@font\mtcSSSfont 11}{subsubsection*.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Byte Stream}{\reset@font\mtcSSSfont 11}{subsubsection*.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode JAXB}{\reset@font\mtcSSSfont 11}{subsubsection*.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode TCP}{\reset@font\mtcSSSfont 12}{subsubsection*.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}example run}{\reset@font\mtcSfont 12}{section.2.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Reflection}{\reset@font\mtcSfont 15}{section.2.4}}

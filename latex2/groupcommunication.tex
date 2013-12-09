@@ -1,8 +1,8 @@
-\chapter{Indirect Communication}
+\chapter{Group Communication}
 \minitoc
 
 
-This chapter is about indirect communication. In distributed systems there's often a need for multicasting messages. It is much more efficient to send a single message to a group of processes instead of sending that message to a group as a series of one-to-one messages. IP multicast is an example of a simple group communication protocol which does not provide guarantees for atomicity, lossless messaging or ordering of messages. These properties are however provided by middleware like JGroups.  \\
+This chapter is about group communication. In distributed systems there's often a need for multicasting messages. It is much more efficient to send a single message to a group of processes instead of sending that message to a group as a series of one-to-one messages. IP multicast is an example of a simple group communication protocol which does not provide guarantees for atomicity, lossless messaging or ordering of messages. These properties are however provided by middleware like JGroups.  \\
 
 We shall describe the result of the JGroup exercise. In section \ref{jgroup_solution} we demonstrate our solution. In section \ref{jgroup_run} we show an example run of the solution. In section \ref{jgroup_motivation} we discuss the underlying theory and relate that to the solution. In section \ref{jgroup_conclusion} we round up the chapter.
 
@@ -13,19 +13,19 @@ We shall describe the result of the JGroup exercise. In section \ref{jgroup_solu
 
 \textit{Your primary task is to add group communication functionality to task manager application using JGroups toolkit. You can assume a scenario as shown in the following figure, where multiple instances of task manager applications are running and providing functionality for their clients to create, read, update and delete tasks, as described in the previous lab exercises.}\\
 
-\textit{Each of instance of a task manager server is running with it?s own set of tasks (i.e. their own copy of task-manager-xml) and want to communicate their incremental state changes (i.e updates to their own tasks such as add, delete, update to a task) with the other instances of task manager application.  On top of that, the task manager application also needs to support state synchronization among the instances, to bring all the task manager instances to same state, i.e to have same tasks among all the instances. The task manager application  achieves this functionality by creating a Task Group using JGroups toolkit and all the instances of task manager connect to the Task Group by using JChannel. Also note that a task manager instance may choose join or leave the task group at any point of time.}\\
+\textit{Each of instance of a task manager server is running with it's own set of tasks (i.e. their own copy of task-manager-xml) and want to communicate their incremental state changes (i.e updates to their own tasks such as add, delete, update to a task) with the other instances of task manager application.  On top of that, the task manager application also needs to support state synchronization among the instances, to bring all the task manager instances to same state, i.e to have same tasks among all the instances. The task manager application  achieves this functionality by creating a Task Group using JGroups toolkit and all the instances of task manager connect to the Task Group by using JChannel. Also note that a task manager instance may choose join or leave the task group at any point of time.}\\
 
 \textit{The Assignment}\\
 
 \textit{You are required to add/implement the following functionality to the task manager JGroup application.}\\
 
-\textit{Extend the task manager xml with a ?required? attribute on the task element, which accepts boolean values (true/false) indicating whether the task is required to be executed later or not.}\\
+\textit{Extend the task manager xml with a 'required' attribute on the task element, which accepts boolean values (true/false) indicating whether the task is required to be executed later or not.}\\
 
 \textit{Implement the following operations on task manager JGroup application.}\\
 
-\textit{\textbf{execute}: accepts id of a task and all instances of task managers in the group execute the task matching to id, by assigning the ?status? attribute to ?executed? and ?required? attribute to ?false?.}\\
+\textit{\textbf{execute}: accepts id of a task and all instances of task managers in the group execute the task matching to id, by assigning the 'status' attribute to 'executed' and 'required' attribute to 'false'.}\\
 
-\textit{\textbf{request}: accepts id of a task and  all instances of task managers in the group assigns the ?required? attribute to ?true? for the task matching to the id.}\\
+\textit{\textbf{request}: accepts id of a task and  all instances of task managers in the group assigns the 'required' attribute to 'true' for the task matching to the id.}\\
 
 \textit{\textbf{get}: accepts a name of a role as input and then all instances of task managers in the group will output their tasks matching to the role specified in their task manager xml.}\\
 
@@ -35,20 +35,18 @@ We shall describe the result of the JGroup exercise. In section \ref{jgroup_solu
 \section{Solution}
 \label{jgroup_solution}
 
-The solution consists of two main classes. A sender and a receiver. The sender's task is to take user requests and relay them to a group of receivers.
+Our solution consists of two main classes. A sender and a receiver. The sender's task is to take user requests and relay them to a group of receivers.
 The receiver's task is to receive the requests and execute them. \\ 
 
-The sender instantiates a 'channel' object. This is similar to a socket and one of the main concepts in the JGroup API. messages are sent over the 'channel' to the group or to individual processes.  A 'Message' object sent over the channel takes the sender's and receiver's addresses as well as a message. If the sender and receivers' addresses are null the message is multicast to the group members.\\
+The sender instantiates a 'channel' object. This is similar to a socket and one of the main concepts in the JGroup API. Messages are sent over the 'channel' to the group or to individual processes.  A 'Message' object sent over the channel takes the sender's and receiver's addresses as well as a message. If the sender's and receiver's addresses are null the message is multicast to the group members.\\
 
 Our sender class first packages a user request in an envelope object (which can hold a request command as well as a Task object) and then serializes the envelope object before multicasting a JGroup Message object containing the envelope to the group. i.e., a request for a given operation on a given task is put into an envelope object with the task's ID. The envelope is marshalled and multicast to the group as a JGroup Message.\\
 
 Receivers subscribe to the same JGroup channel as the sender has instantiated. The group receivers will unmarshall a message back into an envelope object giving them access to the original request and the Task object. \\
 
-Note \textit{JGroup delivers multicast as well as one-to-one communication. By providing the Message object with an explicit receiver address that message is sent to that receiver only and not to the group.}
-
 \section{Example Run}
 \label{jgroup_run}
-In our taskmanagerapplication we first create and connect to the group 'channel'. Then we fetch the state which in turn invokes the receivers 'setstate' method. This is to ensure a synchronized state across the group. Note \textit{the receiver's setState method is not implemented as the time of writing!!!}   
+In our taskmanager application we first create and connect to the group 'channel'. Then we fetch the state which in turn invokes the receivers 'setstate' method. This is to ensure a synchronized state across the group. Note \textit{the receiver's setState method is not implemented at the time of writing!!!}   
 
 \begin{lstlisting}[caption=group setup]
 // channelTasks = ChannelHelper.getNewChannel(localIp, addPort);
@@ -72,8 +70,6 @@ channel.close();
 
 After the initial group creation and state transfer steps we enter the eventLoop. Here we receive requests, transform the request 
 into a Message object and send messages to the group. A request is wrapped in an 'Envelope' object. The WriteToChannel(envelope, channel) method then serializes the envelope and wraps it in a JGroup Message object and sends that message to the group.\\
-
-Note overloads of the channel.send() method exists which, provided an address allows us to send the message to a single address instead of the group.
 
 \pagebreak
 \begin{lstlisting}[caption=eventloop]
@@ -128,16 +124,12 @@ if(DeserializeEnvelope.command.equals("request")){
 }
 \end{lstlisting}
 
-
-
-
-
 \section{Motivation- and theory}
 \label{jgroup_motivation}
 Remote invocation paradigms (RPC, RMI) imply a coupling between the participants that is often not desirable in distributed systems. i.e., the sender need to know the receiver. \\
 
- A common means of decoupling the system is by using a form of indirect communication. Indirect communication is defined as 'entities communicating through an intermediary'. Note \textit{there an be potentially many receivers of a single subject/object. One process sends to several subscriber processes}.\\
-
+A common means of decoupling the system is by using a form of indirect communication. Indirect communication is defined as 'entities communicating through an intermediary'.\\
+ 
 Uncoupling the communicating entities reveal two properties of indirect communication: 
 
 \begin{enumerate}
@@ -145,13 +137,12 @@ Uncoupling the communicating entities reveal two properties of indirect communic
 \item Time uncoupling: the sender and receiver(s) does not need to exist at the same time.  
 \end{enumerate}
 
-This is why indirect communication is desirable in environments where change is anticipated. Note \textit{in reality systems are not always both space and time uncoupled}. \\
-
+This is why indirect communication is desirable in environments where change is anticipated. Note \textit{in reality systems are not always both space and time uncoupled}. E.g. IP multicast is space un-coupled but time coupled. \\
 
 Various techniques for indirect communication exist:\\
 
 \begin{itemize}
-\item \textbf{Group communication:} A message is sent to an address  and then this message is delivered to all members of the group. The message delivery is guaranteed a certain ordering.Sender is not aware of the identity of the receivers. Note this does make the system vulnerable to single-point-failures if ...? \\
+\item \textbf{Group communication:} A message is sent to an address -the intermediary-  and from here this message is delivered to all members of the group. The message delivery is guaranteed a certain ordering. Sender is not aware of the identity of the receivers. Note this does make the system vulnerable to single-point-failures if the intermediary fails all communication is down. \\
 
 \item \textbf{Publish-subscribe systems:} publishers publish structured events to an event service and subscribers express interest in particular events through  subscriptions. \\
 
@@ -162,13 +153,9 @@ Various techniques for indirect communication exist:\\
 
 \subsection{Group Communication Programing Model}
 
-A group has a conceptual group-membership. Processes may join or leave the group transparently. The essential feature of group communication is that it issues only a single multicast operation to send a message to each member of the group (a group of processes). \\
-
-This is, off course, more effective than sending a message once to each member of the group. \\
+A group has a conceptual group-membership. Processes may join or leave the group transparently. The essential feature of group communication is that it issues only a single multicast operation to send a message to each member of the group (a group of processes). This is, off course, more effective than sending a message once to each member of the group. \\
 
 The most basic form of group communication, IP Multicast, provides some guarantees as to the delivery of messages, namely:\\
-
-( Reliability: (see Ch 2) )
 
 \begin{itemize}
 \item \textbf{Integrity}. The message received is the same as the one sent, and no messages are delivered twice. 
@@ -176,7 +163,33 @@ The most basic form of group communication, IP Multicast, provides some guarante
 \item \textbf{Agreement}. If the message is delivered to one process, then it is delivered to all processes in the group.
 \end{itemize}
 
+\subsection{Ordering}
+
 But IP multicast offers no guarantees as to reliability i.e., no ordering of messages and packages may be lost. \\
+
+Ordering of event matters. E.g. a question should appear before its answer. A flight reservation can be made only if the seats are available. The challenge is that two computers cannot rely on a shared definition of time and must communicate only by sending messages. \\ 
+
+So we talk about logical time: we know the order of events within the same process and we know that any message is sent before it is received. Lamport called this \emph{partial ordering } or the \emph{happended-before} relation.\\
+
+Lamport phrased the term \emph{logical clock}, a way to timestamp events achieving partial order. A Lamport timestamp is a way to determine the order of events. A process increments its counter before each event in that process. When a process sends a message, it includes its counter value with the message. On receiving a message, the receiver process sets its counter to be greater than the maximum of its own value and the received value. 
+
+\begin{lstlisting}
+e1 -> then L(e1) -> L(e2)
+\end{lstlisting}
+
+Note e1 - e2 are partially ordered events since the reverse is \emph{not} true. If the Laport time of one event suggests it happened before another it is not to say the actual event happened before the other.\\
+
+The concept of \emph{vector time} takes one step further toward ordering of events and provides that:
+
+\begin{lstlisting}
+e1 -> e2 <-> L(e1) -> L(e2)
+\end{lstlisting}
+
+Vector time does so by letting each process hold a record   $(Vn)$ of the time of its own events and that of all other processes' events as well. This way the ordering of events in a distributed system can be determined in that the time of an event, $ti$, is the number of events that happened in process i before the event.\\
+
+In other words, a Vector holds the time of the past events of all processes. The order of two given events is easy to determine once the time of previous events is known. \\
+  
+\begin{comment}
 
 JGroups is build as an IP multicast application using a transport protocol ( UDP TCP, or JMS (Java Message Service)) 
 and, crucially,  it delivers reliability and ordering to group membership. Among other things this includes:\\
@@ -207,13 +220,18 @@ JGroups consists of 3 main parts: (1) the Channel used by developers to build re
 JGroups is highly configurable and developers can put together a protocol stack that suits their particular needs ranging from fast but unreliable to slower but reliable protocol stacks. i.e., a system might be composed, depending on the protocol stacks used, in such a way that it offers lossless transmission but not ordering of messages or lossless transmission, atomicity and ordering of messages etc.\\
 
 In JGroups the channel abstraction is the group membership itself. When connecting to a channel a process joins the group. A Message abstraction is the means be which a process sends a message to the group. the Message consists of a receiver address (a group), a sender address and a message. 
+\end{comment}  
 
 
 \section{Conclusion}
 \label{jgroup_conclusion}
-Group communication as provided by IP multicast suffers from omission failures, messages may be lost. It also offers no ordering of messages. These properties can be provided by application layers e.g. JGroups. JGroups is an overlay on the basic IP multicast offering amongst other things reliability and ordering in group communication. \\
+Group communication as provided by IP multicast suffers from omission failures, messages may be lost. It also offers no ordering of messages. These properties can be provided by application layers like JGroups. JGroups is an overlay on the basic IP multicast offering, amongst other things, reliability and ordering in group communication. \\
 
-JGroups delivers reliable multicast i.e., where IP multicast is unreliable, it might drop messages, deliver messages multiple times, or deliver messages out of order, JGroups offer a reliable multicast. It offers atomicity; all members receive the message or none does. It offers ordering; the messages will be received by all receivers in the same order. And it offers lossless transmission by retransmission of messages.\\
+JGroups delivers \emph{reliable} multicast i.e., where IP multicast is unreliable - it might drop messages, deliver messages multiple times or deliver messages out of order - JGroups offer a reliable multicast. JGroups offers atomicity; all members receive the message or none does. It offers ordering; the messages will be received by all receivers in the same order. And it offers lossless transmission by retransmission of messages.\\
 
-On a closing note, the flexibility offered by JGroups in composing a protocol stack was beyond the available time. Therefore we did only try out JGroups most basic stack setup, i.e., IP multicast over UDP. Given time it would have been nice to be able to try out some different configurations of the protocol stack.  
+Ordering of messages is important. Lamport phrased the term \emph{happened-before} and provided the \emph{Lamport timestamp} in which each process encrements its counter before sending a message. The receiver compares its own counter to that of the received message to determine the order. This is known as \emph{partial ordering}.\\
+
+Vector clocks does one better providing total ordering by having each process keep a vector of timestamps for all processes, a sort of Lamport timestamp for each process. This is known as total ordering. \\
+
+
 

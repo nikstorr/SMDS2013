@@ -1,0 +1,44 @@
+\chapter{Conclusion}
+\minitoc
+\section{TCP}
+
+We have used this example to demonstrate and experiement with the TCP/IP suite. There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages and TCP transfers byte streams. Unlike UDP, TCP is reliable and ordered. TCP can provide guarantees as to the ordering of its messages i.e., messages arrive in the order they were sent. It does so by giving every packet a number and then ordering the packets on arrival. TCP provides guarantees as to the delivery of the messages i.e, the message eventually arrive. It does so by using acknowledgements and retries (resend messages).   \\
+
+In contrast, the underlying network protocol (the IP protocol ) offers only ?best-effort? semantics, there is no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. IP delegates the task of providing a reliable service to other layers, namely the TCP layer atop it. This nicely demonstrates the end-to-end principle. Application specific functionality should reside at the end hosts.\\
+
+Network layers send IP packets to (IP)addresses accross the network. The transport layer's UDP and TCP protocols sends IP packets to processes instead of addresses. TCP provides guarantees about reliability, ordering etc which UDP does not and this makes TCP well suited for server-client architectures in distributed systems. \\
+
+Our simple example mimiced the way the TCP protocol achieves reliability. By sending acknowledgements our client-server is, in principle, capable of achieving reliability. It could be made to resend a packet in case of no response from the other end. Off course things like latenzy, troughput or duplicate packages come into play here. \\
+
+The code in our solution is very much a 'proof-of-concept'. The code style could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the theory behind.  \\
+
+
+\section{REST}
+\section{Security}
+Sending messages in distributed systems poses a security risk. The enemy can intercept messages, man-in-the-middle attack, and the resend the message posing as the client, replays. To protect against those we use encryption and carefully designed protocols. \\
+
+Instead of authenticating by password we use a challenge. A challenge is an encryted message which can only be decrypted with the right key. Inside the encrypted message is a ticket, another challenge, encrypted in the server key. By adding the clients identity to the ticket a server can authenticate the sender of the message. By adding a sequence of nonces the server can authenticate subsequent messages from the client.\\
+
+An enemy amy intercept the initial message from the client to the authentication/token server but will be unable to decrypt the message, and ticket inside. The enemy may send this message to the server anyway but the server can verify the sender's identity by comparing the identity inside the ticket to the sender. \\
+
+An enemy may intercept messages from the client to the server and replay a message posing as the client but the sequence of nonces in the message enables the server to authenticate the message. If the enemey does not know the right nonce tranformation this is also a futile effort.\\
+
+Though the security protocol in our example does provide protection against man-in-the-middle attacks and protection against replays it still assumes a trusted source. It assumes that the secret keys used for communication between principles and the trusted source are distributed safely. Eliminating the need for a trusted source is desirable but unatainable. \\
+
+Even when principles share private keys there is a possibility of a man-in-the-middle attack. If the initial message from the client to the token server is intercepted the server will not be able to detect the attacker as it will be its identity inside the ticket. \\ 
+
+This example used private keys. Using public/private keys would present a stronger encryption but suffer the same short-commings. \\
+
+The nonce transformation function also need to be known by server and client. How can they share that secret securely?
+
+\section{Concurrency}
+\section{Group Communication}
+Group communication as provided by IP multicast suffers from omission failures, messages may be lost. It also offers no ordering of messages. These properties can be provided by application layers like JGroups. JGroups is an overlay on the basic IP multicast offering, amongst other things, reliability and ordering in group communication. \\
+
+JGroups delivers \emph{reliable} multicast i.e., where IP multicast is unreliable - it might drop messages, deliver messages multiple times or deliver messages out of order - JGroups offer a reliable multicast. JGroups offers atomicity; all members receive the message or none does. It offers ordering; the messages will be received by all receivers in the same order. And it offers lossless transmission by retransmission of messages.\\
+
+Ordering of messages is important. Lamport phrased the term \emph{happened-before} and provided the \emph{Lamport timestamp} in which each process encrements its counter before sending a message. The receiver compares its own counter to that of the received message to determine the order. This is known as \emph{partial ordering}.\\
+
+Vector clocks does one better providing total ordering by having each process keep a vector of timestamps for all processes, a sort of Lamport timestamp for each process. This is known as total ordering. \\
+
+\section{Mobile Client}

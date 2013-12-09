@@ -6,13 +6,15 @@
 
 \section{Solution}
 
-The handed-out project (before improvements) implements a simple security protocol. This protocol has a few short-commings. 1) The protocol is not secure against man-in-the-middle attacks and 2) how can the server trust the clients message is not a replay? Note \textit{This protocol implies that a successful decryption authenticates the sender!} \\
+The handed-out project (before improvements) implements a simple security protocol. This protocol has a few short-commings. 1) The protocol is not secure against man-in-the-middle attacks and 2) how can the server trust the clients message is not a replay? Note \textit{The protocol implies that a successful decryption authenticates the sender!} \\
 
-The challenges in the assignment include how to implement an improved protocol that, among other things, allows a client and a server to exchange a shared secret key which then facilitates authenticated communication between them. Thus providing slightly better security.  \\
+The challenges in the assignment includes how to implement an improved protocol that, among other things, allows a client and a server to exchange a shared secret key which then facilitates authenticated communication between them. How to improve the protocol to provide security against man-in-the-middle attacks and replays.  \\
 
-The handed-out project uses shared private keys between participants i.e., private keys are known between [token server : server] and [token : server-client]. These keys are already distributed between the participants. Challenges include implementing a way for the client and server to share a secret key (session key) with which they can communicate in a secure manner, and preventing replay of the client's messages to the server . \\
+The handed-out project uses shared private keys between participants i.e., private keys are known between [token server : server] and [token : server-client]. These keys are already distributed between the participants. The protocol, however, provides no means for the server to authenticate the client. Thus it is open to man-in-the-middle attacks and replays. A way to improve the protocol is to make the server able to authenticate the client, much liek it is done in the Needham-Schroeder protocol.\\
 
-In our example, first the client sends a request to the authentication server (token server). The token server (upon authenticating the client with their shared secret key) sends back a encrypted response inside which is a ticket encrypted in the [token:server] private key, plus a session key for the communication between the client and the server. \\
+
+In our solution, first the client sends a request to the authentication server (token server). The token server (upon authenticating the client with their shared secret key) sends back a encrypted response inside which is a ticket encrypted in the [token:server] private key, plus a session key for the communication between the client and the server. Note this is another insecure issue in the original protocol in that the authentication server (ITU server) have no means of authenticating the client. \\
+
 
 \begin{lstlisting}
 // from client to token server
@@ -23,11 +25,11 @@ In our example, first the client sends a request to the authentication server (t
 
 The client is able to decrypt the response with the (already distributed) [token server : client] private key. The client now has a ticket plus the secret key (session key) to use for communicating with the server. The ticket is encrypted in the [token server : server] shared private key (so if the respons is intercepted its content is secure) and contains the [client : server] shared key (the session key) plus the clients identity, plus a timestamp and the clients role(note \textit{the server later uses the role to authenticate the client against an access rights table restricting access to it's resources}). \\ 
 
-If this message (from the token-server to the client) is intercepted the encryption with the clients private key poses a challenge as do the ticket encrypted in the servers private key but, crucially, if the enemy manages to intercept and send the message to the server posing as the client it is of no matter as the server then compares the identity in the ticket against the sender, and if they do not match the server denies access to its resources. Thus providing protection against man-in-the-middle attacks\\
+If this message (from the token-server to the client) is intercepted the encryption with the clients private key poses a challenge as do the ticket encrypted in the servers private key but, if the enemy manages to intercept and send the message to the server posing as the client, it is of no matter as the server then compares the identity in the ticket against the sender, and if they do not match the server denies access to its resources. Thus authenticating the client provides a protection against man-in-the-middle attacks.\\
 
-Second, the client now in possesion of the session key, sends a 'authenticate' request to the server along with the ticket encrypted in the servers private key. The server decrypts the message and authenticates the client against the identity in the ticket. The session key has now been distributed between the server and client and will be used for communication between them. Th eticket contains a timestamp \\ 
+Second, the client now in possesion of the session key, sends a 'authenticate' request to the server along with the ticket encrypted in the servers private key. The server decrypts the message and authenticates the client against the identity in the ticket. The session key has now been distributed between the server and client and will be used for communication between them. The ticket contains a timestamp used to timeout requests. \\ 
 
-But first, the server sends a reply consisting of a message and a nonce encrypted with the [server : client] shared key (the session key). The nonce provide proof to the server of message authenticity.
+But first, the server sends a reply consisting of a message plus a nonce, encrypted with the [server : client] shared key (the session key). The purpose of the nonce is to provide proof to the server of message authenticity i.e., if the enemy intercepts and resends the message posing as the client, the server will be able to compare the nonces to authenticate the message.  
 
 \begin{lstlisting}
 // from client to server
@@ -39,7 +41,7 @@ else
 	no, {message}K_sc // nonce
 \end{lstlisting}
 
-When the server later receives a message from the client it should contain the nonce (transformed by some agreed upon function (in this case simply the nonce - 1)). By applying a transformation to the nonce the message effectively authenticates it's own identity to the server. Messages from the client must come in a predetermined order from now on. The use of nonces prevents replay attacks by numbering the messages in a way known to the server and client only. \\
+When the server receives a new message from the client it should contain the nonce transformed by some agreed upon function (in this case simply the nonce - 1). By applying a transformation to the nonce the message/client effectively authenticates it's own identity to the server. Messages from the client must come in a predetermined order, the transformation of the nonce in each message in the communication-. The use of nonces prevents replay by numbering the messages in a way known to the server and client only. \\
 
 If an enemy intercepts the message it will need to first deal with the session key after which it will still need to know which transformation of the nonce is the correct one in order to continue communicating with the server. \\
 
@@ -59,7 +61,7 @@ else
 	no, {message}K_sc
 \end{lstlisting}
 
-In this, rather convoluted, way the server and client now has obtained a shared private key on which to communicate (more) securely. Protecting the communication against man-in-the-middle attacks. The example uses nonces to protect against replays. The example still relies on a trusted third party, the principles involved still need to initially share secret keys.  \\
+In this, rather convoluted, way the server and client now has obtained a shared private key on which to communicate (more) securely. The protocol offers protection against man-in-the-middle attacks in several levels. The example uses nonces to authenticate the client and it provides the client identity, encrypted in the ticket, to the server again authenticating the client and the message as not a man-in-the-middle attack. The example still relies on a trusted third party, the principles involved still need to initially share secret keys. In the example the ITU server is the trusted source. \\
  
 \begin{comment}
 There's also still the possibility of a man-in-the-middle attack in where the message form the token server is send to the enemy, but ... 
@@ -77,6 +79,8 @@ There's also still the possibility of a man-in-the-middle attack in where the me
 \vspace{10pt}
 
 \section{Relating To The Theory}
+
+For a recap of Worst Case Assumptions an a definition of the enemy see the appendix.\\
 
 The solution to security issues in distributed systems is to encrypt messages. All encryption algorithms are based on using a secret (called a key). Encryption algorithms use a key to obscure the content of messages (encrypt the message), and to decrypt the message. Encryption algorithms are based on one-way functions i.e., a function that converts an input to an output from which the input can not easily be deducted. \\ 
 
@@ -129,9 +133,17 @@ Scenario3 (\textit{Authenticated communication with public keys}). A principle m
 
 \section{Conclusion}
 
+Sending messages in distributed systems poses a security risk. The enemy can intercept messages, man-in-the-middle attack, and the resend the message posing as the client, replays. To protect against those we use encryption and carefully designed protocols. \\
+
+Instead of authenticating by password we use a challenge. A challenge is an encryted message which can only be decrypted with the right key. Inside the encrypted message is a ticket, another challenge, encrypted in the server key. By adding the clients identity to the ticket a server can authenticate the sender of the message. By adding a sequence of nonces the server can authenticate subsequent messages from the client.\\
+
+An enemy amy intercept the initial message from the client to the authentication/token server but will be unable to decrypt the message, and ticket inside. The enemy may send this message to the server anyway but the server can verify the sender's identity by comparing the identity inside the ticket to the sender. \\
+
+An enemy may intercept messages from the client to the server and replay a message posing as the client but the sequence of nonces in the message enables the server to authenticate the message. If the enemey does not know the right nonce tranformation this is also a futile effort.\\
+
 Though the security protocol in our example does provide protection against man-in-the-middle attacks and protection against replays it still assumes a trusted source. It assumes that the secret keys used for communication between principles and the trusted source are distributed safely. Eliminating the need for a trusted source is desirable but unatainable. \\
 
-Even when principles share private keys there's a possibility of a man-in-the-middle attack. If the initial message from the client to the token server is intercepted the server will not be able to detect the attacker as it will be it's identity inside the ticket. There's no way the server can now the real identity behind the message. \\ 
+Even when principles share private keys there is a possibility of a man-in-the-middle attack. If the initial message from the client to the token server is intercepted the server will not be able to detect the attacker as it will be its identity inside the ticket. \\ 
 
 This example used private keys. Using public/private keys would present a stronger encryption but suffer the same short-commings. \\
 

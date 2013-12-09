@@ -1,4 +1,7 @@
-\section{Basic Security Model}
+\section{Security Model}
+\label{securitymodel}
+
+
 A goal of security in distributed systems is to restrict access to information and resources to just those with authorization. Another is non-repudiation, securing that a process (or user) cannot deny participating in an activity. \\
 
 This can be achieved by securing the processes and the channels used to interact and by protecting the objects they use against unauthorized access.\\
@@ -39,3 +42,11 @@ to create the list we have a set of worst-case assumptions and guidelines:
 \item attackers have acces to large resources. (computing power is cheap. Assume strong enemies.)
 \item Minimize trust base: the portionof a system responsible for security should be kept small. 
 \end{itemize}
+
+\section{The Enemy}
+
+The enemy can Read, Remember, Intercept, Interrupt, Modify, Fabricate 
+(eavesdrop, masquerade, tamper, replay, denial of service) and guess/get secrets if she/he has sufﬁcient time/power.
+
+
+

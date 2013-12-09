@@ -1,7 +1,7 @@
 \chapter{TCP server and Serialization}
 \minitoc
 
-In this chapter we talk about the TCP protocol. in section \ref{tcp_lab} we describe the assignment. In section \ref{tcp_solution} we describe our solution. in section \ref{tcp_example} we provide an example run of the solution. In section \ref{tcp_reflection} we try to connect the example to the theory behind. In section \ref{tcp_conclusion} we sum up what we've learned and round up the chapter.
+In this chapter we talk about the TCP protocol. in section \ref{tcp_lab} we describe the assignment. In section \ref{tcp_solution} we describe our solution. in section \ref{tcp_example} we provide an example run of the solution. In section \ref{tcp_reflection} we try to connect the example to the theory behind. 
 
 \section{lab description}
 \label{tcp_lab}
@@ -16,10 +16,9 @@ In this chapter we talk about the TCP protocol. in section \ref{tcp_lab} we desc
 
 \item Soon after receiving the command from the server, the client will send necessary data to the server to further process the command on the server side. In case of POST and PUT commands, the client will send a Task object, where as in case of GET or DELETE commands, the client will send an attendant’s name or a task id respectively.\\
 
-\item Finally, after processing the command the server will send back the results to the client. In case of GET command, the server will return a list of tasks (List<Task> object) to the client. On the other hand, it will simply return the result of that command (e.g. task deleted). The result could also contain error message if any (e.g. task Id not found in the task list).
-
-
+\item Finally, after processing the command the server will send back the results to the client. In case of GET command, the server will return a list of tasks (List\textless Task \textgreater) object to the client. On the other hand, it will simply return the result of that command (e.g. task deleted). The result could also contain an error message if any (e.g. task Id not found in the task list).
 \end{itemize}
+
 
 \textit{In this lab exercise, you are required to develop the code for the following functionality.}\\
 
@@ -82,16 +81,18 @@ public class TaskManager implements Serializable{
 
 \subsubsection{TCP}
 
-TCP is one of the main protocols of the transport layer of the TCP/IP model. It receives and sends data to the lower IP layer. \\
+The Transmission Control Protocol (TCP) is one of the main protocols of the transport layer of the TCP/IP suite. TCP provides reliable and ordered streams over the internet. TCP is located at the transport layer where it  receives data from the application layer and sends data to the lower level internet layer IP protocol. \\
 
-The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call and the server won't perform any other tasks before a client connects. The Client creates a socket on the same port which takes the servers InetAddress and the port it is listening on as arguments. \\
+TCP transforms data into packets, a sequence of bytes consisting of a headder (metadata) and a body (the data). \\
+
+The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call and the server will wait for a client to connect. The Client creates a socket on the same port which takes the server's InetAddress and the port it is listening on as arguments. \\
 
 
 
 \section{example run}
 \label{tcp_example}
 
-In our example the server sends out confirmation messages to the client for each request received. The client proceeds, only after receiving an acknowledgement of its request. \textit{This mimics the way the TCP protocol uses acknowledgements (acks) to confirm packet reception. Acks are the way the TCP protocol achieves \textit{reliability}. A client will wait for an ack and if none arrives it retransmits the package.}\\   
+In our example the server sends out confirmation messages to the client for each request received. The client proceeds, only after receiving an acknowledgement of its request. This mimics the way the TCP protocol uses acknowledgements (acks) to confirm packet reception. Acks are the way the TCP protocol achieves \textit{reliability}. A client will wait for an ack and if none arrives it retransmits the package.\\   
 
 After establishing a socket connection between client and server the client sends a request to the server. The server responds by sending an ack to the client (in this case the ack is the request itself).
 % \lstinputlisting{TCPserver.java}
@@ -180,7 +181,7 @@ After the run, in which the client requested the server's POST method with a new
 </taskmanager>
 \end{lstlisting}
 
-Not included in this summary, but in the complete example the client also requests the GET method and the PUT method wanting to change the new 'one more cup of coffe' Task description from 'sense of direction' to 'no sense of direction'. Finally, the client requests the DELETE method with the taskid 'handin'01' parameter. After the run the xml document now looks like this:
+Not included in this summary, but in the complete example the client also requests the GET method and the PUT method wanting to change the new task's description property. Finally, the client requests the DELETE method with the taskid 'handin'01' parameter. After the run the xml document now looks like this:
 
 \begin{lstlisting}[caption=xml after PUT]
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -228,11 +229,9 @@ as long as they comply to the same protocol(s). Note \textit{even so, the hetero
 \end{comment}
 We have used this example to demonstrate and experiement with the TCP/IP suite. There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages and TCP transfers byte streams. Unlike UDP, TCP is reliable and ordered. TCP can provide guarantees as to the ordering of its messages i.e., messages arrive in the order they were sent. It does so by giving every packet a number and then ordering the packets on arrival. TCP provides guarantees as to the delivery of the messages i.e, the message eventually arrive. It does so by using acknowledgements and retries (resend messages).   \\
 
-In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there is no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. IP relegates the task of providing a reliable service to other layers, namely the TCP layer atop it. This nicely demonstrates the end-to-end principle. Application specific functionality should reside at the end hosts.
+In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there is no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. IP delegates the task of providing a reliable service to other layers, namely the TCP layer atop it. This nicely demonstrates the end-to-end principle. Application specific functionality should reside at the end hosts.\\
 
-The code in our solution is very much a 'proof-of-concept'. The code style could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the theory.  \\
 
-As with many other examples, we did not have time to implement the optional parts of the assignment. This is regretable and would have been desirable and a valuable addition to the outcome of the course. But time is simply in short supply at this study.\\
 
 \begin{comment}
 The main lesson learned is about protocols and layers, each layer providing a specialized task enforced by the protocol (provided we use the protocols as intented). Each layer communicates with the layers below. \\
@@ -240,6 +239,9 @@ The main lesson learned is about protocols and layers, each layer providing a sp
 
 Network layers send IP packets to (IP)addresses accross the network. The transport layer's UDP and TCP protocols sends IP packets to processes instead of addresses. TCP provides guarantees about reliability, ordering etc which UDP does not and this makes TCP well suited for server-client architectures in distributed systems. \\
 
-Our simple example resembled the way the TCP protocol achieves reliability. By sending acknowledgements our client-server is, in principle, capable of achieving reliability. It could be made to resend a packet in case of no response from the other end. Off course things like latenzy, troughput or duplicate packages come into play. But the principle stands.     
+Our simple example mimiced the way the TCP protocol achieves reliability. By sending acknowledgements our client-server is, in principle, capable of achieving reliability. It could be made to resend a packet in case of no response from the other end. Off course things like latenzy, troughput or duplicate packages come into play here. \\
 
+The code in our solution is very much a 'proof-of-concept'. The code style could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the theory behind.  \\
+
+As with many other examples, we did not have time to implement the optional parts of the assignment. This is much regrettable but we feel we at least have had a good introduction to the TCP/IP suite.
 

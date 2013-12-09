@@ -14,26 +14,27 @@
 \contentsline {subsubsection}{JAXB}{11}{subsubsection*.4}
 \contentsline {subsubsection}{TCP}{12}{subsubsection*.5}
 \contentsline {section}{\numberline {2.3}example run}{12}{section.2.3}
-\contentsline {section}{\numberline {2.4}Reflection}{15}{section.2.4}
-\contentsline {chapter}{\numberline {3}REST Service}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Lab description}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}Solution}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Test run}{19}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reflection}{19}{section.3.4}
-\contentsline {section}{\numberline {3.5}Conclusion}{20}{section.3.5}
-\contentsline {chapter}{\numberline {4}Security}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lab Description}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}Solution}{21}{section.4.2}
-\contentsline {section}{\numberline {4.3}Example run}{23}{section.4.3}
-\contentsline {section}{\numberline {4.4}Relating To The Theory}{24}{section.4.4}
-\contentsline {section}{\numberline {4.5}Conclusion}{26}{section.4.5}
-\contentsline {chapter}{\numberline {5}Indirect Communication}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}lab description}{27}{section.5.1}
-\contentsline {section}{\numberline {5.2}Solution}{28}{section.5.2}
-\contentsline {section}{\numberline {5.3}Example Run}{29}{section.5.3}
-\contentsline {section}{\numberline {5.4}Motivation- and theory}{31}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Group Communication Programing Model}{32}{subsection.5.4.1}
-\contentsline {section}{\numberline {5.5}Conclusion}{33}{section.5.5}
+\contentsline {section}{\numberline {2.4}Reflection}{16}{section.2.4}
+\contentsline {chapter}{\numberline {3}REST Service}{18}{chapter.3}
+\contentsline {section}{\numberline {3.1}Lab description}{18}{section.3.1}
+\contentsline {section}{\numberline {3.2}Solution}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Test run}{20}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reflection}{20}{section.3.4}
+\contentsline {section}{\numberline {3.5}Conclusion}{21}{section.3.5}
+\contentsline {chapter}{\numberline {4}Security}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lab Description}{22}{section.4.1}
+\contentsline {section}{\numberline {4.2}Solution}{22}{section.4.2}
+\contentsline {section}{\numberline {4.3}Example run}{24}{section.4.3}
+\contentsline {section}{\numberline {4.4}Relating To The Theory}{25}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion}{27}{section.4.5}
+\contentsline {chapter}{\numberline {5}Group Communication}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}lab description}{28}{section.5.1}
+\contentsline {section}{\numberline {5.2}Solution}{29}{section.5.2}
+\contentsline {section}{\numberline {5.3}Example Run}{30}{section.5.3}
+\contentsline {section}{\numberline {5.4}Motivation- and theory}{32}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Group Communication Programing Model}{33}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Ordering}{33}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Conclusion}{34}{section.5.5}
 \contentsline {chapter}{\numberline {6}Concurrency Control}{35}{chapter.6}
 \contentsline {section}{\numberline {6.1}lab description}{35}{section.6.1}
 \contentsline {section}{\numberline {6.2}Solution}{36}{section.6.2}
@@ -56,4 +57,15 @@
 \contentsline {subsubsection}{Interoperations Models}{49}{subsubsection*.16}
 \contentsline {subsubsection}{Sensing And Context-wareness}{49}{subsubsection*.17}
 \contentsline {section}{\numberline {7.5}Conclusion}{49}{section.7.5}
-\contentsline {chapter}{\numberline {A}Who-did-what}{56}{appendix.A}
+\contentsline {chapter}{\numberline {8}Conclusion}{56}{chapter.8}
+\contentsline {section}{\numberline {8.1}TCP}{56}{section.8.1}
+\contentsline {section}{\numberline {8.2}REST}{57}{section.8.2}
+\contentsline {section}{\numberline {8.3}Security}{57}{section.8.3}
+\contentsline {section}{\numberline {8.4}Concurrency}{58}{section.8.4}
+\contentsline {section}{\numberline {8.5}Group Communication}{58}{section.8.5}
+\contentsline {section}{\numberline {8.6}Mobile Client}{58}{section.8.6}
+\contentsline {chapter}{\numberline {A}Security model}{59}{appendix.A}
+\contentsline {section}{\numberline {A.1}Security Model}{59}{section.A.1}
+\contentsline {subsubsection}{Worst-Case Assumptions }{59}{subsubsection*.18}
+\contentsline {section}{\numberline {A.2}The Enemy}{60}{section.A.2}
+\contentsline {chapter}{\numberline {B}Who-did-what}{61}{appendix.B}

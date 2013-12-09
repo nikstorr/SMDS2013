@@ -19,7 +19,6 @@
 % make table captions float left
 \usepackage{floatrow}
 
-
 % code formatting
 \usepackage{listings}
 \lstset{
@@ -89,9 +88,11 @@ rulecolor=\color{black}
 \include{groupcommunication}
 \include{concurrency}
 \include{mobile}
-\include{Conclusion}
+\include{conclusion}
 
 \appendix
+\chapter{Security model}
+\input{securitymodel}
 \chapter{Who-did-what}
 \input{whodidwhat}
 \end{document}          

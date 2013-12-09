@@ -45,27 +45,17 @@
 \contentsline {chapter}{\numberline {7}Mobile client}{43}{chapter.7}
 \contentsline {section}{\numberline {7.1}Lab Description}{43}{section.7.1}
 \contentsline {section}{\numberline {7.2}Solution}{43}{section.7.2}
-\contentsline {section}{\numberline {7.3}Example Run}{44}{section.7.3}
-\contentsline {section}{\numberline {7.4}Theory}{45}{section.7.4}
-\contentsline {subsubsection}{Volatility}{45}{subsubsection*.12}
-\contentsline {subsubsection}{Smart Spaces}{45}{subsubsection*.13}
-\contentsline {subsection}{\numberline {7.4.1}Device Model}{45}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Discovery Services}{47}{subsection.7.4.2}
-\contentsline {subsubsection}{Serverless Discovery}{47}{subsubsection*.14}
-\contentsline {subsubsection}{Real World Example:}{48}{subsubsection*.15}
-\contentsline {subsection}{\numberline {7.4.3}Interoperation}{48}{subsection.7.4.3}
-\contentsline {subsubsection}{Interoperations Models}{49}{subsubsection*.16}
-\contentsline {subsubsection}{Sensing And Context-wareness}{49}{subsubsection*.17}
-\contentsline {section}{\numberline {7.5}Conclusion}{49}{section.7.5}
-\contentsline {chapter}{\numberline {8}Conclusion}{56}{chapter.8}
-\contentsline {section}{\numberline {8.1}TCP}{56}{section.8.1}
-\contentsline {section}{\numberline {8.2}REST}{57}{section.8.2}
-\contentsline {section}{\numberline {8.3}Security}{57}{section.8.3}
-\contentsline {section}{\numberline {8.4}Concurrency}{58}{section.8.4}
-\contentsline {section}{\numberline {8.5}Group Communication}{58}{section.8.5}
-\contentsline {section}{\numberline {8.6}Mobile Client}{58}{section.8.6}
-\contentsline {chapter}{\numberline {A}Security model}{59}{appendix.A}
-\contentsline {section}{\numberline {A.1}Security Model}{59}{section.A.1}
-\contentsline {subsubsection}{Worst-Case Assumptions }{59}{subsubsection*.18}
-\contentsline {section}{\numberline {A.2}The Enemy}{60}{section.A.2}
-\contentsline {chapter}{\numberline {B}Who-did-what}{61}{appendix.B}
+\contentsline {section}{\numberline {7.3}Example Run}{45}{section.7.3}
+\contentsline {section}{\numberline {7.4}Reflection}{51}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{52}{chapter.8}
+\contentsline {section}{\numberline {8.1}TCP}{52}{section.8.1}
+\contentsline {section}{\numberline {8.2}REST}{53}{section.8.2}
+\contentsline {section}{\numberline {8.3}Security}{53}{section.8.3}
+\contentsline {section}{\numberline {8.4}Concurrency}{54}{section.8.4}
+\contentsline {section}{\numberline {8.5}Group Communication}{54}{section.8.5}
+\contentsline {section}{\numberline {8.6}Mobile Client}{54}{section.8.6}
+\contentsline {chapter}{\numberline {A}Security model}{55}{appendix.A}
+\contentsline {section}{\numberline {A.1}Security Model}{55}{section.A.1}
+\contentsline {subsubsection}{Worst-Case Assumptions }{55}{subsubsection*.6}
+\contentsline {section}{\numberline {A.2}The Enemy}{56}{section.A.2}
+\contentsline {chapter}{\numberline {B}Who-did-what}{57}{appendix.B}

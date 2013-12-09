@@ -3,48 +3,55 @@
 \BOOKMARK [1][-]{section.1.2}{report structure}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.3}{Baseline model}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.4}{Failure model}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{TCP server and Serialization}{}% 6
-\BOOKMARK [1][-]{section.2.1}{lab description}{chapter.2}% 7
+\BOOKMARK [0][-]{chapter.2}{Servlet}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Lab description}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.2}{Solution}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.3}{example run}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Test run}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.4}{Reflection}{chapter.2}% 10
-\BOOKMARK [0][-]{chapter.3}{REST Service}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Lab description}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Solution}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{Test run}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.4}{Reflection}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.5}{Conclusion}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{Security}{}% 17
-\BOOKMARK [1][-]{section.4.1}{Lab Description}{chapter.4}% 18
+\BOOKMARK [1][-]{section.2.5}{Conclusion}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{TCP server and Serialization}{}% 12
+\BOOKMARK [1][-]{section.3.1}{lab description}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Solution}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{example run}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.4}{Reflection}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{REST Service}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Lab description}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.2}{Solution}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.3}{Example run}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.4}{Relating To The Theory}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.3}{Test run}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Reflection}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{Group Communication}{}% 23
-\BOOKMARK [1][-]{section.5.1}{lab description}{chapter.5}% 24
+\BOOKMARK [0][-]{chapter.5}{Security}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Lab Description}{chapter.5}% 24
 \BOOKMARK [1][-]{section.5.2}{Solution}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.3}{Example Run}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.4}{Motivation- and theory}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{Example run}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.4}{Relating To The Theory}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 28
-\BOOKMARK [0][-]{chapter.6}{Concurrency Control}{}% 29
+\BOOKMARK [0][-]{chapter.6}{Group Communication}{}% 29
 \BOOKMARK [1][-]{section.6.1}{lab description}{chapter.6}% 30
 \BOOKMARK [1][-]{section.6.2}{Solution}{chapter.6}% 31
 \BOOKMARK [1][-]{section.6.3}{Example Run}{chapter.6}% 32
 \BOOKMARK [1][-]{section.6.4}{Motivation- and theory}{chapter.6}% 33
 \BOOKMARK [1][-]{section.6.5}{Conclusion}{chapter.6}% 34
-\BOOKMARK [0][-]{chapter.7}{Mobile client}{}% 35
-\BOOKMARK [1][-]{section.7.1}{Lab Description}{chapter.7}% 36
+\BOOKMARK [0][-]{chapter.7}{Concurrency Control}{}% 35
+\BOOKMARK [1][-]{section.7.1}{lab description}{chapter.7}% 36
 \BOOKMARK [1][-]{section.7.2}{Solution}{chapter.7}% 37
 \BOOKMARK [1][-]{section.7.3}{Example Run}{chapter.7}% 38
-\BOOKMARK [1][-]{section.7.4}{Reflection}{chapter.7}% 39
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 40
-\BOOKMARK [1][-]{section.8.1}{TCP}{chapter.8}% 41
-\BOOKMARK [1][-]{section.8.2}{REST}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.3}{Security}{chapter.8}% 43
-\BOOKMARK [1][-]{section.8.4}{Concurrency}{chapter.8}% 44
-\BOOKMARK [1][-]{section.8.5}{Group Communication}{chapter.8}% 45
-\BOOKMARK [1][-]{section.8.6}{Mobile Client}{chapter.8}% 46
-\BOOKMARK [0][-]{appendix.A}{Security model}{}% 47
-\BOOKMARK [1][-]{section.A.1}{Security Model}{appendix.A}% 48
-\BOOKMARK [1][-]{section.A.2}{The Enemy}{appendix.A}% 49
-\BOOKMARK [0][-]{appendix.B}{Who-did-what}{}% 50
+\BOOKMARK [1][-]{section.7.4}{Motivation- and theory}{chapter.7}% 39
+\BOOKMARK [1][-]{section.7.5}{Conclusion}{chapter.7}% 40
+\BOOKMARK [0][-]{chapter.8}{Mobile client}{}% 41
+\BOOKMARK [1][-]{section.8.1}{Lab Description}{chapter.8}% 42
+\BOOKMARK [1][-]{section.8.2}{Solution}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.3}{Example Run}{chapter.8}% 44
+\BOOKMARK [1][-]{section.8.4}{Reflection}{chapter.8}% 45
+\BOOKMARK [1][-]{section.8.5}{Conclusion}{chapter.8}% 46
+\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 47
+\BOOKMARK [1][-]{section.9.1}{TCP}{chapter.9}% 48
+\BOOKMARK [1][-]{section.9.2}{REST}{chapter.9}% 49
+\BOOKMARK [1][-]{section.9.3}{Security}{chapter.9}% 50
+\BOOKMARK [1][-]{section.9.4}{Concurrency}{chapter.9}% 51
+\BOOKMARK [1][-]{section.9.5}{Group Communication}{chapter.9}% 52
+\BOOKMARK [1][-]{section.9.6}{Mobile Client}{chapter.9}% 53
+\BOOKMARK [0][-]{appendix.A}{Security model}{}% 54
+\BOOKMARK [1][-]{section.A.1}{Security Model}{appendix.A}% 55
+\BOOKMARK [1][-]{section.A.2}{The Enemy}{appendix.A}% 56
+\BOOKMARK [0][-]{appendix.B}{Who-did-what}{}% 57

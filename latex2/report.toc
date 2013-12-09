@@ -6,56 +6,63 @@
 \contentsline {section}{\numberline {1.2}report structure}{4}{section.1.2}
 \contentsline {section}{\numberline {1.3}Baseline model}{5}{section.1.3}
 \contentsline {section}{\numberline {1.4}Failure model}{7}{section.1.4}
-\contentsline {chapter}{\numberline {2}TCP server and Serialization}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}lab description}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Solution}{10}{section.2.2}
-\contentsline {subsubsection}{Serialization}{11}{subsubsection*.2}
-\contentsline {subsubsection}{Byte Stream}{11}{subsubsection*.3}
-\contentsline {subsubsection}{JAXB}{11}{subsubsection*.4}
-\contentsline {subsubsection}{TCP}{12}{subsubsection*.5}
-\contentsline {section}{\numberline {2.3}example run}{12}{section.2.3}
-\contentsline {section}{\numberline {2.4}Reflection}{16}{section.2.4}
-\contentsline {chapter}{\numberline {3}REST Service}{18}{chapter.3}
-\contentsline {section}{\numberline {3.1}Lab description}{18}{section.3.1}
-\contentsline {section}{\numberline {3.2}Solution}{18}{section.3.2}
-\contentsline {section}{\numberline {3.3}Test run}{20}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reflection}{20}{section.3.4}
-\contentsline {section}{\numberline {3.5}Conclusion}{21}{section.3.5}
-\contentsline {chapter}{\numberline {4}Security}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lab Description}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}Solution}{22}{section.4.2}
-\contentsline {section}{\numberline {4.3}Example run}{24}{section.4.3}
-\contentsline {section}{\numberline {4.4}Relating To The Theory}{25}{section.4.4}
-\contentsline {section}{\numberline {4.5}Conclusion}{27}{section.4.5}
-\contentsline {chapter}{\numberline {5}Group Communication}{28}{chapter.5}
-\contentsline {section}{\numberline {5.1}lab description}{28}{section.5.1}
-\contentsline {section}{\numberline {5.2}Solution}{29}{section.5.2}
-\contentsline {section}{\numberline {5.3}Example Run}{30}{section.5.3}
-\contentsline {section}{\numberline {5.4}Motivation- and theory}{32}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Group Communication Programing Model}{33}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Ordering}{33}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Conclusion}{34}{section.5.5}
-\contentsline {chapter}{\numberline {6}Concurrency Control}{35}{chapter.6}
-\contentsline {section}{\numberline {6.1}lab description}{35}{section.6.1}
-\contentsline {section}{\numberline {6.2}Solution}{36}{section.6.2}
-\contentsline {section}{\numberline {6.3}Example Run}{37}{section.6.3}
-\contentsline {section}{\numberline {6.4}Motivation- and theory}{40}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Coordination: Mututal Exclusion}{40}{subsection.6.4.1}
-\contentsline {section}{\numberline {6.5}Conclusion}{42}{section.6.5}
-\contentsline {chapter}{\numberline {7}Mobile client}{43}{chapter.7}
-\contentsline {section}{\numberline {7.1}Lab Description}{43}{section.7.1}
-\contentsline {section}{\numberline {7.2}Solution}{43}{section.7.2}
-\contentsline {section}{\numberline {7.3}Example Run}{45}{section.7.3}
-\contentsline {section}{\numberline {7.4}Reflection}{51}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{52}{chapter.8}
-\contentsline {section}{\numberline {8.1}TCP}{52}{section.8.1}
-\contentsline {section}{\numberline {8.2}REST}{53}{section.8.2}
-\contentsline {section}{\numberline {8.3}Security}{53}{section.8.3}
-\contentsline {section}{\numberline {8.4}Concurrency}{54}{section.8.4}
-\contentsline {section}{\numberline {8.5}Group Communication}{54}{section.8.5}
-\contentsline {section}{\numberline {8.6}Mobile Client}{54}{section.8.6}
-\contentsline {chapter}{\numberline {A}Security model}{55}{appendix.A}
-\contentsline {section}{\numberline {A.1}Security Model}{55}{section.A.1}
-\contentsline {subsubsection}{Worst-Case Assumptions }{55}{subsubsection*.6}
-\contentsline {section}{\numberline {A.2}The Enemy}{56}{section.A.2}
-\contentsline {chapter}{\numberline {B}Who-did-what}{57}{appendix.B}
+\contentsline {chapter}{\numberline {2}Servlet}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Lab description}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Solution}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Test run}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Reflection}{12}{section.2.4}
+\contentsline {section}{\numberline {2.5}Conclusion}{13}{section.2.5}
+\contentsline {chapter}{\numberline {3}TCP server and Serialization}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}lab description}{14}{section.3.1}
+\contentsline {section}{\numberline {3.2}Solution}{15}{section.3.2}
+\contentsline {subsubsection}{Serialization}{16}{subsubsection*.2}
+\contentsline {subsubsection}{Byte Stream}{16}{subsubsection*.3}
+\contentsline {subsubsection}{JAXB}{16}{subsubsection*.4}
+\contentsline {subsubsection}{TCP}{17}{subsubsection*.5}
+\contentsline {section}{\numberline {3.3}example run}{17}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reflection}{21}{section.3.4}
+\contentsline {chapter}{\numberline {4}REST Service}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lab description}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Solution}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Test run}{25}{section.4.3}
+\contentsline {section}{\numberline {4.4}Reflection}{25}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion}{26}{section.4.5}
+\contentsline {chapter}{\numberline {5}Security}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Lab Description}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}Solution}{27}{section.5.2}
+\contentsline {section}{\numberline {5.3}Example run}{29}{section.5.3}
+\contentsline {section}{\numberline {5.4}Relating To The Theory}{30}{section.5.4}
+\contentsline {section}{\numberline {5.5}Conclusion}{32}{section.5.5}
+\contentsline {chapter}{\numberline {6}Group Communication}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}lab description}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}Solution}{34}{section.6.2}
+\contentsline {section}{\numberline {6.3}Example Run}{35}{section.6.3}
+\contentsline {section}{\numberline {6.4}Motivation- and theory}{37}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Group Communication Programing Model}{38}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Ordering}{38}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Conclusion}{39}{section.6.5}
+\contentsline {chapter}{\numberline {7}Concurrency Control}{40}{chapter.7}
+\contentsline {section}{\numberline {7.1}lab description}{40}{section.7.1}
+\contentsline {section}{\numberline {7.2}Solution}{41}{section.7.2}
+\contentsline {section}{\numberline {7.3}Example Run}{42}{section.7.3}
+\contentsline {section}{\numberline {7.4}Motivation- and theory}{45}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Coordination: Mututal Exclusion}{45}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.5}Conclusion}{47}{section.7.5}
+\contentsline {chapter}{\numberline {8}Mobile client}{48}{chapter.8}
+\contentsline {section}{\numberline {8.1}Lab Description}{48}{section.8.1}
+\contentsline {section}{\numberline {8.2}Solution}{48}{section.8.2}
+\contentsline {section}{\numberline {8.3}Example Run}{50}{section.8.3}
+\contentsline {section}{\numberline {8.4}Reflection}{56}{section.8.4}
+\contentsline {section}{\numberline {8.5}Conclusion}{56}{section.8.5}
+\contentsline {chapter}{\numberline {9}Conclusion}{57}{chapter.9}
+\contentsline {section}{\numberline {9.1}TCP}{57}{section.9.1}
+\contentsline {section}{\numberline {9.2}REST}{58}{section.9.2}
+\contentsline {section}{\numberline {9.3}Security}{58}{section.9.3}
+\contentsline {section}{\numberline {9.4}Concurrency}{59}{section.9.4}
+\contentsline {section}{\numberline {9.5}Group Communication}{59}{section.9.5}
+\contentsline {section}{\numberline {9.6}Mobile Client}{59}{section.9.6}
+\contentsline {chapter}{\numberline {A}Security model}{60}{appendix.A}
+\contentsline {section}{\numberline {A.1}Security Model}{60}{section.A.1}
+\contentsline {subsubsection}{Worst-Case Assumptions }{60}{subsubsection*.6}
+\contentsline {section}{\numberline {A.2}The Enemy}{61}{section.A.2}
+\contentsline {chapter}{\numberline {B}Who-did-what}{62}{appendix.B}

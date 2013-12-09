@@ -10,7 +10,7 @@ The handed-out project (before improvements) implements a simple security protoc
 
 The challenges in the assignment includes how to implement an improved protocol that, among other things, allows a client and a server to exchange a shared secret key which then facilitates authenticated communication between them. How to improve the protocol to provide security against man-in-the-middle attacks and replays.  \\
 
-The handed-out project uses shared private keys between participants i.e., private keys are known between [token server : server] and [token : server-client]. These keys are already distributed between the participants. The protocol, however, provides no means for the server to authenticate the client. Thus it is open to man-in-the-middle attacks and replays. A way to improve the protocol is to make the server able to authenticate the client, much liek it is done in the Needham-Schroeder protocol.\\
+The handed-out project uses shared private keys between participants i.e., private keys are known between [token server : server] and [token : server-client]. These keys are already distributed between the participants. The protocol, however, provides no means for the server to authenticate the client. Thus it is open to man-in-the-middle attacks and replays. A way to improve the protocol is to make the server able to authenticate the client, much like it is done in the Needham-Schroeder protocol.\\
 
 
 In our solution, first the client sends a request to the authentication server (token server). The token server (upon authenticating the client with their shared secret key) sends back a encrypted response inside which is a ticket encrypted in the [token:server] private key, plus a session key for the communication between the client and the server. Note this is another insecure issue in the original protocol in that the authentication server (ITU server) have no means of authenticating the client. \\
@@ -71,14 +71,16 @@ There's also still the possibility of a man-in-the-middle attack in where the me
 
 \section{Example run}
 
-\begin{center}
+This is the console output....
+
+\begin{figure}
 \centering
 \caption{example run}
 \includegraphics[scale=0.5]{images/security_run.png}
-\end{center}
+\end{figure}
 \vspace{10pt}
 
-\section{Relating To The Theory}
+\section{Reflection}
 
 For a recap of Worst Case Assumptions an a definition of the enemy see the appendix.\\
 
@@ -86,11 +88,10 @@ The solution to security issues in distributed systems is to encrypt messages. A
 
 There are two types of keys and thus two types of encryption algorithms: \\
 
-\begin{itemize}
-\item[  \textbf{shared secret keys:}] In which both the sender and the receiver knows the secret, note \textit{this is a solution for organizations which are able to distribute the secret key, secretely.}
+ \textbf{shared secret keys:} In which both the sender and the receiver knows the secret, note \textit{this is a solution for organizations which are able to distribute the secret key, secretely.}\\
 
-\item[\textbf{public/private key pairs:}] In which a principle publishes a public key which can be used to encrypt messages. It doesn't matter if an enemy intercepts the key since only the coresponding private key can decrypt the message (idealy). Public/private algorithms (asymmetric algoritms) use trap-door functions. Trap-door functions are one-way functions that can be inversed by applying a key.  \\
-\end{itemize}
+\textbf{public/private key pairs:} In which a principle publishes a public key which can be used to encrypt messages. It doesn't matter if an enemy intercepts the key since only the coresponding private key can decrypt the message (idealy). Public/private algorithms (asymmetric algoritms) use trap-door functions. Trap-door functions are one-way functions that can be inversed by applying a key.  \\
+
 
 In our example we used the JAVAX.CRYPTO package to encrypt end decrypt messages. We used the Data Encryption Standard (DES) algorithm but other algorithms can be used.\\
 

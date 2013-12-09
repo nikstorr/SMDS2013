@@ -1,13 +1,14 @@
 \documentclass[]{report}
 
 \usepackage{comment}
-
 \usepackage{graphicx}
-
 \usepackage{color}
 \usepackage{xcolor}
 
+\usepackage{float}
+
 \usepackage{caption}
+
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
@@ -17,7 +18,7 @@
 \newcolumntype{L}[1]{>{}m{#1}}
 \renewcommand\tabularxcolumn[1]{L{#1}}
 % make table captions float left
-\usepackage{floatrow}
+%\usepackage{floatrow}
 
 % code formatting
 \usepackage{listings}
@@ -81,18 +82,23 @@ rulecolor=\color{black}
 \tableofcontents
 
 \include{introduction}
+
 \include{servlet}
+
 \include{tcp}
+
 \include{rest}
+
 \include{security}
 \include{groupcommunication}
 \include{concurrency}
 \include{mobile}
 \include{conclusion}
+         
 
 \appendix
 \chapter{Security model}
 \input{securitymodel}
-\chapter{Who-did-what}
-\input{whodidwhat}
-\end{document}          
+%\chapter{Who-did-what}
+%\input{whodidwhat}
+\end{document} 

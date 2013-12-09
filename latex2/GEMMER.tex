@@ -1,0 +1,116 @@
+\begin{comment}
+
+
+
+\section{Baseline model}
+
+Before we move on, a brief summary of some challenges in distributed systems is outlined.\\
+
+A distributed system is defined by three properties:
+\begin{itemize}
+
+\item Nodes run concurrently (thus, if they operate on the same resource we risk unintended behaviour. )
+\item There's no notion of time (since two nodes would not be able to agree on the time due to differences in location and processor speed etc.) 
+\item The potential crash of one node should not influence the rest (i.e., nodes must be able to come and go without affecting the remaining nodes)
+\end{itemize}
+
+These properties have an impact on the requirements for distributed systems. Here is a list of challenges that follows from the basic definition of distributed systems.
+
+\begin{enumerate}
+
+\item [\textbf{Heterogeneity}]
+
+%\subsection{Heterogeneity}
+Each node in a distributed system may have been developed in different languages on different OS', by different developers, on different hardware etc.\\
+
+E.g. Even though protocols exist for communicating on the internet the heterogeneity of distributed systems makes it difficult to provide guarantees as to a given systems performance under any circumstances.  \\
+
+\item[\textbf{Openness}]
+
+%\subsection{Openness}
+
+Nodes communicate through interfaces. A system is open if it publishes a public interface. It is paramount that the protocols are followed closely to mask the differences as seen above. Due to challenge 1 this is a challenge in itself.\\
+
+
+\item[\textbf{Confidentiality}]
+%\subsection{Security}
+
+Confidentiality: (authorization). Integrity: (protection against corruption i.e, the message you receive is genuine.) Availability: (?)\\
+
+The solution is to use encrypted messages.\\
+
+\item[\textbf{Scalability}]
+%\subsection{Scalability}
+As nodes can come and go freely, the size of the system can become very large. Preferably, the cost of adding another node should be constant. (This has an impact on the algorithms used in distributed systems.)\\
+
+\item[ \textbf{ Availability} \newline \textbf{and Failure Handling}]
+%\subsection{Availability and Failure Handling}
+
+We can \textit{detect} failures by using checksums against the data.
+We can \textit{mask} failures by catching the failure and resending the message. We can \textit{tolerate} failures:  e.g. by letting the browser timeout instead of waiting indefinitely tying down resources. \\
+
+Some systems must guarantee the ability to recover from a failure,: e.g. by performing a server rollback or by building in redundancy, e.g., DNS servers keep copies at several locations. In case one server crashes the tables are always available elsewhere. \\
+
+\item[\textbf{Concurrency}]
+%\subsection{Concurrency}
+How to deal with concurrent requests to resources? Ideally, we avoid race conditions and dead-locks. And we also preferably serve clients in the order they arrive. \\
+
+\item[\textbf{Transparency}]
+%\subsection{Transparency}
+
+How to make the system seem one though it is in fact comprised of several subsystems perhaps located on different continents.\\
+
+There are several transparency issues.
+\pagebreak
+%\begin{minipage}{\textwidth-10pt}
+\captionof{table}{transparency } \label{tab:title}
+\begin{tabular}{L{1.0in} L{3.45in} }    % { C{1.25in} C{.85in} *4{C{.75in}}}
+\toprule[1.5pt] % horizontal line
+\textbf{Access-\newline transparency} & access to local and remote resources must go through the same  interfaces thus providing a transparent interaction. \\\midrule
+\textbf{Location- \newline transparency} & The node accessing a resource should not need to know it's exact location. \\\midrule
+\textbf{Concurrency-\newline transparency} & Multiple nodes can access a resource simultaneously. Thus providing transparent of system load.  \\\midrule
+\textbf{Replication-\newline transparency} & multiple instances of a resources can be utilized without the nodes noticing.\\\midrule
+\textbf{Failure-\newline transparency} & In case of failure in the resource (hardware or software) the node should be able to complete its task. Perhaps achieved by building in redundancy?\\\midrule
+\textbf{Mobility-\newline transparency} & the resource can be moved without the nodes noticing. THe exact location of the resource is tranparent to the nodes.\\
+\bottomrule[1.25pt] % horizontal line
+\end {tabular}\par
+\bigskip
+%\end{minipage}
+
+
+\end{enumerate}
+
+
+\section{Failure model}
+
+The mentioned challenges are at the root of a basic failure model for distributed systems. \\
+
+There are three places of potential failure: the sender, the channel and the receiver. The model distinguishes between failure in the channel and failure in the processes.
+
+\pagebreak
+%\begin{minipage}{\textwidth-10pt}
+\captionof{table}{failures } \label{tab:title}
+\begin{tabular}{L{1.0in} L{3.45in} }    % { C{1.25in} C{.85in} *4{C{.75in}}}
+\toprule[1.5pt] % horizontal line
+
+\textbf{Omission} & Channel failure. An outgoing message never arrives at the destination \\\midrule
+ 
+\textbf{Send-Omission} & Process failure. The message never leaves the process.\\\midrule
+ 
+\textbf{Receive Omission} & Process Failure. The message arrives but the process can't find it.\\\midrule\textsl{}
+ 
+\textbf{Crash} & Process failure. A process halts. Others might not recognize this.\\\midrule
+ 
+\textbf{Fail-stop} & Process failure. A process halts. Others see this.\\\midrule
+ 
+\textbf{Arbitrary} &  Process or channel failure. All or any of the above.\\
+
+\bottomrule[1.25pt] % horizontal line
+\end {tabular}\par
+\bigskip
+%\end{minipage}
+
+Providing guarantees in distributed systems is a matter of cost versus quality. It may not be feasable to provide a guarantee under any circumstances. Therefore the challenges are handled on a system to system basis.\\ 
+
+Many, many more models and challenges faces the developer of distributed systems. These were just the sad tip of the iceberg.
+\end{comment}

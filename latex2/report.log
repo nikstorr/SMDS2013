@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.4.4)  9 DEC 2013 12:09
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.4.4)  9 DEC 2013 14:17
 entering extended mode
 **report.tex
 
@@ -95,6 +95,14 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count89
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
@@ -107,7 +115,8 @@ Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \caption@parindent=\dimen109
 \caption@hangindent=\dimen110
 )
-\c@ContinuedFloat=\count89
+\c@ContinuedFloat=\count90
+Package caption Info: float package is loaded.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
@@ -116,7 +125,7 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen111
 \extrarowheight=\dimen112
-\NC@list=\toks15
+\NC@list=\toks17
 \extratabsurround=\skip43
 \backup@length=\skip44
 )
@@ -125,8 +134,8 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@old@col=\dimen115
 \TX@target=\dimen116
 \TX@delta=\dimen117
-\TX@cols=\count90
-\TX@ftn=\toks16
+\TX@cols=\count91
+\TX@ftn=\toks18
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
@@ -161,71 +170,33 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen125
 \cmidrulekern=\dimen126
 \defaultaddspace=\dimen127
-\@cmidla=\count91
-\@cmidlb=\count92
+\@cmidla=\count92
+\@cmidlb=\count93
 \@aboverulesep=\dimen128
 \@belowrulesep=\dimen129
-\@thisruleclass=\count93
-\@lastruleclass=\count94
+\@thisruleclass=\count94
+\@lastruleclass=\count95
 \@thisrulewidth=\dimen130
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\floatrow\floatrow.sty"
-Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
-\c@float@type=\count95
-\float@exts=\toks17
-\float@box=\box26
-\@floatcapt=\box27
-Package floatrow Info: Modified float package code loaded on input line 455.
-Package floatrow Info: Modified rotfloat package code loaded on input line 473.
-
-\FR@everyfloat=\toks18
-\flrow@foot=\insert233
-\FB@wd=\dimen131
-\FBo@wd=\dimen132
-\FBc@wd=\dimen133
-\FBo@ht=\skip59
-\FBc@ht=\skip60
-\FBf@ht=\skip61
-\FBo@max=\skip62
-\FBc@max=\skip63
-\FBf@max=\skip64
-\c@FBl@b=\count96
-\floatbox@depth=\count97
-\c@FRobj=\count98
-\c@FRsobj=\count99
-\Xhsize=\skip65
-\sXhsize=\skip66
-\Zhsize=\skip67
-\sZhsize=\skip68
-\flrow@rowbox=\box28
-\FR@Zunitlength=\dimen134
-\c@FBcnt=\count100
-\FPOScnt=\count101
-\LTleft=\skip69
-\LTright=\skip70
-\LTleft=\skip71
-\LTright=\skip72
-\flrow@types=\toks19
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count102
-\lst@gtempboxa=\box29
-\lst@token=\toks20
-\lst@length=\count103
-\lst@currlwidth=\dimen135
-\lst@column=\count104
-\lst@pos=\count105
-\lst@lostspace=\dimen136
-\lst@width=\dimen137
-\lst@newlines=\count106
-\lst@lineno=\count107
-\lst@maxwidth=\dimen138
+\lst@mode=\count96
+\lst@gtempboxa=\box28
+\lst@token=\toks19
+\lst@length=\count97
+\lst@currlwidth=\dimen131
+\lst@column=\count98
+\lst@pos=\count99
+\lst@lostspace=\dimen132
+\lst@width=\dimen133
+\lst@newlines=\count100
+\lst@lineno=\count101
+\lst@maxwidth=\dimen134
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count108
-\lst@skipnumbers=\count109
-\lst@framebox=\box30
+\c@lstnumber=\count102
+\lst@skipnumbers=\count103
+\lst@framebox=\box29
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2007/02/22 1.4 listings configuration
@@ -237,15 +208,15 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box31
-\beforetitleunit=\skip73
-\aftertitleunit=\skip74
-\ttl@plus=\dimen139
-\ttl@minus=\dimen140
-\ttl@toksa=\toks21
-\titlewidth=\dimen141
-\titlewidthlast=\dimen142
-\titlewidthfirst=\dimen143
+\ttl@box=\box30
+\beforetitleunit=\skip59
+\aftertitleunit=\skip60
+\ttl@plus=\dimen135
+\ttl@minus=\dimen136
+\ttl@toksa=\toks20
+\titlewidth=\dimen137
+\titlewidthlast=\dimen138
+\titlewidthfirst=\dimen139
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
@@ -301,14 +272,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen144
-\Hy@linkcounter=\count110
-\Hy@pagecounter=\count111
+\@linkdim=\dimen140
+\Hy@linkcounter=\count104
+\Hy@pagecounter=\count105
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count112
+\Hy@SavedSpaceFactor=\count106
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -320,16 +291,16 @@ Package hyperref Info: Plain pages OFF on input line 4077.
 Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4300.
-\c@Hy@tempcnt=\count113
+\c@Hy@tempcnt=\count107
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4653.
-\Fld@menulength=\count114
-\Field@Width=\dimen145
-\Fld@charsize=\dimen146
+\Fld@menulength=\count108
+\Field@Width=\dimen141
+\Fld@charsize=\dimen142
 Package hyperref Info: Hyper figures OFF on input line 5773.
 Package hyperref Info: Link nesting OFF on input line 5778.
 Package hyperref Info: Hyper index ON on input line 5781.
@@ -339,26 +310,26 @@ Package hyperref Info: Link coloring with OCG OFF on input line 5798.
 Package hyperref Info: PDF/A mode OFF on input line 5803.
 LaTeX Info: Redefining \ref on input line 5843.
 LaTeX Info: Redefining \pageref on input line 5847.
-\Hy@abspage=\count115
-\c@Item=\count116
-\c@Hfootnote=\count117
+\Hy@abspage=\count109
+\c@Item=\count110
+\c@Hfootnote=\count111
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
-\Fld@listcount=\count118
-\c@bookmark@seq@number=\count119
+\Fld@listcount=\count112
+\c@bookmark@seq@number=\count113
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip75
+\Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 54.
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\minitoc.sty"
 Package: minitoc 2008/07/16 v60 Package minitoc (JPFD)
@@ -369,17 +340,17 @@ Package: mtcmess 2006/03/14
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 60 ***.
 \tf@mtc=\write4
-\mtcindent=\skip76
-\mtcskipamount=\skip77
+\mtcindent=\skip62
+\mtcskipamount=\skip63
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks22
-\mtc@strutbox=\box32
-\mtc@hstrutbox=\box33
+\mtc@toks=\toks21
+\mtc@strutbox=\box31
+\mtc@hstrutbox=\box32
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 
@@ -390,11 +361,11 @@ Package minitoc Info: I0012
 Package minitoc Info: I0031
 (minitoc)             ==> this version is configured for UNIX-like 
 (minitoc)                 (long extensions) file names.
-\c@mtc=\count120
-\c@minitocdepth=\count121
-\c@ptc=\count122
-\c@parttocdepth=\count123
-\ptcindent=\skip78
+\c@mtc=\count114
+\c@minitocdepth=\count115
+\c@ptc=\count116
+\c@parttocdepth=\count117
+\ptcindent=\skip64
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
@@ -406,20 +377,16 @@ File: english.mld 2006/01/13
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip79
-\enit@outerparindent=\dimen147
-\enit@toks=\toks23
-\enit@inbox=\box34
-\enitdp@description=\count124
+\labelindent=\skip65
+\enit@outerparindent=\dimen143
+\enit@toks=\toks22
+\enit@inbox=\box33
+\enitdp@description=\count118
 )
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 aux"
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\introdu
-ction.aux"
-
-LaTeX Warning: Label `tab:title' multiply defined.
-
-)
+ction.aux")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\servlet
 .aux")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\tcp.aux
@@ -435,50 +402,44 @@ ency.aux")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\mobile.
 aux")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\conclus
-ion.aux")
-
-LaTeX Warning: Label `tab:title' multiply defined.
-
-)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+ion.aux"))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count125
-\scratchdimen=\dimen148
-\scratchbox=\box35
-\nofMPsegments=\count126
-\nofMParguments=\count127
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count128
-\MPscratchDim=\dimen149
-\MPnumerator=\count129
-\makeMPintoPDFobject=\count130
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count119
+\scratchdimen=\dimen144
+\scratchbox=\box34
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen145
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks24
 )
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
-Package caption Info: floatrow package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 77.
-\c@lstlisting=\count131
-\AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring ON on input line 77.
+LaTeX Info: Redefining \selectfont on input line 78.
+\c@lstlisting=\count125
+\AtBeginShipoutBox=\box35
+Package hyperref Info: Link coloring ON on input line 78.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -486,11 +447,11 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count132
+\c@section@level=\count126
 )
-LaTeX Info: Redefining \ref on input line 77.
-LaTeX Info: Redefining \pageref on input line 77.
-LaTeX Info: Redefining \nameref on input line 77.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 out")
@@ -564,7 +525,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
 Package minitoc Info: I0024
-(minitoc)             PREPARING MINITOCS FROM report.toc on input line 80.
+(minitoc)             PREPARING MINITOCS FROM report.toc on input line 81.
 Package minitoc Info: I0033
 (minitoc)             Writing report.mtc1.
 Package minitoc Info: I0033
@@ -585,8 +546,6 @@ Package minitoc Info: I0033
 (minitoc)             Writing report.mtc9.
 Package minitoc Info: I0033
 (minitoc)             Writing report.mtc10.
-Package minitoc Info: I0033
-(minitoc)             Writing report.mtc11.
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 toc"
@@ -598,7 +557,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 ...mberline {6.5}Conclusion}{39}{section.6.5}
+l.42 ...ine {7}Concurrency Control}{37}{chapter.7}
                                                    [1
 
 ])
@@ -673,17 +632,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
@@ -702,112 +671,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 157.
-See the caption package documentation for explanation.
-
-[6]
-Overfull \hbox (0.60126pt too wide) in paragraph at lines 158--167
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
-
- []
-
-[7]
-
-Package caption Warning: \captionsetup{type*=...} or \captionof
-(caption)                outside box or environment on input line 183.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 183.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
-[]|\OT1/cmr/bx/n/10 Send-
- []
-
-
-Overfull \hbox (0.60126pt too wide) in paragraph at lines 184--200
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-
- []
-
-) [8]
+) [5]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\servlet
 .tex"
 Chapter 2.
-[9
+[6
 
 
 
@@ -831,9 +699,10 @@ Overfull \hbox (31.00003pt too wide) in paragraph at lines 42--42
 [][][][][][][] 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 79--82
-\OT1/cmr/m/n/10 http://localhost:8080/BMDS-TaskManager-
+[7]
+Overfull \hbox (20.45918pt too wide) in paragraph at lines 79--82
+\OT1/cmr/m/n/10 http://localhost:8080/BMDS-TaskManager-01/GetTaskById.jsp?id="h
+andin-
  []
 
 
@@ -852,8 +721,9 @@ Overfull \hbox (31.00003pt too wide) in paragraph at lines 83--83
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--98
-\OT1/cmr/m/n/10 http://localhost:8080/BMDS-TaskManager-
+Overfull \hbox (22.82027pt too wide) in paragraph at lines 95--98
+\OT1/cmr/m/n/10 http://localhost:8080/BMDS-TaskManager-01/GetTaskByDate.jsp?dat
+e="17-
  []
 
 
@@ -871,10 +741,15 @@ Overfull \hbox (31.00003pt too wide) in paragraph at lines 99--99
 [][][][][][][] 
  []
 
-[11]) [12] [13]
+[8]) [9] [10]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\tcp.tex
 "
 Chapter 3.
+
+Overfull \hbox (1.54308pt too wide) in paragraph at lines 1--1
+|\OT1/cmr/bx/n/24.88 TCP server and Se-ri-al-iza-tion| 
+ []
+
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 mtc3")
@@ -891,17 +766,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmti10!
+Missing character: There is no Ä in font cmti10!
+Missing character: There is no ô in font cmti10!
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmti10!
+Missing character: There is no Ä in font cmti10!
+Missing character: There is no ô in font cmti10!
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
@@ -911,32 +786,20 @@ LaTeX Font Info:    Try loading font information for OML+cmr on input line 19.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 19.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-[14
+[11
 
 
 
 ]
-Underfull \hbox (badness 1867) in paragraph at lines 26--27
-[]\OT1/cmr/m/it/10 Develop java se-ri-al-iza-tion classes for task-manager-xml 
-us-ing Java
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
- []
-
-
-Underfull \hbox (badness 1038) in paragraph at lines 28--29
-[]\OT1/cmr/m/it/10 Develop TaskMan-agerTCPServer and TaskMan-agerTCP-Client cla
-sses
  []
 
 
@@ -955,7 +818,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
@@ -966,63 +829,68 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 90--90
+[][][][][][][] 
  []
 
 
@@ -1030,103 +898,81 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 100--100
 [][][][][][][] 
  []
 
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 110--110
-[][][][][][][] 
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 135--135
+Overfull \hbox (6.0pt too wide) in paragraph at lines 126--126
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 146--146
+Overfull \hbox (6.0pt too wide) in paragraph at lines 137--137
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 165--165
+Overfull \hbox (6.0pt too wide) in paragraph at lines 157--157
 [][][][][][][] 
  []
 
-[18]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 186--186
+[15]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 178--178
 [][][][][][][] 
  []
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 203.
-See the caption package documentation for explanation.
-
-<images/TCP_run_client.png, id=564, 556.32843pt x 360.59718pt>
+<images/TCP_run_client.png, id=532, 556.32843pt x 360.59718pt>
 File: images/TCP_run_client.png Graphic file (type png)
 
 <use images/TCP_run_client.png>
-Package pdftex.def Info: images/TCP_run_client.png used on input line 204.
+Package pdftex.def Info: images/TCP_run_client.png used on input line 211.
 (pdftex.def)             Requested size: 389.42725pt x 252.4163pt.
 
-Overfull \hbox (44.42725pt too wide) in paragraph at lines 204--205
- [] 
+Overfull \hbox (44.42725pt too wide) in paragraph at lines 211--212
+ [][] 
  []
 
-[19]
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 211.
-See the caption package documentation for explanation.
-
-<images/TCP_run_server.png, id=594, 556.32843pt x 360.59718pt>
+[16] <images/TCP_run_server.png, id=561, 556.32843pt x 360.59718pt>
 File: images/TCP_run_server.png Graphic file (type png)
 
 <use images/TCP_run_server.png>
-Package pdftex.def Info: images/TCP_run_server.png used on input line 212.
+Package pdftex.def Info: images/TCP_run_server.png used on input line 219.
 (pdftex.def)             Requested size: 389.42725pt x 252.4163pt.
 
-Overfull \hbox (44.42725pt too wide) in paragraph at lines 212--213
- [] 
+Overfull \hbox (44.42725pt too wide) in paragraph at lines 219--220
+ [][] 
  []
 
-[20 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+[17 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
 es/TCP_run_client.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ò in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
-
- []
-
-[21 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+[18 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
 es/TCP_run_server.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
-) [22]
+) [19]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\rest.te
 x"
 Chapter 4.
@@ -1142,7 +988,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-[23
+[20
 
 
 
@@ -1156,7 +1002,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[24] [25]) [26]
+[21] [22]) [23]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\securit
 y.tex"
 Chapter 5.
@@ -1182,7 +1028,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[27
+[24
 
 
 
@@ -1206,7 +1052,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-[28]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
@@ -1221,25 +1067,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 76.
-See the caption package documentation for explanation.
-
-<images/security_run.png, id=665, 919.93687pt x 451.6875pt>
+<images/security_run.png, id=634, 919.93687pt x 451.6875pt>
 File: images/security_run.png Graphic file (type png)
 
 <use images/security_run.png>
-Package pdftex.def Info: images/security_run.png used on input line 77.
+Package pdftex.def Info: images/security_run.png used on input line 79.
 (pdftex.def)             Requested size: 459.96732pt x 225.84319pt.
 
-Overfull \hbox (114.96732pt too wide) in paragraph at lines 77--78
- [] 
- []
-
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-
+Overfull \hbox (114.96732pt too wide) in paragraph at lines 79--80
+ [][] 
  []
 
 
@@ -1247,93 +1083,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
-
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-[30 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+[27 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
 es/security_run.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-
- []
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
+Overfull \hbox (2.89268pt too wide) in paragraph at lines 110--111
+[]\OT1/cmr/m/n/10 Scenario3 (\OT1/cmr/m/it/10 Au-then-ti-cated com-mu-ni-ca-tio
+n with pub-lic keys\OT1/cmr/m/n/10 ). A prin-ci-ple makes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-) [32]
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+) [29]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\groupco
 mmunication.tex"
 Chapter 6.
@@ -1359,7 +1211,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[33
+[30
 
 
 
@@ -1418,7 +1270,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-[34]
+[31]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 51--51
 [][][][][][][] 
  []
@@ -1428,7 +1280,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
 
-[35]
+[32]
 Overfull \hbox (6.0pt too wide) in paragraph at lines 75--75
 [][][][][][][] 
  []
@@ -1448,9 +1300,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-[36]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
+ []
+
+
+Overfull \hbox (2.8894pt too wide) in paragraph at lines 140--141
+[]\OT1/cmr/m/n/10 This is why in-di-rect com-mu-ni-ca-tion is de-sir-able in en
+-vi-ron-ments where change
  []
 
 
@@ -1464,9 +1322,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
  []
 
 
-Underfull \hbox (badness 1400) in paragraph at lines 145--146
+Overfull \hbox (10.76941pt too wide) in paragraph at lines 145--146
 []\OT1/cmr/bx/n/10 Group com-mu-ni-ca-tion: \OT1/cmr/m/n/10 A mes-sage is sent 
-to an ad-dress -the
+to an ad-dress -the intermediary-
  []
 
 
@@ -1485,12 +1343,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 151--152
-[]\OT1/cmr/bx/n/10 Shared mem-ory sys-tems: \OT1/cmr/m/n/10 Pro-cesses ac-cess 
-DSM by reads and
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
@@ -1500,7 +1352,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-[37]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
@@ -1525,7 +1377,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-[38]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
@@ -1555,7 +1407,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-) [39]
+) [36]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\concurr
 ency.tex"
 Chapter 7.
@@ -1672,7 +1524,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-[40
+[37
 
 
 
@@ -1707,7 +1559,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-[41]
+[38]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -1748,66 +1600,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 62.
-See the caption package documentation for explanation.
-
-<images/CCServer1.png, id=820, 576.65437pt x 405.76593pt>
+<images/CCServer1.png, id=789, 576.65437pt x 405.76593pt>
 File: images/CCServer1.png Graphic file (type png)
 
 <use images/CCServer1.png>
 Package pdftex.def Info: images/CCServer1.png used on input line 63.
 (pdftex.def)             Requested size: 345.99529pt x 243.46143pt.
 
-Overfull \hbox (0.99529pt too wide) in paragraph at lines 63--66
+Overfull \hbox (0.99529pt too wide) in paragraph at lines 63--64
 [][] 
  []
 
-[42]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 71.
-See the caption package documentation for explanation.
-
-<images/CCServer2.png, id=827, 625.58719pt x 432.86719pt>
+<images/CCServer2.png, id=794, 625.58719pt x 432.86719pt>
 File: images/CCServer2.png Graphic file (type png)
 
 <use images/CCServer2.png>
 Package pdftex.def Info: images/CCServer2.png used on input line 72.
 (pdftex.def)             Requested size: 375.35521pt x 259.7223pt.
 
-Overfull \hbox (30.35521pt too wide) in paragraph at lines 72--75
+Overfull \hbox (30.35521pt too wide) in paragraph at lines 72--73
 [][] 
  []
 
-[43 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+[40 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
 es/CCServer1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 80.
-See the caption package documentation for explanation.
-
-<images/CCServer3.png, id=833, 649.67719pt x 328.97906pt>
+<images/CCServer3.png, id=800, 649.67719pt x 328.97906pt>
 File: images/CCServer3.png Graphic file (type png)
 
 <use images/CCServer3.png>
 Package pdftex.def Info: images/CCServer3.png used on input line 81.
 (pdftex.def)             Requested size: 389.80931pt x 197.38895pt.
 
-Overfull \hbox (44.80931pt too wide) in paragraph at lines 81--84
+Overfull \hbox (44.80931pt too wide) in paragraph at lines 81--82
 [][] 
  []
 
-[44 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+[41 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
 es/CCServer2.png>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -1822,7 +1659,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-[45 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+[42 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
 es/CCServer3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
@@ -1841,7 +1678,7 @@ Missing character: There is no ô in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-[46]) [47]
+[43]) [44]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\mobile.
 tex"
 Chapter 8.
@@ -1853,11 +1690,11 @@ Missing character: There is no Ä in font cmti10!
 Missing character: There is no ô in font cmti10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¥ in font cmr10!
- [48
+ [45
 
 
 
-] [49]
+] [46]
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
@@ -1867,7 +1704,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<images/googlecloud__createtask.png, id=869, 657.2053pt x 545.78906pt>
+<images/googlecloud__createtask.png, id=837, 657.2053pt x 545.78906pt>
 File: images/googlecloud__createtask.png Graphic file (type png)
 
 <use images/googlecloud__createtask.png>
@@ -1875,17 +1712,11 @@ Package pdftex.def Info: images/googlecloud__createtask.png used on input line
 26.
 (pdftex.def)             Requested size: 460.04057pt x 382.04973pt.
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 27.
-See the caption package documentation for explanation.
-
-
 Overfull \hbox (115.04057pt too wide) in paragraph at lines 26--27
- [] 
+ [][] 
  []
 
-<images/googlecloud__taskexist.png, id=870, 1192.455pt x 492.33937pt>
+<images/googlecloud__taskexist.png, id=838, 1192.455pt x 492.33937pt>
 File: images/googlecloud__taskexist.png Graphic file (type png)
 
 <use images/googlecloud__taskexist.png>
@@ -1893,25 +1724,14 @@ Package pdftex.def Info: images/googlecloud__taskexist.png used on input line 3
 2.
 (pdftex.def)             Requested size: 596.22604pt x 246.16907pt.
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 33.
-See the caption package documentation for explanation.
-
-
 Overfull \hbox (251.22604pt too wide) in paragraph at lines 32--33
- [] 
+ [][] 
  []
 
-[50 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
-es/googlecloud__createtask.png>] [51 <C:/Users/nikolai/Documents/skole/ITU5/Dis
+[47 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/googlecloud__createtask.png>] [48 <C:/Users/nikolai/Documents/skole/ITU5/Dis
 tributed Systems/GIT2/latex2/images/googlecloud__taskexist.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-<images/googlemessagin_isonline_cloudmessaging.png, id=884, 542.025pt x 625.587
+<images/googlemessagin_isonline_cloudmessaging.png, id=853, 542.025pt x 625.587
 19pt>
 File: images/googlemessagin_isonline_cloudmessaging.png Graphic file (type png)
 
@@ -1920,23 +1740,18 @@ Package pdftex.def Info: images/googlemessagin_isonline_cloudmessaging.png used
  on input line 41.
 (pdftex.def)             Requested size: 379.4149pt x 437.90805pt.
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 42.
-See the caption package documentation for explanation.
-
-
 Overfull \hbox (34.4149pt too wide) in paragraph at lines 41--42
- [] 
+ [][] 
  []
 
-[52 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--44
+
+ []
+
+[49 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
 es/googlemessagin_isonline_cloudmessaging.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-<images/googlemessagin_sendmessage.png, id=893, 718.93594pt x 454.69875pt>
+<images/googlemessagin_sendmessage.png, id=862, 718.93594pt x 454.69875pt>
 File: images/googlemessagin_sendmessage.png Graphic file (type png)
 
 <use images/googlemessagin_sendmessage.png>
@@ -1944,17 +1759,16 @@ Package pdftex.def Info: images/googlemessagin_sendmessage.png used on input li
 ne 50.
 (pdftex.def)             Requested size: 359.46709pt x 227.34882pt.
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 51.
-See the caption package documentation for explanation.
-
-
 Overfull \hbox (14.46709pt too wide) in paragraph at lines 50--51
- [] 
+ [][] 
  []
 
-<images/googlecloudmessaging.png, id=894, 545.78906pt x 628.59843pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
+
+ []
+
+<images/googlecloudmessaging.png, id=863, 545.78906pt x 628.59843pt>
 File: images/googlecloudmessaging.png Graphic file (type png)
 
 <use images/googlecloudmessaging.png>
@@ -1962,20 +1776,14 @@ Package pdftex.def Info: images/googlecloudmessaging.png used on input line 56.
 
 (pdftex.def)             Requested size: 382.04973pt x 440.0159pt.
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 57.
-See the caption package documentation for explanation.
-
-
 Overfull \hbox (37.04973pt too wide) in paragraph at lines 56--57
- [] 
+ [][] 
  []
 
-[53 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
-es/googlemessagin_sendmessage.png>] [54 <C:/Users/nikolai/Documents/skole/ITU5/
+[50 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/googlemessagin_sendmessage.png>] [51 <C:/Users/nikolai/Documents/skole/ITU5/
 Distributed Systems/GIT2/latex2/images/googlecloudmessaging.png>]
-<images/googlecloud__tasksindevice.png, id=909, 545.78906pt x 625.58719pt>
+<images/googlecloud__tasksindevice.png, id=877, 545.78906pt x 625.58719pt>
 File: images/googlecloud__tasksindevice.png Graphic file (type png)
 
 <use images/googlecloud__tasksindevice.png>
@@ -1983,18 +1791,12 @@ Package pdftex.def Info: images/googlecloud__tasksindevice.png used on input li
 ne 66.
 (pdftex.def)             Requested size: 382.04973pt x 437.90805pt.
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 67.
-See the caption package documentation for explanation.
-
-
 Overfull \hbox (37.04973pt too wide) in paragraph at lines 66--67
- [] 
+ [][] 
  []
 
-[55 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
-es/googlecloud__tasksindevice.png>]) [56]
+[52 <C:/Users/nikolai/Documents/skole/ITU5/Distributed Systems/GIT2/latex2/imag
+es/googlecloud__tasksindevice.png>]) [53]
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\conclus
 ion.tex"
 Chapter 9.
@@ -2025,7 +1827,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[57
+[54
 
 
 
@@ -2069,7 +1871,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-[58]
+[55]
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
@@ -2084,7 +1886,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-) [59]
+) [56]
 Appendix A.
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\securit
@@ -2123,23 +1925,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[60
+[57
 
 
 ]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
-) [61]
-Appendix B.
-
-("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\whodidw
-hat.tex"
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2.
-See the caption package documentation for explanation.
-
 )
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
@@ -2149,27 +1941,15 @@ Package minitoc(hints) Info: I0053
 (minitoc(hints))             please be aware that the minitoc package 
 (minitoc(hints))             facilities can not be used for new types 
 (minitoc(hints))             of floats defined by the float package.
-Package minitoc(hints) Info: I0053
-(minitoc(hints))             You have loaded the floatrow package; 
-(minitoc(hints))             please be aware that the minitoc package 
-(minitoc(hints))             facilities can not be used for new types 
-(minitoc(hints))             of floats defined by the floatrow package.
-Package minitoc(hints) Info: I0053
-(minitoc(hints))             You have loaded the rotfloat package; 
-(minitoc(hints))             please be aware that the minitoc package 
-(minitoc(hints))             facilities can not be used for new types 
-(minitoc(hints))             of floats defined by the rotfloat package.
 
 
 Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the report.log file.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
-[62
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
+[58]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
 
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\report.
 aux"
@@ -2191,27 +1971,24 @@ ency.aux")
 aux")
 ("C:\Users\nikolai\Documents\skole\ITU5\Distributed Systems\GIT2\latex2\conclus
 ion.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 95EC84E6112EEF9406D013553F36383B;3306.
+(rerunfilecheck)             Checksum: 01CD7AA079423094CC30E2ED9E3FF486;3097.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
  ) 
 Here is how much of TeX's memory you used:
- 11296 strings out of 494045
- 172040 string characters out of 3148382
- 590021 words of memory out of 3000000
- 13735 multiletter control sequences out of 15000+200000
+ 10811 strings out of 494045
+ 165048 string characters out of 3148382
+ 578738 words of memory out of 3000000
+ 13267 multiletter control sequences out of 15000+200000
  9728 words of font info for 34 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 36i,9n,41p,880b,1784s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,9n,41p,880b,1796s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -2224,9 +2001,9 @@ s/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (63 pages, 1005145 bytes).
+Output written on report.pdf (59 pages, 993737 bytes).
 PDF statistics:
- 1085 PDF objects out of 1200 (max. 8388607)
- 427 named destinations out of 1000 (max. 500000)
- 517 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1046 PDF objects out of 1200 (max. 8388607)
+ 417 named destinations out of 1000 (max. 500000)
+ 493 words of extra memory for PDF output out of 10000 (max. 10000000)
 

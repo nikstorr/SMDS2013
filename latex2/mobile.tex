@@ -21,52 +21,52 @@ In order to debug and run the client we are setting up a virtual Android machine
 
 A number of requests are send manually to the TaskEndpoint to create new Task objects on the server. Figure \ref{mobile_json_figure} shows the request to the server and the response. Consequently, a number of tasks are created on the site. Figure \ref{mobile_task_list_figure} shows a list of the tasks created.\\
 
-\begin{center}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{images/googlecloud__createtask.png}
 	\caption{creating a task}
 	\label{mobile_json_figure}
-\end{center}
-\begin{center}
+\end{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{images/googlecloud__taskexist.png}
 	\caption{list of tasks created}
 	\label{mobile_task_list_figure}
-\end{center}
+\end{figure}
 
 \pagebreak
 The client is registered to receive updates whenever a new task is added to the Task collection. Figure \ref{mobile_registration_figure} shows the message informing that registration was successful.\\
-\begin{center}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{images/googlemessagin_isonline_cloudmessaging.png}
 	\caption{registration succeeds}
 	\label{mobile_registration_figure}
-\end{center}
+\end{figure}
 
 \pagebreak
 To test that communication happens properly a test message is sent manually. Figure \ref{mobile_message_figure} shows the message being sent at the server site, and figure \ref{mobile_hej_hej_hej_figure} shows the client receiving the message.\\
-\begin{center}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{images/googlemessagin_sendmessage.png}
 	\caption{message being sent}
 	\label{mobile_message_figure}
-\end{center}
-\begin{center}
+\end{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{images/googlecloudmessaging.png}
 	\caption{message being received}
 	\label{mobile_hej_hej_hej_figure}
-\end{center}
+\end{figure}
 
 
 \pagebreak
 When a new Task is being created at the server site, the client receives the update message as shown in figure \ref{mobile_task_update_figure}.
-\begin{center}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{images/googlecloud__tasksindevice.png}
 	\caption{task update being received}
 	\label{mobile_task_update_figure}
-\end{center}
+\end{figure}
 
 
 \section{Reflection}

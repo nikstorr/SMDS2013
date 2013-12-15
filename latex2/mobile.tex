@@ -75,13 +75,15 @@ When a new Task is being created at the server site, the client receives the upd
 \section{Reflection}
 
 mobile applications are characterized first and foremost by volatility and instability. Volatility refers to connections that are assumed to fail more often than not, while instability refers to high-level formats and standards that are not expected to remain relevant to a given solution for an extended period of time. The Google Endpoint technology used in the solution attempts to overcome the instability problem by relying on the well established and stable Http interface for communication. The protocol build atop Http centralizes definitions of data formats and protocols, and ensures that companies and developers making use of the system can rely on the protocol functioning.\\
-The volatility issue is never directly assessed in the exercise, as the mobile device involved is not a physical device, but a simulation. Common solutions to volatile connections involves the device continuously scanning its surroundings for suitable connection providers, and preparing to switch between providers frequently and easily.\\\\
+The volatility issue is never directly assessed in the exercise, as the mobile device involved is not a physical device, but a simulation. Common solutions to volatile connections involves the device continuously scanning its surroundings for suitable connection providers, and preparing to switch between providers frequently and easily.\\
+
 The Android client designed exemplifies several characteristics of the Android architecture:
 \begin{itemize}
 	\item The platform does not require compilation to a common code format, but supports embedding of other code languages, here among java. This could allow for a mobile application to be designed for several mobile platforms at once, without having to deal with a lot of platform-specific code.
 	\item The system is entirely event driven. Activity objects are instantiated as an abstraction of running processes on the platform, and each activity listens for a number of relevant events, and reacts to them. No functional entry point (main method) exists for the application, only a designated main activity that is instantiated and started at program startup. In our specific solution the main activity only start a single activity; the register activity.
 	\item The application switches between a number of states during execution. These include starting, running, pausing, restarting and stopping. The activities on the application reacts to these changes in state by listening to the relevant events.
-\end{itemize}\\
+\end{itemize}
+
 In accordance with another problem common to mobile devices, namely limited memory, the Google App Engine manages all  object persistence in the solution. Given the data centred design of the task manager application, proper persistence performance can be expected to be a relevant characteristic.\\
 
 \section{Conclusion}

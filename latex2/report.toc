@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.2}report structure}{4}{section.1.2}
 \contentsline {chapter}{\numberline {2}Servlet}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}Lab description}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Solution}{6}{section.2.2}
+\contentsline {section}{\numberline {2.2}Solution}{7}{section.2.2}
 \contentsline {section}{\numberline {2.3}Test run}{7}{section.2.3}
 \contentsline {section}{\numberline {2.4}Reflection}{9}{section.2.4}
 \contentsline {section}{\numberline {2.5}Conclusion}{10}{section.2.5}
@@ -49,17 +49,21 @@
 \contentsline {chapter}{\numberline {8}Mobile client}{45}{chapter.8}
 \contentsline {section}{\numberline {8.1}Lab Description}{45}{section.8.1}
 \contentsline {section}{\numberline {8.2}Solution}{45}{section.8.2}
+\contentsline {paragraph}{Google Endpoints}{45}{paragraph*.12}
+\contentsline {paragraph}{Backend}{46}{paragraph*.13}
+\contentsline {paragraph}{Client}{46}{paragraph*.14}
+\contentsline {paragraph}{Notifications}{46}{paragraph*.15}
 \contentsline {section}{\numberline {8.3}Example Run}{47}{section.8.3}
 \contentsline {section}{\numberline {8.4}Reflection}{53}{section.8.4}
-\contentsline {section}{\numberline {8.5}Conclusion}{53}{section.8.5}
-\contentsline {chapter}{\numberline {9}Conclusion}{54}{chapter.9}
-\contentsline {section}{\numberline {9.1}TCP}{54}{section.9.1}
+\contentsline {section}{\numberline {8.5}Conclusion}{54}{section.8.5}
+\contentsline {chapter}{\numberline {9}Conclusion}{55}{chapter.9}
+\contentsline {section}{\numberline {9.1}TCP}{55}{section.9.1}
 \contentsline {section}{\numberline {9.2}REST}{55}{section.9.2}
 \contentsline {section}{\numberline {9.3}Security}{55}{section.9.3}
 \contentsline {section}{\numberline {9.4}Concurrency}{56}{section.9.4}
 \contentsline {section}{\numberline {9.5}Group Communication}{56}{section.9.5}
-\contentsline {section}{\numberline {9.6}Mobile Client}{56}{section.9.6}
-\contentsline {chapter}{\numberline {A}Security model}{57}{appendix.A}
-\contentsline {section}{\numberline {A.1}Security Model}{57}{section.A.1}
-\contentsline {subsubsection}{Worst-Case Assumptions }{57}{subsubsection*.18}
-\contentsline {section}{\numberline {A.2}The Enemy}{58}{section.A.2}
+\contentsline {section}{\numberline {9.6}Mobile Client}{57}{section.9.6}
+\contentsline {chapter}{\numberline {A}Security model}{58}{appendix.A}
+\contentsline {section}{\numberline {A.1}Security Model}{58}{section.A.1}
+\contentsline {subsubsection}{Worst-Case Assumptions }{58}{subsubsection*.22}
+\contentsline {section}{\numberline {A.2}The Enemy}{59}{section.A.2}

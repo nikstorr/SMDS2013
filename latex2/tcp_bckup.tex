@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+\begin{comment}
+Information in OO programs are typically stored as data structures whereas data in the messages used to communicate in distributed systems are binary. So, no matter the communication protocols used the data structures need to be flattened before transmitting and then reassembled at the other end. This is called marshalling and unmarshalling. The sender and transmitter must agree on the format used in order for the receiver to reassmble the data structures. CORBA, Java Object Serialization and XML are som of the formats used to transmit binary data from one node to another. \\
+
+This can (as it often is) be done by middleware. In this project we have used JAXB to marshall our taskmanager data structure. JAXB use a XML format to transfer binary data. This works by annotating the data structures. Our taskmanager data structure in this case. JAXB can then marshall and unmarshall our data structure.\\
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+%\pagebreak
+
+
+\begin{comment}
+In this exercise we worked with the TCP protocol. TCP is a transport layer level protocol. The TCP protocol provides communication between the application layer and the network layer (IP)\\
+
+The TCP protocol is part of the TCP/IP protocol suite. A protocol suite is a stack of protocols each responsible for a single logical task, e.g. transport, packaging etc. Each layer communicates with the layer directly above and below, only. Messages are passed down the stack at one side and they bubble up through the stack at the other side. \\
+
+At the bottom of the TCP/IP suite are the physical layer (hardware). On top of the physical layer the network layer provides an interface to the transport layer, application services (and their protocols) are built on top of the transport layer based on TCP e.g. HTTP, SMTP, POP, FTP etc. More layers can be added to provide additional functionality e.g. security etc.\\
+
+Using protocols gives us network independance i.e., different application types and languages can use the same network to communicate 
+as long as they comply to the same protocol(s). Note \textit{even so, the heterogeneity of distributed systems makes it difficult to provide guarantees.}\\
+\end{comment}
+
+
+\begin{comment}
+The main lesson learned is about protocols and layers, each layer providing a specialized task enforced by the protocol (provided we use the protocols as intented). Each layer communicates with the layers below. \\
+\end{comment}

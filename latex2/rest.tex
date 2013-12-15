@@ -1,9 +1,11 @@
 \chapter{REST Service}
 \minitoc
+This chapter explores the design of a RESTful service.\\
+The chapter covers the definition of REST and Http
 
 \section{Lab description}
 \label{rest_description}
-The purpose of this week?s lab exercise is to develop a REST web service (and also a client) for management of tasks in the Task manager. As part of the exercise,
+The purpose of this week's lab exercise is to develop a REST web service (and also a client) for management of tasks in the Task manager. As part of the exercise,
 \begin{enumerate}
  \item Develop a web service which exposes operations  for the management of the tasks from the taskmanager.xml in a RESTful way. To be more specific, you will use the following HTTP methods explicitly for the operations on the tasks.\\
  \begin{enumerate}
@@ -27,7 +29,7 @@ The attributes we are using are:\\
 	\item @Consumes: modifies method declarations and defines, corresponding to @Produces, which format of text is accepted in the method body of the Http-method when mapping to this Java-method. 
 	\item @FormParam: modifies arguments in declarations and allows for mapping from named parameters in the Http-method to named String parameters in the Java-method.
 \end{itemize}
-With the use of these attributes, a number of classes and methods can b defined to accept input from all relevant Http-method formats. Based on the form of the request the Jersey framework finds the Java-method suitable for handling the request. Ambiguities are reported at compile time.\\
+With the use of these attributes, a number of classes and methods can be defined to accept input from all relevant Http-method formats. Based on the form of the request the Jersey framework finds the Java-method suitable for handling the request. Ambiguities are reported at compile time.\\\\
 As part of the Http specification it is only necessary to implement the GET method to qualify for a valid Http server. We have implemented GET, POST, PUT and DELETE as part of the exercise. All four methods are only implemented to produce html output. The logic behind the methods are rather simple: a List of Task objects are extracted from persistence, its content is returned in the GET method, while the remaining methods modify the lists contents and and writes it back to persistence.\\
 
 Persistence of Tasks is carried out in a manner nearly identical to the previous exercise; a Task-class encapsulating the data content of the provided Xml-schema is made serializable by Xml-binding, and a wrapping class, TaskSerializer, serializes a collection of tasks with a similar binding. The purpose of the construct have been to correspond exactly to the provided schema without modification.\\
@@ -36,9 +38,9 @@ Several difficulties have been encountered during the exercise:
 \begin{itemize}
 	\item General problems with implementing and handling the Jersey framework. Were resolved.
 	\item Difficulties getting the Jersey-defined Java servlet to run on the Apache Tomcat server used for test runs. Were not resolved.\\
-	We have had general problems with running code on the server throughout the entire course, and in this case we have not been able to resolve the problem. When attempting to run the code the server responds with "404 resource not found". As a consequence it has not been possible to run the code and test the client, but the core logic of manipulating the task collection is so simple that we are pretty confident in asserting that it is correct.
+	We have had general problems with running code on the server throughout the entire course, and in this case we have not been able to resolve the problem. When attempting to run the code the server responds with "404 resource not found". This might have been a problem with the server setup for debugging the program, or it might be caused by a flaw in the code logic. As a consequence it has not been possible to run the code and test the client, but the core logic of manipulating the task collection is so simple that we are pretty confident in asserting that it is correct.
 	\item Problems reading from persistence when running the program on the server. Were not resolved.\\
-	It seemed these problems where caused by the execution being run from a different system position when run on the server. During development we had no problems reading from the .xml-document included in the eclipse-project when running the program as a stand-alone Java application. This leads us t believe that the relative file path needed to define access to the file were pointing to an invalid position when the default base path where defined from the server. We were not able to isolate the correct position to place the document at in order for the server to gain access to it, other than to use an absolute filepath, which would break the build when ported to another machine.
+	It seemed these problems where caused by the execution being run from a different system position when run on the server. During development we had no problems reading from the .xml-document included in the eclipse-project when running the program as a stand-alone Java application. This leads us to believe that the relative file path needed to define access to the file were pointing to an invalid position when the default base path where defined from the server. We were not able to isolate the correct position to place the document at in order for the server to gain access to it, other than to use an absolute file path, which would break the build when ported to another machine.
 \end{itemize}
 \section{Test run}
 \label{rest_test}
@@ -53,10 +55,10 @@ The service implemented follows the principal rules of RESTful services:
 	\item The server is stateless; it stores no session state and no information about which requests have been made. During the individual request the server only knows about the state of the resources it exposes before and after the request has been executed. 
 	\item The rules on limitations of side effects for the different methods have been followed:
 	\begin{itemize}
-		\item The GET method should have no side effects; that is it should not change the representation of any resources exposed by the server. This is followed, as GET never calls TaskRestServer.writeObjects(), an therefore does not change the content of persistence. 
-		\item GET, PUT and DELETE should not cause different results in the content of exposed data if they are called with the same content several times, as opposed to being called only once.\\
+		\item The GET method should have no side effects; that is it should not change the representation of any resources exposed by the server. This is followed, as GET never calls TaskRestServer.writeObjects(), and therefore does not change the content of persistence. 
+		\item GET, PUT and DELETE should be idempotent; making a sequence of identical requests should have the same effect on the content of exposed data as a single request, provided that no other requests are made in between.\\
 		The is followed by GET for the reasons stated above.\\
-		PUT requests provide a task, and adds it to the collection only if it can find an existing task with the same id. It then deletes the existing task, ensuring that only the first in a sequence of identical calls can change the contents of the collection. \\
+		PUT request provides a task, and adds it to the collection only if it can find an existing task with the same id. It then deletes the existing task, ensuring that the number of tasks in the collection and their ids are not altered by requests. As a result, each sequential call simply replaces an entity with an identical copy, causing no actual change to the exposes data.\\
 		DELETE removes a task from the collection with the id provided. As it is defined as an invariant of the collection that only one task with a given id can exist (both POST and PUT enforces this invariant), only the first call in a sequence will find any task to remove. Following calls will therefore have no effects. 
 	\end{itemize}
 	\item The data exposed by the server (tasks) is exposed, transported and modified through an Xml-representation; the implementation of tasks as a Java class is irrelevant to the client.
@@ -65,7 +67,7 @@ The service implemented follows the principal rules of RESTful services:
 	
 \section{Conclusion}
 \label{rest_conclusion}
-We have implemented a service that follows the ruled and guidelines for a RESTful web service.\\
+We have implemented a service that follows the rules and guidelines for a RESTful web service.\\
 The service uses Http for communication, and exposes a collection of tasks for retrieval and modification through the methods "GET", "POST", "PUT" and "DELETE". The tasks are exposed as an Xml-representation.\\
 The implementation of the Jersey framework and the handling of the different requests seems to be working correctly.\\
 We have not been able to run the program correctly on the server used for the assignment, an as such have not been able to fully test the solution. Reading from and writing to the persistent storage of tasks have not been resolved satisfactory. 

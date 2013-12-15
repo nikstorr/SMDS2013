@@ -63,30 +63,30 @@ We ran into some troubles concerning how to send a message to only one member of
 
 In this run we will run 3 TaskManagerServers each with its own xml task file. After the servers has been initialized we will ask two of the servers to do an execute and a request operation on the same task, and then hopefully one of them will be able to run its command, while the other will be denied. \\
 
-%\begin{center}
+\begin{figure}[H]
 %\centering
 \caption{Server 1}
 \includegraphics[scale=0.6]{images/CCServer1.png}
-%\end{center}
-%\vspace{10pt}
+\end{figure}
+\vspace{10pt}
 
 In the first server we run the execute command. The server sends a request to the other servers and receives a GrantLock from server 3, which is not running any commands, and a DenyLock from server 3, which is running the request command. After receiving the DenyLock gives, because it no longer has the task in the HashTable. After that it then receives a commit from server 2, and performs the request command on the specified task. \\
 
-%\begin{center}
+\begin{figure}[H]
 %\centering
 \caption{Server 2}
 \includegraphics[scale=0.6]{images/CCServer2.png}
-%\end{center}
-%\vspace{10pt}
+\end{figure}
+\vspace{10pt}
 
 In the second server we run the request command. The server send a RequestLock to the other servers, but before it receives any feedback, it gets a request from server 1. Since the server has the same task in the HashTable, it sends back a DenyLock. After sending the DenyLock, it receives a GrantLock from both servers, and then because the requirement for GrantLocks is fulfilled, it sends a commit to all servers including itself, telling them to execute its command on the specified task. \\
 
-%\begin{center}
+\begin{figure}[H]
 %\centering
 \caption{Server 3}
 \includegraphics[scale=0.6]{images/CCServer3.png}
-%\end{center}
-%\vspace{10pt}
+\end{figure}
+\vspace{10pt}
 
 In the third server no command is run. The server receives a RequestLock from the other servers and since it does not have any commands running, it simply sends back a GrantLock. After a while it then receives a commit from server 2 and performs the command on the specified task. \\
 

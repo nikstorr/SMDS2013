@@ -1,25 +1,24 @@
 \chapter{TCP server and Serialization}
 \minitoc
 
-In this chapter we talk about the TCP protocol. in section \ref{tcp_lab} we describe the assignment. In section \ref{tcp_solution} we describe our solution. in section \ref{tcp_example} we provide an example run of the solution. In section \ref{tcp_reflection} we try to connect the example to the theory behind. In section \ref{tcp_conclusion} we sum up what we've learned and round up the chapter.
+In this chapter we talk about the TCP protocol. in section \ref{tcp_lab} we describe the assignment. In section \ref{tcp_solution} we describe our solution. in section \ref{tcp_example} we provide an example run of the solution. In section \ref{tcp_reflection} we try to connect the example to the theory behind. 
 
 \section{lab description}
 \label{tcp_lab}
-\textit{The purpose of this week’s lab exercise is to develop a simplified version of web server for task manager that runs on TCP protocol.}\\
+\textit{The purpose of this week's lab exercise is to develop a simplified version of web server for task manager that runs on TCP protocol.}\\
 
 \textit{The task manager TCP server and its clients follow a strictly predefined structured communication based on the following conversational protocol.}
 
 \begin{itemize}
-\item Initially a client will send a command to the server indicating that it wishes to consume the particular service offered by the server through the mentioned command.\\
+\item \textit{Initially a client will send a command to the server indicating that it wishes to consume the particular service offered by the server through the mentioned command.}\\
 
-\item After receiving a command from the client, the server will respond by sending the same command back to the client indicating it’s readiness to provide the service mentioned in the command.\\
+\item \textit{After receiving a command from the client, the server will respond by sending the same command back to the client indicating it’s readiness to provide the service mentioned in the command.}\\
 
-\item Soon after receiving the command from the server, the client will send necessary data to the server to further process the command on the server side. In case of POST and PUT commands, the client will send a Task object, where as in case of GET or DELETE commands, the client will send an attendant’s name or a task id respectively.\\
+\item \textit{Soon after receiving the command from the server, the client will send necessary data to the server to further process the command on the server side. In case of POST and PUT commands, the client will send a Task object, where as in case of GET or DELETE commands, the client will send an attendant's name or a task id respectively.}\\
 
-\item Finally, after processing the command the server will send back the results to the client. In case of GET command, the server will return a list of tasks (List<Task> object) to the client. On the other hand, it will simply return the result of that command (e.g. task deleted). The result could also contain error message if any (e.g. task Id not found in the task list).
-
-
+\item \textit{Finally, after processing the command the server will send back the results to the client. In case of GET command, the server will return a list of tasks object (List\textless Task \textgreater) to the client. On the other hand, it will simply return the result of that command (e.g. task deleted). The result could also contain an error message if any (e.g. task Id not found in the task list).}
 \end{itemize}
+
 
 \textit{In this lab exercise, you are required to develop the code for the following functionality.}\\
 
@@ -34,26 +33,18 @@ In this chapter we talk about the TCP protocol. in section \ref{tcp_lab} we desc
 
 \end{itemize}
 
-
-
 \section{Solution}
 \label{tcp_solution}
 
-Due to the general pressure of the study we did not find the time to elaborate much on this excersize. Hence the optional parts are not implemented.\\
+Due to the general pressure of the study we did not find the time to elaborate much on this excerpter. Hence the optional parts are not implemented.\\
 
-\begin{comment}
-Information in OO programs are typically stored as data structures whereas data in the messages used to communicate in distributed systems are binary. So, no matter the communication protocols used the data structures need to be flattened before transmitting and then reassembled at the other end. This is called marshalling and unmarshalling. The sender and transmitter must agree on the format used in order for the receiver to reassmble the data structures. CORBA, Java Object Serialization and XML are som of the formats used to transmit binary data from one node to another. \\
-
-This can (as it often is) be done by middleware. In this project we have used JAXB to marshall our taskmanager data structure. JAXB use a XML format to transfer binary data. This works by annotating the data structures. Our taskmanager data structure in this case. JAXB can then marshall and unmarshall our data structure.\\
-\end{comment}
-
-
-We use JAXB API to provide persistence for the taskmanager objects. JAXB is java middleware capable of marshalling and unmarshalling java objects into xml and back into java objects, in this case a 'taskmanager' object with a related collection of ‘Task’ objects. To send the taskmanager object over TCP/IP, objects are transformed into bytes by ObjectInputStream and ObjectOutputStream (only objects that are serializable may be written as a bytestream).   \\ 
+We use JAXB API to provide persistence for the taskmanager objects. JAXB is java middle ware capable of marshalling and unmarshalling java objects into xml and back into java objects, in this case a 'taskmanager' object with a related collection of ‘Task’ objects. To send the taskmanager object over TCP/IP, objects are transformed into bytes by ObjectInputStream and ObjectOutputStream (only objects that are serializable may be written as a bytestream).   \\ 
 
 Our TCP server first opens a serversocket on a specified port and continues to listens for clients . A client instantiates a socket specifying the serversocket's address and port number. The client and server then communicates by passing byte streams through the agreed upon port. The transmission of bytes is done with ObjectInputStream and ObjectOutputStream methods.  \\
 
 \subsubsection{Serialization}
 Information in OO programs are typically stored as data structures whereas data in the messages used to communicate in distributed systems are binary. So, no matter the communication protocols used the data structures need to be flattened before transmitting and then reassembled at the other end.
+
 
 
 \subsubsection{Byte Stream}
@@ -82,16 +73,16 @@ public class TaskManager implements Serializable{
 
 \subsubsection{TCP}
 
-TCP is one of the main protocols of the transport layer of the TCP/IP model. It receives and sends data to the lower IP layer. \\
+The Transmission Control Protocol (TCP) is one of the main protocols of the transport layer of the TCP/IP suite. TCP provides reliable and ordered streams over the internet. TCP is located at the transport layer where it  receives data from the application layer and sends data to the lower level internet layer IP protocol. \\
 
-The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call and the server won't perform any other tasks before a client connects. The Client creates a socket on the same port which takes the servers InetAddress and the port it is listening on as arguments. \\
+TCP transforms data into packets, a sequence of bytes consisting of a headder (metadata) and a body (the data). \\
 
-
+The TCP server in our solution first connects to a serversocket and then waits for incoming requests on the port bound to the socket. Note this is a blocking call and the server will wait for a client to connect. The Client creates a socket on the same port which takes the server's InetAddress and the port it is listening on as arguments. \\
 
 \section{example run}
 \label{tcp_example}
 
-In our example the server sends out confirmation messages to the client for each request received. The client proceeds, only after receiving an acknowledgement of its request. \textit{This mimics the way the TCP protocol uses acknowledgements (acks) to confirm packet reception. Acks are the way the TCP protocol achieves \textit{reliability}. A client will wait for an ack and if none arrives it retransmits the package.}\\   
+In our example the server sends out confirmation messages to the client for each request received. The client proceeds, only after receiving an acknowledgement of its request. This mimics the way the TCP protocol uses acknowledgements (acks) to confirm packet reception. Acks are the way the TCP protocol achieves \textit{reliability}. A client will wait for an ack and if none arrives it retransmits the package.\\   
 
 After establishing a socket connection between client and server the client sends a request to the server. The server responds by sending an ack to the client (in this case the ack is the request itself).
 % \lstinputlisting{TCPserver.java}
@@ -127,6 +118,7 @@ if(response.equals(message)){
 }
 \end{lstlisting}
 
+
 The client-server uses readUTF() and writeUTF() to send requests and acks but in order to send an object they use writeObject() and readObject() to transform the object into a byte stream to send over the socket. \textit{Only objects implementing serializable can be transmitted by writeObject().} After receiving the bytestream we cast it back into an object.\\
 
 After executing a POST operation the server then proceeds to persist the taskmanager object by marshalling it with JAXB.
@@ -159,6 +151,7 @@ Before the example run the taskmanager xml document looked like this:
 
 \end{lstlisting}
 
+
 After the run, in which the client requested the server's POST method with a new Task, the xml document looks like this:
 
 \begin{lstlisting}[caption=xml after POST]
@@ -180,7 +173,7 @@ After the run, in which the client requested the server's POST method with a new
 </taskmanager>
 \end{lstlisting}
 
-Not included in this summary, but in the complete example the client also requests the GET method and the PUT method wanting to change the new 'one more cup of coffe' Task description from 'sense of direction' to 'no sense of direction'. Finally, the client requests the DELETE method with the taskid 'handin'01' parameter. After the run the xml document now looks like this:
+Not included in this summary, but in the complete example the client also requests the GET method and the PUT method wanting to change the new task's description property. Finally, the client requests the DELETE method with the taskid 'handin'01' parameter. After the run the xml document now looks like this:
 
 \begin{lstlisting}[caption=xml after PUT]
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -194,52 +187,33 @@ Not included in this summary, but in the complete example the client also reques
 </taskmanager>
 \end{lstlisting}
 
-%\pagebreak
-
-
-\begin{center}
+\begin{figure}[H]
 \centering
 \caption{console output tcp client}
 \includegraphics[scale=0.7]{images/TCP_run_client.png}
-\end{center}
+\end{figure}
 \vspace{10pt}
 
 
-\begin{center}
+\begin{figure}[H]
 \centering
 \caption{console output server}
 \includegraphics[scale=0.7]{images/TCP_run_server.png}
-\end{center}
+\end{figure}
 \vspace{10pt}
-
 
 \section{Reflection}
 \label{tcp_reflection}
 
-\begin{comment}
-In this exercise we worked with the TCP protocol. TCP is a transport layer level protocol. The TCP protocol provides communication between the application layer and the network layer (IP)\\
+We have used this example to demonstrate and experiment with the TCP/IP suite. There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages and TCP transfers byte streams. Unlike UDP, TCP is reliable and ordered. TCP can provide guarantees as to the ordering of its messages i.e., messages arrive in the order they were sent. It does so by giving every packet a number and then ordering the packets on arrival. TCP provides guarantees as to the delivery of the messages i.e, the message eventually arrive. It does so by using acknowledgements and retries (resend messages).   \\
 
-The TCP protocol is part of the TCP/IP protocol suite. A protocol suite is a stack of protocols each responsible for a single logical task, e.g. transport, packaging etc. Each layer communicates with the layer directly above and below, only. Messages are passed down the stack at one side and they bubble up through the stack at the other side. \\
-
-At the bottom of the TCP/IP suite are the physical layer (hardware). On top of the physical layer the network layer provides an interface to the transport layer, application services (and their protocols) are built on top of the transport layer based on TCP e.g. HTTP, SMTP, POP, FTP etc. More layers can be added to provide additional functionality e.g. security etc.\\
-
-Using protocols gives us network independance i.e., different application types and languages can use the same network to communicate 
-as long as they comply to the same protocol(s). Note \textit{even so, the heterogeneity of distributed systems makes it difficult to provide guarantees.}\\
-\end{comment}
-We have used this example to demonstrate and experiement with the TCP/IP suite. There are two transport protocols in the TCP/IP suite; UDP and TCP. UDP transfers text messages and TCP transfers byte streams. Unlike UDP, TCP is reliable and ordered. TCP can provide guarantees as to the ordering of its messages i.e., messages arrive in the order they were sent. It does so by giving every packet a number and then ordering the packets on arrival. TCP provides guarantees as to the delivery of the messages i.e, the message eventually arrive. It does so by using acknowledgements and retries (resend messages).   \\
-
-In contrast, the underlying network protocol (the IP protocol ) offers only ‘best-effort’ semantics, there is no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. IP relegates the task of providing a reliable service to other layers, namely the TCP layer atop it. This nicely demonstrates the end-to-end principle. Application specific functionality should reside at the end hosts.
-
-The code in our solution is very much a 'proof-of-concept'. The code style could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the theory.  \\
-
-As with many other examples, we did not have time to implement the optional parts of the assignment. This is regretable and would have been desirable and a valuable addition to the outcome of the course. But time is simply in short supply at this study.\\
-
-\begin{comment}
-The main lesson learned is about protocols and layers, each layer providing a specialized task enforced by the protocol (provided we use the protocols as intented). Each layer communicates with the layers below. \\
-\end{comment}
+In contrast, the underlying network protocol (the IP protocol ) offers only 'best-effort' semantics, there is no guarantee of delivery and packets can be lost, duplicated, delayed or delivered out of order. IP delegates the task of providing a reliable service to other layers, namely the TCP layer atop it. This nicely demonstrates the end-to-end principle. Application specific functionality should reside at the end hosts.\\
 
 Network layers send IP packets to (IP)addresses accross the network. The transport layer's UDP and TCP protocols sends IP packets to processes instead of addresses. TCP provides guarantees about reliability, ordering etc which UDP does not and this makes TCP well suited for server-client architectures in distributed systems. \\
 
-Our simple example resembled the way the TCP protocol achieves reliability. By sending acknowledgements our client-server is, in principle, capable of achieving reliability. It could be made to resend a packet in case of no response from the other end. Off course things like latenzy, troughput or duplicate packages come into play. But the principle stands.     
+Our simple example mimiced the way the TCP protocol achieves reliability. By sending acknowledgements our client-server is, in principle, capable of achieving reliability. It could be made to resend a packet in case of no response from the other end. Off course things like latenzy, troughput or duplicate packages come into play here. \\
 
+The code in our solution is very much a 'proof-of-concept'. The code style could only have been done better but since this was a course in Distributed Systems, and not in code writing norms, we chose to leave the code as is and concentrate on the theory behind.  \\
+
+As with many other examples, we did not have time to implement the optional parts of the assignment. This is much regrettable but we feel we at least have had a good introduction to the TCP/IP suite.
 

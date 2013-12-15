@@ -1,17 +1,20 @@
-\section{Basic Security Model}
+\section{Security Model}
+\label{securitymodel}
+
+
 A goal of security in distributed systems is to restrict access to information and resources to just those with authorization. Another is non-repudiation, securing that a process (or user) cannot deny participating in an activity. \\
 
 This can be achieved by securing the processes and the channels used to interact and by protecting the objects they use against unauthorized access.\\
 
 A basic model for the analysis of security risks include: \\
 
-The enemey: we postulate an enemy who can send messages and receive messages 
+The enemy: we postulate an enemy who can send messages and receive messages 
 to and from any two processes. \\
 
 Threats include threats to processes and to communication channels: \\
 
 \begin{itemize}
-\item[\textbf{Processes}] Even if protocols include an address in the messags sent there's no guarantee the sender is who he claims to be. A server cannot be sure the sender is authorized to access a certain resource if it cannot deermine the source of the message. Likewise, a client cannot be sure the result of a invokation is actually comming form the server and not a man-in-the-middle.  
+\item[\textbf{Processes}] Even if protocols include an address in the messages sent there's no guarantee the sender is who he claims to be. A server cannot be sure the sender is authorized to access a certain resource if it cannot determine the source of the message. Likewise, a client cannot be sure the result of a invocation is actually comming form the server and not a man-in-the-middle.  
 \item[\textbf{Channels}] The conceptual enemy can copy, alter or inject messages as they travel the network.
 \end{itemize}
 
@@ -34,8 +37,16 @@ to create the list we have a set of worst-case assumptions and guidelines:
 \begin{itemize}
 \item interfaces are exposed: 
 \item networks are insecure
-\item limit the lifetime and scope of secrets: (the longer the lifetime the grater the risk of compromization)
+\item limit the lifetime and scope of secrets: (the longer the lifetime the grater the risk of compromisation)
 \item code and algorithms are available to the enemy. (better expose the algorithm hoping to discover holes in it and then creating better ones. )
-\item attackers have acces to large resources. (computing power is cheap. Assume strong enemies.)
-\item Minimize trust base: the portionof a system responsible for security should be kept small. 
+\item attackers have access to large resources. (computing power is cheap. Assume strong enemies.)
+\item Minimize trust base: the portion of a system responsible for security should be kept small. 
 \end{itemize}
+
+\section{The Enemy}
+
+The enemy can Read, Remember, Intercept, Interrupt, Modify, Fabricate 
+(eavesdrop, masquerade, tamper, replay, denial of service) and guess/get secrets if she/he has sufficient time/power.
+
+
+

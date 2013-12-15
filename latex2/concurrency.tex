@@ -1,14 +1,14 @@
 \chapter{Concurrency Control}
 \minitoc
 
-This chapter is about concurrency control. In distributed systems where there are several different nodes which needs to perform operations on some shared ressources, there is a need for controlling the access to these ressources in order to maintain consisteny and ensure correctness of the operations. \\
+This chapter is about concurrency control. In distributed systems where there are several different nodes which needs to perform operations on some shared resources, there is a need for controlling the access to these resources in order to maintain consistency and ensure correctness of the operations. \\
 
 We shall describe the result of the mutual exclusion exercise. In section \ref{MutualExclusion_solution} we demonstrate our solution. In section \ref{MutualExclusion_run} we show an example run of the solution. In section \ref{MutualExclusion_motivation} we discuss the underlying theory and relate that to the solution. In section \ref{MutualExclusion_conclusion} we round up the chapter.
 
 \section{lab description}
-\textit{The main objective of this week’s assignment is to understand some of the primary challenges of concurrency control. In order to understand those challenges, we will use Task Manager group communication, bulding on the last week’s lab exercise using JGroups.}\\
+\textit{The main objective of this week's assignment is to understand some of the primary challenges of concurrency control. In order to understand those challenges, we will use Task Manager group communication, building on the last week's lab exercise using JGroups.}\\
 
-\textit{The sample code is provided in order to help you to understand how tasks can results into different states if it is executed concurrently at different task manager servers. This week’s sample code is more or less similar to the last week’s sample code and uses JGroups for group communication among the Task manager servers. Even though each task manger uses an individual task manager Xml file, the tasks in the xml files are the same. It offers two simple operations on the tasks as described below.}
+\textit{The sample code is provided in order to help you to understand how tasks can results into different states if it is executed concurrently at different task manager servers. This week's sample code is more or less similar to the last week's sample code and uses JGroups for group communication among the Task manager servers. Even though each task manger uses an individual task manager Xml file, the tasks in the xml files are the same. It offers two simple operations on the tasks as described below.}
 
 \begin{itemize}
 \item \textit{\textbf{execute:} accepts id of a task and executes the task by assigning the ’status’ attribute to ‘executed’ and ‘required’ attribute to ‘false’. After the execution of the task, the task manager server will inform all other task manager servers in the group to execute the task matching to id.}
@@ -31,21 +31,27 @@ We shall describe the result of the mutual exclusion exercise. In section \ref{M
 \label{MutualExclusion_solution}
 The solution to this assignment is primarily based on the solution of the former chapter, Indirect Communication, where there are two primary classes for solving this assignment; TaskManagerServer and TaskReceiver2. \\
 
-The TaskManagerServer´s primary function in the relationship between two the classes, is to send request to other TaskManagerServers, while TaskReceiver2 receives the requests on behalf of the TaskManagerServers and executes them. \\
+The TaskManagerServer's primary function in the relationship between two the classes, is to send requests to other TaskManagerServers, while TaskReceiver2 receives the requests on behalf of the TaskManagerServers and executes them. \\
 
 The solution uses the same JGroup system for sending and receiving messages, so this chapter will not so much focus on the setup of the two classes, but rather the process of how requests are handled in this mutual exclusion solution, which uses the simple concurrency control protocol as described on the blog: \url{https://blog.itu.dk/SMDS-E2013/schedule/lab-exercise-07/} \\
 
 The General idea of the simple concurrency control protocol is; that each Server must be able to lock the tasks which they wish to execute, send a request to all other servers and wait until it has been given authorization to execute the task. \\
 
-In order for the Servers to be able to lock the tasks they wish to execute, each Server has a hashtable which contains the taskId as key and then the amount of Grantlocks it needs, which is the number of members in the group -1, before the task is executable, as value. \\
+When we need to process the requests and execute the tasks we are in need of 4 different tokens:
+\begin{itemize}
+\item RequestLock: A RequestLock is created and send by a node which needs to execute an operation. It contains information about which task that needs to be executed, so that the nodes receiving the RequestLock, is able to see if they have already locked it.
+\item GrantLock: A GrantLock is of of two possible responses to a RequestLock, which gives the node whom send the RequestLock, permission to execute if the reciever did not have the task locked. A node must receive a total of N-1 nodes, before it can execute a task.
+\item DenyLock: A DenyLock is the other possible response to a Requestlock, which denies the node whom send the RequestLock, permission to execute if the reciever had the task locked. If a node receives just one DenyLock, then it can not execute the specified task.
+\item Commit: A Commit is created and send when a node receives the required N-1 GrantLocks. The Commit gives the final permission to execute the task.        
+\end{itemize} We have not made the tokens, however we use strings which we pass around to the different receivers using the envelope. The envelope now contains two string fields; command and lock, in order to tell the receiver what to do. It would have been a better solution to make use of tokens, which in this case would basically be objects of classes containing information related to their function.\\
 
-When we need to process the requests and execute the tasks we are in need of 4 different tokens: RequestLock, GrantLock, DenyLock and Commit. We haven’t made the tokens, however we use strings which we pass around to the different receivers using the envelope. The envelope now contains two string fields; command and lock, in order to tell the receiver what to do. \\
+In order for the Servers to be able to lock the tasks they wish to execute, each Server has a HashTable which contains the taskId as key and then the amount of Grantlocks it needs, which is the number of members in the group -1, before the task is executable, as value. \\
 
-When a Server wants to execute or request a task, it first checks if it already has the task listed in its hashtable. If the task is already there, then the user will be informed that the task is already enlisted. Else we add the task to Server´s own hashtable with the number of grantlocks needed, and then sends a request to all the other members of the group. \\
+When a Server wants to execute or request a task, it first checks if it already has the task listed in its HashTable. If the task is already there, then the user will be informed that the task is already enlisted. Else we add the task to server's own HashTable with the number of GrantLocks needed, and then sends a request to all the other members of the group. \\
 
-When the group members receives a request they first check if they have the task enlisted in their own hashtable. If they do not have the task enlisted, then they will send a grantlock back to the server which requested it. If the server do have the task enlisted in its hashtable then it will send a denylock back to the requesting server. \\
+When the group members receives a request they first check if they have the task enlisted in their own HashTable. If they do not have the task enlisted, then they will send a GrantLock back to the server which requested it. If the server do have the task enlisted in its HashTable then it will send a DenyLock back to the requesting server. \\
 
-If the server receives a denylock it will immediately delete the specified task from the hashtable. However if the server receives a grantlock, then it will countdown the number of grantlocks needed for the specific task, and if the countdown hits zero, then the server sends a Commit to all members of the qroup. \\
+If the server receives a DenyLock it will immediately delete the specified task from the HashTable. However if the server receives a GrantLock, then it will countdown the number of GrantLocks needed for the specific task, and if the countdown hits zero, then the server sends a Commit to all members of the group. \\
 
 When a Server is given a Commit, it will execute the command on the specified task and save its xml-file. And thus is the simple concurrency control implemented. \\
 
@@ -64,7 +70,7 @@ In this run we will run 3 TaskManagerServers each with its own xml task file. Af
 %\end{center}
 %\vspace{10pt}
 
-In the first server we run the execute command. The server sends a request to the other servers and receives a grantlock from server 3, which is not running any commands, and a denylock from server 3, which is running the request command. After receiving the denylock, the server then deques the task and waits for new orders. Then after a while the server is asked for grantlock from server 2 which it gives, because it no longer has the task in the hashtable. After that it then receives a commit from server 2, and performs the request command on the specified task. \\
+In the first server we run the execute command. The server sends a request to the other servers and receives a GrantLock from server 3, which is not running any commands, and a DenyLock from server 3, which is running the request command. After receiving the DenyLock gives, because it no longer has the task in the HashTable. After that it then receives a commit from server 2, and performs the request command on the specified task. \\
 
 %\begin{center}
 %\centering
@@ -73,7 +79,7 @@ In the first server we run the execute command. The server sends a request to th
 %\end{center}
 %\vspace{10pt}
 
-In the second server we run the request command. The server send a requestlock to the other servers, but before it receives any feedback, it gets a request from server 1. Since the server has the same task in the hashtable, it sends back a denylock. After sending the denylock, it receives a grantlock from both servers, and then because the requirement for grantlocks is fulfilled, it sends a commit to all servers including itself, telling them to execute its command on the specified task. \\
+In the second server we run the request command. The server send a RequestLock to the other servers, but before it receives any feedback, it gets a request from server 1. Since the server has the same task in the HashTable, it sends back a DenyLock. After sending the DenyLock, it receives a GrantLock from both servers, and then because the requirement for GrantLocks is fulfilled, it sends a commit to all servers including itself, telling them to execute its command on the specified task. \\
 
 %\begin{center}
 %\centering
@@ -82,15 +88,17 @@ In the second server we run the request command. The server send a requestlock t
 %\end{center}
 %\vspace{10pt}
 
-In the third server no command is run. The server receives a requestlock from the other servers and since it doesn’t have any commands running, it simply sends back a grantlock. After a while it then receives a commit from server 2 and performs the command on the specified task. \\
+In the third server no command is run. The server receives a RequestLock from the other servers and since it does not have any commands running, it simply sends back a GrantLock. After a while it then receives a commit from server 2 and performs the command on the specified task. \\
 
-We sometimes run into the problem, that two servers might both get a denylock, if they send the requestlock on the same time. This means that no command will be run on the specified task, which is undesirable. The problem can be solved by using timestamps and queue the request.
+We sometimes run into the problem, that two servers might both get a DenyLock, if they send the RequestLock on the same time. This means that no command will be run on the specified task, which is undesirable. The problem can be solved by using timestamps and queue the request.
 
-\section{Motivation- and theory}
+\section{Reflection}
 \label{MutualExclusion_motivation}
 
-\subsection{Coordination: Mututal Exclusion}
-Mututal exclusion algorithms are used in systems where there is some common resources, which are accessed from several different users eg. servers. The algorithms for distributed mutual exclusion rely on message passing which can either be; permission based or token based. \\
+
+
+\subsection{Coordination: Mutual Exclusion}
+Mutual exclusion algorithms are used in systems where there is some common resources, which are accessed from several different users e.g. servers. The algorithms for distributed mutual exclusion rely on message passing which can either be; permission based or token based. \\
 
 For all distributed algorithms there are the following requirements:
 \begin{itemize}
@@ -108,7 +116,7 @@ Following the requirements there is also a set of mutex quality measurements:
 \item \textbf{Synchronisation delay:} messages required from resource is exited, until it is next entered
 \end{itemize}
 
-There are several different ways to make a permission based mutual exclussion. It can be:
+There are several different ways to make a permission based mutual exclusion. It can be:
 \begin{itemize}
 \item \textbf{Centralised:} A single coordinator handles entry.
 \item \textbf{Decentralised:} A majority of coordinators must say ok before entry.
@@ -120,25 +128,25 @@ One of the more prominent token based algorithms is:
 \item \textbf{Token Ring:} A token is constantly passed around when a node needs the token it, accesses it, when it gets it, and passing it on when releasing it. 
 \end{itemize} 
 
-There are also other mutual exclussion algorithms, which are based on elections, which are very good at handling crashes. \\
+There are also other mutual exclusion algorithms, which are based on elections, which are very good at handling crashes. \\
 
 The simple concurrency control protocol. Which we used to make this assignment, is most similar to distributed permission, as the node needs permission from all other nodes. Though they are very similar, the concurrency control lacks in some areas. \\
 
 \textbf{Fulfilling requirements:}
 \begin{itemize} 
-\item \textbf{ME1(Safety):} Since all nodes must give a grantLock before a node may enter the critical section, it is pretty certain to say that it is save. 
-\item \textbf{ME2 (Liveness):} In terms of Deadlock we are certain that only one Node is capable of entering the critical state so there should be no problems in exiting the critical state. However when a Node requests permission from the other nodes and one of the nodes crashes, then that node will never be able enter the critical state, and all other nodes will be prevented from entering, which is a clear deadlock! In terms of starvation the concurrency control is also very poor. When a node is given a denylock, the operation is simply removed, which means that it will never be executed. That problem leads to ultimate starvation. Also because of this, the concurrency control isn´t fair either, and doesn’t even pass the other fairness requirement, which is happened-before ordering, which is also stated in the run.
-\item \textbf{ME2 (Ordering):} As stated in Liveness the concurrency control doesn’t support happened-before ordering, meaning that if there are two requests on the same task, then the request with the "smallest" timestamp will execute first.
+\item \textbf{ME1(Safety):} Since all nodes must give a GrantLock before a node may enter the critical section, it is pretty certain to say that it is save. 
+\item \textbf{ME2 (Liveness):} In terms of Deadlock we are certain that only one Node is capable of entering the critical state so there should be no problems in exiting the critical state. However when a Node requests permission from the other nodes and one of the nodes crashes, then that node will never be able enter the critical state, and all other nodes will be prevented from entering, which is a clear deadlock! In terms of starvation the concurrency control is also very poor. When a node is given a DenyLock, the operation is simply removed, which means that it will never be executed. That problem leads to ultimate starvation. Also because of this, the concurrency control is not fair either, and does not even pass the other fairness requirement, which is happened-before ordering, which is also stated in the run.
+\item \textbf{ME3 (Ordering):} As stated in Liveness the concurrency control does not support happened-before ordering, meaning that if there are two requests on the same task, then the request with the "smallest" timestamp will execute first.
 \end{itemize}
 
 \textbf{Quality of the simple concurrency control protocol:}
 \begin{itemize}
-\item \textbf{Bandwidth:} The concurrency control uses 3(n-1) messages to enter and exit the critical stat. First have to send requests to all other nodes, then all the nodes receiving the requests has to send back a reply, and finally when the operation is going to be executed, the node again has to send a message to all the other nodes, in order for them to executing operation as well. This is terribly slow!
+\item \textbf{Bandwidth:} The concurrency control uses 3(n-1) messages to enter and exit the critical state. First have to send requests to all other nodes, then all the nodes receiving the requests has to send back a reply, and finally when the operation is going to be executed, the node again has to send a message to all the other nodes, in order for them to executing operation as well. This is terribly slow!
 \item \textbf{Client delay:} In terms of client delay the concurrency control again uses 3(n-1).
-\item \textbf{Synchronization delay:} Since the concurrency control has not implemented the option to queue operation requests, but just sends denylock, which ensures that the request is terminated, then the time for a the resource to be entered into CS again will take 2(n-1). This again states how bad this system is!
+\item \textbf{Synchronization delay:} Since the concurrency control has not implemented the option to queue operation requests, but just sends DenyLock, which ensures that the request is terminated, then the time for a the resource to be entered into CS again will take 2(n-1). This again states how bad this system is!
 \end{itemize}
 
 \section{Conclusion}
 \label{MutualExclusion_conclusion}
-We have implemented the simple concurrency control protocol as described in the assignment description, with one deviation being that we use strings instead of tokens. The SCCP successfully satisfy the requirements of the assignment, however there are many drawbacks to the chosen solution. The first problem we run into is the deadlock, where one node waits for a request from a crashed node. In terms of livenes and ordering it would be pretty simple to implement a queue of requests for each node, and to add a timestamp to the requests, which would fix the problems with starvation and ordering. The queue would also improve the Synchronization delay from 2(n-1) to 1.
+We have implemented the simple concurrency control protocol as described in the assignment description, with one deviation being that we use strings instead of tokens. The SCCP successfully satisfy the requirements of the assignment, however there are many drawbacks to the chosen solution. The first problem we run into is the deadlock, where one node waits for a request from a crashed node. In terms of liveness and ordering it would be pretty simple to implement a queue of requests for each node, and to add a timestamp to the requests, which would fix the problems with starvation and ordering. The queue would also improve the Synchronization delay from 2(n-1) to 1.
 So to sum up; the solution meets the requirements, but could certainly be better!

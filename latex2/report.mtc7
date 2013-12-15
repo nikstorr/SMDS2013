@@ -1,14 +1,6 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Lab Description}{\reset@font\mtcSfont 43}{section.7.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Solution}{\reset@font\mtcSfont 43}{section.7.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.3}Example Run}{\reset@font\mtcSfont 44}{section.7.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.4}Theory}{\reset@font\mtcSfont 45}{section.7.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Volatility}{\reset@font\mtcSSSfont 45}{subsubsection*.12}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Smart Spaces}{\reset@font\mtcSSSfont 45}{subsubsection*.13}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.4.1}Device Model}{\reset@font\mtcSSfont 45}{subsection.7.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.4.2}Discovery Services}{\reset@font\mtcSSfont 47}{subsection.7.4.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Serverless Discovery}{\reset@font\mtcSSSfont 47}{subsubsection*.14}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Real World Example:}{\reset@font\mtcSSSfont 48}{subsubsection*.15}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.4.3}Interoperation}{\reset@font\mtcSSfont 48}{subsection.7.4.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Interoperations Models}{\reset@font\mtcSSSfont 49}{subsubsection*.16}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Sensing And Context-wareness}{\reset@font\mtcSSSfont 49}{subsubsection*.17}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.5}Conclusion}{\reset@font\mtcSfont 49}{section.7.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}lab description}{\reset@font\mtcSfont 40}{section.7.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Solution}{\reset@font\mtcSfont 41}{section.7.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.3}Example Run}{\reset@font\mtcSfont 42}{section.7.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.4}Motivation- and theory}{\reset@font\mtcSfont 45}{section.7.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.4.1}Coordination: Mututal Exclusion}{\reset@font\mtcSSfont 45}{subsection.7.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.5}Conclusion}{\reset@font\mtcSfont 47}{section.7.5}}

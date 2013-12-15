@@ -63,8 +63,8 @@
 \contentsline {section}{\numberline {9.3}Security}{56}{section.9.3}
 \contentsline {section}{\numberline {9.4}Concurrency}{57}{section.9.4}
 \contentsline {section}{\numberline {9.5}Group Communication}{57}{section.9.5}
-\contentsline {section}{\numberline {9.6}Mobile Client}{57}{section.9.6}
-\contentsline {chapter}{\numberline {A}Security model}{58}{appendix.A}
-\contentsline {section}{\numberline {A.1}Security Model}{58}{section.A.1}
-\contentsline {subsubsection}{Worst-Case Assumptions }{58}{subsubsection*.22}
-\contentsline {section}{\numberline {A.2}The Enemy}{59}{section.A.2}
+\contentsline {section}{\numberline {9.6}Mobile Client}{58}{section.9.6}
+\contentsline {chapter}{\numberline {A}Security model}{59}{appendix.A}
+\contentsline {section}{\numberline {A.1}Security Model}{59}{section.A.1}
+\contentsline {subsubsection}{Worst-Case Assumptions }{59}{subsubsection*.22}
+\contentsline {section}{\numberline {A.2}The Enemy}{60}{section.A.2}
